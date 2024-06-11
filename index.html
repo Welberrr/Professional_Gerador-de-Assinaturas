@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/index.css">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -19,7 +19,10 @@
             <div class="col-12 text-center">
                 <h1 class="p-2 title">Gerador de Assinatura</h1>
             </div>
-            <div class="col-12 col-sm-6">
+        </div>
+        <a href="templates.html">templates</a>
+        <div class="row mt-5">
+            <div class="col-12-col-lg-6-mb-5">
                 <h2>Dados</h2>
                 <form>
                     <div class="form-row">
@@ -119,92 +122,96 @@
                     </div>
                 </form>
             </div>
-            <div class="col-12 col-sm-6">
-                <h2>Modelo de Assinatura 1</h2> <br>
-                <a class="botLarge botForm" onclick="copy()">Copiar</a>
-                <div id="ass">
-                    <table style="border-left: solid 16px;border-color: var(--color);">
-                        <thead>
-                            <tr>
-                                <th>
-                                    <td style="padding: 5px 25px;position: relative;" valign="top">
-                                        <span id="primeiroNomeAqui" style="line-height: 1.5em; font-size:20px; text-align: left; font-family: 'Montserrat', sans-serif;color:var(--color)"><b>Pedro Henrique Silva</b></span>
-                                        <ul style="margin: 0 auto; padding: 0; list-style: none; display: block;">
-                                            <li style="line-height: 0.5em; margin-left: 0!important;">
-                                                <span id="cargoAqui" style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#575756">Gerente/ Analista/ Assistente</span>
-                                            </li>
-                                            <li style="padding-bottom: 5px;  margin-left: 0!important;">
-                                                <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#575756">
-                                                    <a id="telefoneAqui" style="color: #565656" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
+            <div class="col-12 col-lg-6">
+                <div class="mb-5">
+                    <h2>Modelo de Assinatura 1</h2>
+                    <a class="botLarge botForm" onclick="copy()">Copiar</a>
+                    <div id="ass">
+                        <table style="border-left: solid 16px;border-color: var(--color);">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <td style="padding: 5px 25px;position: relative;" valign="top">
+                                            <span id="primeiroNomeAqui" style="line-height: 1.5em; font-size:20px; text-align: left; font-family: 'Montserrat', sans-serif;color:var(--color)"><b>Pedro Henrique Silva</b></span>
+                                            <ul style="margin: 0 auto; padding: 0; list-style: none; display: block;">
+                                                <li style="line-height: 0.5em; margin-left: 0!important;">
+                                                    <span id="cargoAqui" style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#575756">Gerente/ Analista/ Assistente</span>
+                                                </li>
+                                                <li style="padding-bottom: 5px;  margin-left: 0!important;">
+                                                    <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#575756">
+                                                        <a id="telefoneAqui" style="color: #565656" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                            <ul style="margin: 0 auto; padding: 0; position: absolute; bottom: 0; list-style: none; display: block;">
+                                                <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color: #565656">
+                                                    <a id="emailAqui" style="color: #565656!important" href="mailto:pedro.henrique@idp.edu.br">pedro.henrique@seudominio.com</a>
                                                 </span>
-                                            </li>
-                                        </ul>
-                                        <ul style="margin: 0 auto; padding: 0; position: absolute; bottom: 0; list-style: none; display: block;">
-                                            <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color: #565656">
-                                                <a id="emailAqui" style="color: #565656!important" href="mailto:pedro.henrique@idp.edu.br">pedro.henrique@seudominio.com</a>
-                                            </span>
-                                            </li>
-                                            <li style="line-height: 0.5em; margin-left: 0!important;">
-                                                <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;">
-                                                    <a id="siteAqui" style="color: #565656" href="https://referenciaseguros.com.br/?utm_source=email&utm_medium=assinatura">referenciaseguros.com.br</a>
-                                                </span>
-                                            </li>
-                                            <li style="line-height: 0.5em; margin-left: 0!important;">
-                                                <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#575756">
-                                                    <a href="sbiz.app" style="color: #4A5961; text-decoration: none; font-weight: normal;"><b></b></a>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </th>
-                                <th>
-                                    <td style="padding:0px 35px; border-left: solid 1.8px #ececec;">
-                                        <ul style="margin: 0 auto; padding: 0; list-style: none; display: block;">
-                                            <li>
-                                                <img style="width: 100px; height: 100px; border-radius:100px; display:block;" id="preview-image-url" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/referencia-seguros.png" alt="SBIZ" border="0">
-                                            </li>
-                                            <li style="padding-top: 18px;">
-                                                <a id="facebookAqui" style="float: right; padding-right: 5px;" href="https://www.facebook.com/referenciaseguros">
-                                                    <img class="facebookIco" id="preview-facebook-url" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/facebook.png" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
-                                                </a>
-                                                <a id="instagramAqui" style="float: right; padding-right: 5px;" href="https://www.instagram.com/referenciaseguros/">
-                                                    <img class="instagramIco" id="preview-instagram-url" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/instagram.png" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
-                                                </a>
-                                                <a id="linkedinAqui" style="float: right; padding-right: 5px;" href="https://br.linkedin.com/company/referenciasseguros">
-                                                    <img class="linkedinIco" id="preview-linkedin-url" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/linkedin.png" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </th>
-                            </tr>
-                        </thead>
-                    </table>
+                                                </li>
+                                                <li style="line-height: 0.5em; margin-left: 0!important;">
+                                                    <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;">
+                                                        <a id="siteAqui" style="color: #565656" href="https://referenciaseguros.com.br/?utm_source=email&utm_medium=assinatura">referenciaseguros.com.br</a>
+                                                    </span>
+                                                </li>
+                                                <li style="line-height: 0.5em; margin-left: 0!important;">
+                                                    <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#575756">
+                                                        <a href="sbiz.app" style="color: #4A5961; text-decoration: none; font-weight: normal;"><b></b></a>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </th>
+                                    <th>
+                                        <td style="padding:0px 35px; border-left: solid 1.8px #ececec;">
+                                            <ul style="margin: 0 auto; padding: 0; list-style: none; display: block;">
+                                                <li>
+                                                    <img style="width: 100px; height: 100px; border-radius:100px; display:block;" id="preview-image-url" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/referencia-seguros.png" alt="SBIZ" border="0">
+                                                </li>
+                                                <li style="padding-top: 18px;">
+                                                    <a id="facebookAqui" style="float: right; padding-right: 5px;" href="https://www.facebook.com/referenciaseguros">
+                                                        <img class="facebookIco" id="preview-facebook-url" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/facebook.png" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
+                                                    </a>
+                                                    <a id="instagramAqui" style="float: right; padding-right: 5px;" href="https://www.instagram.com/referenciaseguros/">
+                                                        <img class="instagramIco" id="preview-instagram-url" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/instagram.png" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
+                                                    </a>
+                                                    <a id="linkedinAqui" style="float: right; padding-right: 5px;" href="https://br.linkedin.com/company/referenciasseguros">
+                                                        <img class="linkedinIco" id="preview-linkedin-url" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/linkedin.png" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
 
-                <h2 class="mt-5">Modelo de Assinatura 2</h2> <br>
-                <a class="botLarge botForm" onclick="copyAlt()">Copiar</a>
-                <div id="assAlt">
-                    <div class="signature-box">
-                        <div class="signature-left">
-                            <img id="preview-image-url-alt" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/referencia-seguros.png" alt="Profile Image">
-                        </div>
-                        <div class="signature-right">
-                            <h3 id="primeiroNomeAquiAlt" class="signature-name">Pedro Henrique Silva</h3>
-                            <p id="cargoAquiAlt" class="signature-title">Gerente/ Analista/ Assistente</p>
-                            <p><a id="telefoneAquiAlt" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a></p>
-                            <p><a id="emailAquiAlt" href="mailto:pedro.henrique@idp.edu.br">pedro.henrique@seudominio.com</a></p>
-                            <p><a id="siteAquiAlt" href="https://referenciaseguros.com.br/?utm_source=assinatura&utm_medium=assinatura">referenciaseguros.com.br</a></p>
-                            <div class="social-icons">
-                                <a id="linkedinAquiAlt" href="https://br.linkedin.com/company/referenciasseguros">
-                                    <img class="linkedinIco" id="preview-linkedin-url-alt" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/linkedin.png" alt="LinkedIn">
-                                </a>
-                                <a id="instagramAquiAlt" href="https://www.instagram.com/referenciaseguros/">
-                                    <img class="instagramIco" id="preview-instagram-url-alt" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/instagram.png" alt="Instagram">
-                                </a>
-                                <a id="facebookAquiAlt" href="https://www.facebook.com/referenciaseguros">
-                                    <img class="facebookIco" id="preview-facebook-url-alt" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/facebook.png" alt="Facebook">
-                                </a>
+                <div class="mb-5">
+                    <h2>Modelo de Assinatura 2</h2>
+                    <a class="botLarge botForm" onclick="copyAlt()">Copiar</a>
+                    <div id="assAlt">
+                        <div class="signature-box">
+                            <div class="signature-left">
+                                <img id="preview-image-url-alt" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/referencia-seguros.png" alt="Profile Image">
+                            </div>
+                            <div class="signature-right">
+                                <h3 id="primeiroNomeAquiAlt" class="signature-name">Pedro Henrique Silva</h3>
+                                <p id="cargoAquiAlt" class="signature-title">Gerente/ Analista/ Assistente</p>
+                                <p><a id="telefoneAquiAlt" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a></p>
+                                <p><a id="emailAquiAlt" href="mailto:pedro.henrique@idp.edu.br">pedro.henrique@seudominio.com</a></p>
+                                <p><a id="siteAquiAlt" href="https://referenciaseguros.com.br/?utm_source=email&utm_medium=assinatura">referenciaseguros.com.br</a></p>
+                                <div class="social-icons">
+                                    <a id="linkedinAquiAlt" href="https://br.linkedin.com/company/referenciasseguros">
+                                        <img class="linkedinIco" id="preview-linkedin-url-alt" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/linkedin.png" alt="LinkedIn">
+                                    </a>
+                                    <a id="instagramAquiAlt" href="https://www.instagram.com/referenciaseguros/">
+                                        <img class="instagramIco" id="preview-instagram-url-alt" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/instagram.png" alt="Instagram">
+                                    </a>
+                                    <a id="facebookAquiAlt" href="https://www.facebook.com/referenciaseguros">
+                                        <img class="facebookIco" id="preview-facebook-url-alt" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/facebook.png" alt="Facebook">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -217,6 +224,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="scripts.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
