@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="index.css">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -20,9 +20,8 @@
                 <h1 class="p-2 title">Gerador de Assinatura</h1>
             </div>
         </div>
-        <a href="templates.html">templates</a>
         <div class="row mt-5">
-            <div class="col-12-col-lg-6-mb-5">
+            <div class="col-12 col-lg-6 mb-5">
                 <h2>Dados</h2>
                 <form>
                     <div class="form-row">
@@ -30,8 +29,8 @@
                             <label for="hexadecimal">Cor Hexadecimal</label>
                             <input type="text" class="form-control" id="hexadecimal" placeholder="Código da cor" required>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <button id="clickToChange" type="button" class="btn btn-primary btn-block">Trocar Cor</button>
+                        <div class="col-md-6 mb-3 d-flex align-items-end">
+                            <button id="clickToChange" type="button" class="btn btn-primary">Trocar Cor</button>
                         </div>
                     </div>
                     <div class="form-row">
@@ -198,9 +197,11 @@
                             <div class="signature-right">
                                 <h3 id="primeiroNomeAquiAlt" class="signature-name">Pedro Henrique Silva</h3>
                                 <p id="cargoAquiAlt" class="signature-title">Gerente/ Analista/ Assistente</p>
-                                <p><a id="telefoneAquiAlt" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a></p>
-                                <p><a id="emailAquiAlt" href="mailto:pedro.henrique@idp.edu.br">pedro.henrique@seudominio.com</a></p>
-                                <p><a id="siteAquiAlt" href="https://referenciaseguros.com.br/?utm_source=email&utm_medium=assinatura">referenciaseguros.com.br</a></p>
+                                <div class="signature-contact">
+                                    <p><i class="fas fa-phone"></i> <a id="telefoneAquiAlt" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a></p>
+                                    <p><i class="fas fa-envelope"></i> <a id="emailAquiAlt" href="mailto:pedro.henrique@idp.edu.br">pedro.henrique@seudominio.com</a></p>
+                                    <p><i class="fas fa-globe"></i> <a id="siteAquiAlt" href="https://referenciaseguros.com.br/?utm_source=assinatura&utm_medium=assinatura">referenciaseguros.com.br</a></p>
+                                </div>
                                 <div class="social-icons">
                                     <a id="linkedinAquiAlt" href="https://br.linkedin.com/company/referenciasseguros">
                                         <img class="linkedinIco" id="preview-linkedin-url-alt" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/linkedin.png" alt="LinkedIn">
@@ -216,6 +217,26 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="mb-5">
+                    <h2>Modelo de Assinatura 3</h2>
+                    <a class="botLarge botForm" onclick="copyThird()">Copiar</a>
+                    <div id="assThird">
+                        <div class="signature">
+                            <div class="left-section">
+                                <img id="preview-image-url-third" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/referencia-seguros.png" alt="Logo" class="logo">
+                                <p class="firm-name">Referência Seguros</p>
+                            </div>
+                            <div class="right-section">
+                                <p id="primeiroNomeAquiThird" class="name">Pedro Henrique Silva</p>
+                                <p id="cargoAquiThird" class="title">Gerente/ Analista/ Assistente</p>
+                                <p id="telefoneAquiThird" class="contact">+55 (xx) 999 999 999</p>
+                                <p class="contact"><a id="emailAquiThird" href="mailto:pedro.henrique@idp.edu.br">pedro.henrique@seudominio.com</a></p>
+                                <p class="contact"><a id="siteAquiThird" href="https://referenciaseguros.com.br/?utm_source=assinatura&utm_medium=assinatura">referenciaseguros.com.br</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -224,6 +245,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="scripts/index.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
