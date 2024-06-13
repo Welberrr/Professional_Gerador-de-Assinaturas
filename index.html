@@ -252,20 +252,66 @@
 
                 <div class="mb-5">
                     <h2>Modelo de Assinatura 3</h2>
-                    <a class="botLarge botForm" onclick="copyThird()">Copiar</a>
-                    <div id="assThird">
-                        <div class="signature">
-                            <div class="left-section">
-                                <img id="preview-image-url-third" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/referencia-seguros.png" alt="Logo" class="logo">
-                            </div>
-                            <div class="right-section">
-                                <p id="primeiroNomeAquiThird" class="name">Seu Nome Aqui</p>
-                                <p id="cargoAquiThird" class="title">Gerente/ Analista/ Assistente</p>
-                                <p id="telefoneAquiThird" class="contact">+55 (xx) 999 999 999</p>
-                                <p class="contact"><a id="emailAquiThird" href="mailto:pedro.henrique@idp.edu.br">seuemail@referenciaseguros.com.br</a></p>
-                                <p class="contact"><a id="siteAquiThird" href="https://referenciaseguros.com.br/?utm_source=assinatura&utm_medium=assinatura">referenciaseguros.com.br</a></p>
-                            </div>
-                        </div>
+                    <a class="botLarge botForm" onclick="copyAlt()">Copiar</a>
+                    <div id="assAlt" style="border: solid 3px; border-color: var(--color); border-radius: 1%; background-color: var(--color);">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <td style="padding:0px 35px; background-color: rgb(126, 143, 153);">
+                                            <ul style="margin: 0 auto; padding: 0; list-style: none; display: block; margin-bottom: 30px;">
+                                                <li>
+                                                    <img style="margin-left: 1px; margin-right: 20px; margin-top: 10px; width: 100px; height: 80px; border-radius:100px; display:block;" id="preview-image-url" src="logo_referencia-seguros_transparent.png" alt="SBIZ" border="0">
+                                                    <p style="font-family: 'Montserrat', sans-serif; color: blue;"> referencia-seguros</p>
+                                                </li>
+                                                <li style="padding-top: 18px; margin-right: 40px; margin-left: 10px;">
+                                                    <a id="facebookAqui" style="float: right; padding-right: 5px;" href="https://www.facebook.com/referenciaseguros">
+                                                        <img class="facebookIco" id="preview-facebook-url" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/facebook.png" style="width: 20px; height: 20px; border-radius:20px; display:block; margin-right: 21px;" alt="SBIZ" border="0">
+                                                    </a>
+                                                    <a id="instagramAqui" style="float: right; padding-right: 5px;" href="https://www.instagram.com/referenciaseguros/">
+                                                        <img class="instagramIco" id="preview-instagram-url" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/instagram.png" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
+                                                    </a>
+                                                    <a id="linkedinAqui" style="float: right; padding-right: 5px;" href="https://br.linkedin.com/company/referenciasseguros">
+                                                        <img class="linkedinIco" id="preview-linkedin-url" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/linkedin.png" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </th>
+                                    <th>
+                                        <td style="padding: 5px 25px;position: relative;" valign="top">
+                                            <span id="primeiroNomeAqui" style="line-height: 1.5em; font-size:22px; text-align: left; font-family: 'Montserrat', sans-serif;color:black"><b>Seu Nome Aqui</b></span>
+                                            <ul style="margin: 0 auto; padding: 0; list-style: none; display: block;">
+                                                <li style="line-height: 0.5em; margin-left: 0!important; margin-top: 40px; margin-bottom: 3px;">
+                                                    <span id="cargoAqui" style="font-size:16px; text-align: left; font-family: 'Montserrat', sans-serif;color: black">Gerente/ Analista/ Assistente</span>
+                                                </li>
+                                                <li style="padding-bottom: 5px;  margin-left: 0!important;">
+                                                    <span style="font-size:16px; text-align: left; font-family: 'Montserrat', sans-serif;color:#575756;">
+                                                        <a id="telefoneAqui" style="color: black" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                            <ul style="margin: 0 auto; padding: 0; position: absolute; bottom: 0; list-style: none; display: block;">
+                                                <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color: black">
+                                                    <a id="emailAqui" style="color: black !important" href="mailto:pedro.henrique@idp.edu.br">seuemail@seudominio.com</a>
+                                                </span>
+                                                </li>
+                                                <li style="line-height: 0.5em; margin-left: 0!important; margin-bottom: 10px;">
+                                                    <span style="font-size: 16px; font-family: 'Montserrat', sans-serif;">
+                                                        <a id="siteAqui" style="color: black" href="https://referenciaseguros.com.br/?utm_source=email&utm_medium=assinatura">referenciaseguros.com.br</a>
+                                                    </span>
+                                                </li>
+                                                <li style="line-height: 0.5em; margin-left: 0!important;">
+                                                    <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#575756">
+                                                        <a href="sbiz.app" style="color: #4A5961; text-decoration: none; font-weight: normal;"><b></b></a>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
                     </div>
                 </div>
             </div>
