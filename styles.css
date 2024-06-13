@@ -43,8 +43,8 @@ form .form-control, form .input-group-text {
 
 .botForm {
     border: 2px solid #5a52ee;
-    background: #5a52ee;
-    color: #FFF;
+    background: #bbbbbd;
+    color: white;
     letter-spacing: 1px;
     border-radius: 50px;
     height: 40px;
@@ -61,7 +61,7 @@ form .form-control, form .input-group-text {
 
 .botForm:hover {
     background: transparent;
-    color: #5a52ee;
+
     text-decoration: none;
 }
 
@@ -239,4 +239,27 @@ form .form-control, form .input-group-text {
 .mb-5:hover {
     transform: translateY(-5px);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mb-5 table {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.mb-5 td {
+    vertical-align: top;
+}
+
+.mb-5 img {
+    border-radius: 50%;
+}
+
+.mb-5 a {
+    color: var(--color);
+    text-decoration: none;
+}
+
+.mb-5 a:hover {
+    text-decoration: underline;
 }
