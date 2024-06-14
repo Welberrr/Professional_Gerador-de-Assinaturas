@@ -43,9 +43,9 @@ $(document).ready(function() {
 
     $('#foto').on('input', function() {
         var foto = $(this).val();
-        $("#preview-image-url").attr('src', foto);
-        $("#preview-image-url-alt").attr('src', foto);
-        $("#preview-image-url-third").attr('src', foto);
+        $("#preview-image-url2").attr('src', foto);
+        $("#preview-image-url-alt2").attr('src', foto);
+        $("#preview-image-url-third2").attr('src', foto);
     });
 
     $('#site').on('input', function() {
@@ -165,4 +165,34 @@ function copyThird() {
         range.select();
         document.execCommand('copy');
     }
+
+    document.getElementById('fotoUpload').addEventListener('change', function(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var output = document.getElementById('preview-image-upload');
+            output.src = reader.result;
+            output.style.display = 'block';
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    });
+
+    document.getElementById('fotoUpload').addEventListener('change', function(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var output = document.getElementById('preview-image-url-third');
+            output.src = reader.result;
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }); 
+
+    document.getElementById('fotoUpload').addEventListener('change', function(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var output = document.getElementById('preview-image-url-second');
+            output.src = reader.result;
+            output.style.display = 'block';
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    });
+    
 }

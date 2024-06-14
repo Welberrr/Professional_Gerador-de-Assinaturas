@@ -16,6 +16,7 @@ form label {
 form .form-control, form .input-group-text {
     border-radius: 50px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    border-color: #000000;
 }
 
 .btn-primary {
@@ -43,11 +44,12 @@ form .form-control, form .input-group-text {
 
 .botForm {
     border: 2px solid #5a52ee;
-    background: #bbbbbd;
+    background: #4D48E2;
     color: white;
     letter-spacing: 1px;
     border-radius: 50px;
     height: 40px;
+    line-height: 20px;
     font-size: 16px;
     text-align: center;
     text-transform: uppercase;
@@ -80,7 +82,6 @@ form .form-control, form .input-group-text {
 }
 
 #ass a {
-    color: var(--color);
     text-decoration: none;
 }
 
@@ -230,15 +231,18 @@ form .form-control, form .input-group-text {
     text-decoration: underline;
 }
 
-/* Hover effect for inputs */
 .form-control:hover, .input-group-text:hover {
     border-color: var(--color);
-    box-shadow: 0 0 10px rgba(77, 72, 226, 0.2);
+    box-shadow: 0 0 10px #0157EF;
+}
+
+.mb-5 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .mb-5:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.07);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.25);
 }
 
 .mb-5 table {
@@ -256,10 +260,17 @@ form .form-control, form .input-group-text {
 }
 
 .mb-5 a {
-    color: var(--color);
     text-decoration: none;
 }
 
 .mb-5 a:hover {
     text-decoration: underline;
+}
+
+.img-preview {
+    display: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
 }

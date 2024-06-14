@@ -26,15 +26,6 @@
                 <form>
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
-                            <label for="hexadecimal">Cor Hexadecimal</label>
-                            <input type="text" class="form-control" id="hexadecimal" placeholder="Código da cor" required>
-                        </div>
-                        <div class="col-md-6 mb-3 d-flex align-items-end">
-                            <button id="clickToChange" type="button" class="btn btn-primary">Trocar Cor</button>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-6 mb-3">
                             <label for="primeiroNome">Primeiro Nome</label>
                             <input type="text" class="form-control" id="primeiroNome" placeholder="Primeiro Nome" required>
                         </div>
@@ -59,20 +50,10 @@
                             <label for="cargo">Cargo/Função</label>
                             <input type="text" class="form-control" id="cargo" placeholder="Gerente/ Analista/ Assistente" required>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="foto">Foto</label>
-                            <input type="text" class="form-control" id="foto" placeholder="URL da imagem" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-6 mb-3">
-                            <label for="site">Site</label>
-                            <input type="text" class="form-control" id="site" placeholder="https://site.com" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="telefone">Telefone</label>
-                            <input type="text" class="form-control" id="telefone" placeholder="(99) 999 999 999" required>
-                        </div>
+                        <div class="form-group">
+                            <label for="fotoUpload">Foto</label>
+                            <input type="file" class="form-control-file" id="fotoUpload" accept="image/*" required>
+                        </div>                        
                     </div>
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
@@ -85,12 +66,6 @@
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="linkedinIco">Linkedin URL Imagem</label>
-                            <input type="text" class="form-control" id="linkedinIco" placeholder="URL da imagem" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-6 mb-3">
                             <label for="instagram">Instagram</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -98,10 +73,6 @@
                                 </div>
                                 <input type="text" class="form-control" id="instagram" placeholder="https://www.instagram.com/" required>
                             </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="instagramIco">Instagram URL Imagem</label>
-                            <input type="text" class="form-control" id="instagramIco" placeholder="URL da imagem" required>
                         </div>
                     </div>
                     <div class="form-row">
@@ -113,10 +84,6 @@
                                 </div>
                                 <input type="text" class="form-control" id="facebook" placeholder="https://www.facebook.com/" required>
                             </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="facebookIco">Facebook URL Imagem</label>
-                            <input type="text" class="form-control" id="facebookIco" placeholder="URL da imagem" required>
                         </div>
                     </div>
                 </form>
@@ -188,16 +155,17 @@
 
                 <div class="mb-5">
                     <h2>Modelo de Assinatura 2</h2>
-                    <a class="botLarge botForm" onclick="copyAlt()">Copiar</a>
+                    <href onclick="copyAlt()">
                     <div id="assAlt">
-                        <table style="border-left: solid 16px;; border-bottom: solid 5px; border-color: rgb(206, 205, 205); background-color: #131b85;">
+                        <table style="border-left: solid 16px; border-bottom: solid 5px; border-color: black; background-image: linear-gradient(to right, #0051f4, #0790b8);">
                             <thead>
                                 <tr>
                                     <th>
-                                        <td style="padding:0px 50px; background-color: #131b85;">
+                                        <td style="padding:0px 50px;">
                                             <ul style="margin: 0 auto; padding: 0; list-style: none; display: block; margin-bottom: 30px;">
                                                 <li>
-                                                    <img style="margin-left: 1px; margin-top: 10px; width: 130px; height: 130px; border-radius:100px; display:block;" id="preview-image-url" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/referencia-seguros.png" alt="SBIZ" border="0">
+                                                    <img id="preview-image-url-second" class="img-preview" alt="Prévia da imagem">
+                                                    <img style="margin-left: 1px; margin-top: 10px; width: 130px; height: 150px; border-radius:100px; display:block;" src="ReferenciaSeguros_Logos_Vetor_Illustrator_referencia-seguros-simbolo-cores cópia 5.png" alt="SBIZ" border="0">
                                                 </li>
                                                 <li style="padding-top: 18px;">
                                                     <a id="facebookAqui" style="float: right; padding-right: 5px;" href="https://www.facebook.com/referenciaseguros">
@@ -206,7 +174,7 @@
                                                     <a id="instagramAqui" style="float: right; padding-right: 5px;" href="https://www.instagram.com/referenciaseguros/">
                                                         <img class="instagramIco" id="preview-instagram-url" src="instagram.jpg" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
                                                     </a>
-                                                    <a id="linkedinAqui" style="float: right; padding-right: 5px;" href="https://br.linkedin.com/company/referenciasseguros">
+                                                    <a id="linkedinAqui" style="float: right; padding-right: 5px;" href="linkedin.jpg">
                                                         <img class="linkedinIco" id="preview-linkedin-url" src="linkedin.jpg" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
                                                     </a>
                                                 </li>
@@ -246,12 +214,13 @@
                                     </th>
                                 </tr>
                             </thead>
-                        </table>
-                    </div>
+                        </table>                        
+                    </div></href>
+                    <a class="botLarge botForm" style="margin-left: 190px;" onclick="copyAlt()">Copiar</a>
                 </div>
         </div>
     </div>
-
+    
     <!-- JavaScript files -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
