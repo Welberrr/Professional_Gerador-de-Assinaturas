@@ -50,6 +50,11 @@
                             <label for="cargo">Cargo/Função</label>
                             <input type="text" class="form-control" id="cargo" placeholder="Gerente/ Analista/ Assistente" required>
                         </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" class="form-control" id="telefone" value="" placeholder="(99) 999 999 999" required>
+                        </div>    
                         <div class="form-group">
                             <label for="fotoUpload">Foto</label>
                             <input type="file" class="form-control-file" id="fotoUpload" accept="image/*" required>
@@ -91,13 +96,13 @@
             <div class="col-12 col-lg-6">
                 <div class="mb-5">
                     <h2>Modelo de Assinatura 1</h2>
-                    <a class="botLarge botForm" onclick="copy()">Copiar</a>
+                    <href onclick="copy()">
                     <div id="ass">
                         <table style="border-left: solid 16px;border-color: var(--color);">
                             <thead>
                                 <tr>
                                     <th>
-                                        <td style="padding: 5px 25px;position: relative;" valign="top">
+                                        <td style="padding: 40px 40px 60px 25px;position: relative;" valign="top">
                                             <span id="primeiroNomeAqui" style="line-height: 1.5em; font-size:20px; text-align: left; font-family: 'Montserrat', sans-serif;color:var(--color)"><b>Pedro Henrique Silva</b></span>
                                             <ul style="margin: 0 auto; padding: 0; list-style: none; display: block;">
                                                 <li style="line-height: 0.5em; margin-left: 0!important;">
@@ -150,7 +155,8 @@
                                 </tr>
                             </thead>
                         </table>
-                    </div>
+                    </div></href>
+                    <a class="botLarge botForm" style="margin-left: 190px;" onclick="copyAlt()">Copiar</a>
                 </div>
 
                 <div class="mb-5">
@@ -161,21 +167,21 @@
                             <thead>
                                 <tr>
                                     <th>
-                                        <td style="padding:0px 50px;">
+                                        <td style="padding: 5px 25px;position: relative;" valign="top">
                                             <ul style="margin: 0 auto; padding: 0; list-style: none; display: block; margin-bottom: 30px;">
                                                 <li>
                                                     <img id="preview-image-url-second" class="img-preview" alt="Prévia da imagem">
-                                                    <img style="margin-left: 1px; margin-top: 10px; width: 130px; height: 150px; border-radius:100px; display:block;" src="ReferenciaSeguros_Logos_Vetor_Illustrator_referencia-seguros-simbolo-cores cópia 5.png" alt="SBIZ" border="0">
+                                                    <img style="margin-left: 1px; margin-top: 10px; width: 130px; height: 150px; border-radius:100px; display:block;" src="" alt="LOGO" border="0">
                                                 </li>
                                                 <li style="padding-top: 18px;">
                                                     <a id="facebookAqui" style="float: right; padding-right: 5px;" href="https://www.facebook.com/referenciaseguros">
-                                                        <img class="facebookIco" id="preview-facebook-url" src="facebook.jpg" style="width: 20px; height: 20px; border-radius:20px; display:block; margin-right: 21px;" alt="SBIZ" border="0">
+                                                        <img class="facebookIco" id="preview-facebook-url" src="imagens/facebook.jpg" style="width: 20px; height: 20px; border-radius:20px; display:block; margin-right: 21px;" alt="SBIZ" border="0">
                                                     </a>
                                                     <a id="instagramAqui" style="float: right; padding-right: 5px;" href="https://www.instagram.com/referenciaseguros/">
-                                                        <img class="instagramIco" id="preview-instagram-url" src="instagram.jpg" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
+                                                        <img class="instagramIco" id="preview-instagram-url" src="imagens/instagram.jpg" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
                                                     </a>
                                                     <a id="linkedinAqui" style="float: right; padding-right: 5px;" href="linkedin.jpg">
-                                                        <img class="linkedinIco" id="preview-linkedin-url" src="linkedin.jpg" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
+                                                        <img class="linkedinIco" id="preview-linkedin-url" src="imagens/linkedin.jpg" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
                                                     </a>
                                                 </li>
                                             </ul>
