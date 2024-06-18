@@ -133,6 +133,8 @@ function copy() {
 function copyAlt() {
     var target = document.getElementById('assAlt');
     var range, select;
+    var img = target.querySelector('img');
+    img.classList.add('round-image');
     if (document.createRange) {
         range = document.createRange();
         range.selectNode(target);
