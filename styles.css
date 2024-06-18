@@ -318,3 +318,23 @@ hr {
     border-radius: 50%;
     object-fit: cover;
 }
+
+#assAlt {
+    width: 550px; /* Defina a largura desejada */
+    height: 200px; /* Defina a altura desejada */
+    overflow: hidden; /* Isso garantirá que o conteúdo extra seja ocultado */
+    padding: 10px; /* Ajuste o padding conforme necessário */
+    background-color: #fff; /* Cor de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+}
+
+#ass{
+    width: 550px; /* Defina a largura desejada */
+    height: 200px; /* Defina a altura desejada */
+    overflow: hidden; /* Isso garantirá que o conteúdo extra seja ocultado */
+    padding: 10px; /* Ajuste o padding conforme necessário */
+    background-color: #fff; /* Cor de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+}
