@@ -127,6 +127,7 @@ function copy() {
         range.select();
         document.execCommand('copy');
     }
+    showPopup(); // Mostrar o pop-up
 }
 
 function copyAlt() {
@@ -146,53 +147,42 @@ function copyAlt() {
         range.select();
         document.execCommand('copy');
     }
+    showPopup(); // Mostrar o pop-up
 }
 
-function copyThird() {
-    var target = document.getElementById('assThird');
-    var range, select;
-    if (document.createRange) {
-        range = document.createRange();
-        range.selectNode(target);
-        select = window.getSelection();
-        select.removeAllRanges();
-        select.addRange(range);
-        document.execCommand('copy');
-        select.removeAllRanges();
-    } else {
-        range = document.body.createTextRange();
-        range.moveToElementText(target);
-        range.select();
-        document.execCommand('copy');
+function showPopup() {
+    var popup = document.getElementById('popup');
+    popup.style.display = 'block';
+    setTimeout(function() {
+        popup.style.display = 'none';
+    }, 2000);
+}
+
+document.getElementById('fotoUpload').addEventListener('change', function(event) {
+    var reader = new FileReader();
+    reader.onload = function() {
+        var output = document.getElementById('preview-image-upload');
+        output.src = reader.result;
+        output.style.display = 'block';
     }
+    reader.readAsDataURL(event.target.files[0]);
+});
 
-    document.getElementById('fotoUpload').addEventListener('change', function(event) {
-        var reader = new FileReader();
-        reader.onload = function() {
-            var output = document.getElementById('preview-image-upload');
-            output.src = reader.result;
-            output.style.display = 'block';
-        }
-        reader.readAsDataURL(event.target.files[0]);
-    });
+document.getElementById('fotoUpload').addEventListener('change', function(event) {
+    var reader = new FileReader();
+    reader.onload = function() {
+        var output = document.getElementById('preview-image-url-third');
+        output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+}); 
 
-    document.getElementById('fotoUpload').addEventListener('change', function(event) {
-        var reader = new FileReader();
-        reader.onload = function() {
-            var output = document.getElementById('preview-image-url-third');
-            output.src = reader.result;
-        }
-        reader.readAsDataURL(event.target.files[0]);
-    }); 
-
-    document.getElementById('fotoUpload').addEventListener('change', function(event) {
-        var reader = new FileReader();
-        reader.onload = function() {
-            var output = document.getElementById('preview-image-url-second');
-            output.src = reader.result;
-            output.style.display = 'block';
-        }
-        reader.readAsDataURL(event.target.files[0]);
-    });
-    
-}
+document.getElementById('fotoUpload').addEventListener('change', function(event) {
+    var reader = new FileReader();
+    reader.onload = function() {
+        var output = document.getElementById('preview-image-url-second');
+        output.src = reader.result;
+        output.style.display = 'block';
+    }
+    reader.readAsDataURL(event.target.files[0]);
+});
