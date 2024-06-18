@@ -237,6 +237,7 @@ form .form-control, form .input-group-text {
 
 .mb-5 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 .mb-5:hover {
