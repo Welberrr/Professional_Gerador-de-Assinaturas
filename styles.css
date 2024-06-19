@@ -90,7 +90,6 @@ form .form-control, form .input-group-text {
 
 .input-group-text {
     background-color: var(--color);
-    color: #fff;
     border: none;
 }
 
@@ -246,7 +245,6 @@ form .form-control, form .input-group-text {
 }
 
 .mb-5 table {
-    
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
@@ -321,21 +319,24 @@ hr {
 }
 
 #assAlt {
-    width: 550px; /* Defina a largura desejada */
-    height: 200px; /* Defina a altura desejada */
-    overflow: hidden; /* Isso garantirá que o conteúdo extra seja ocultado */
-    padding: 10px; /* Ajuste o padding conforme necessário */
-    background-color: #fff; /* Cor de fundo */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+    background-image: linear-gradient(to right, #0051f4, #0790b8, #02abdf);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #ass{
-    width: 550px; /* Defina a largura desejada */
-    height: 200px; /* Defina a altura desejada */
-    overflow: hidden; /* Isso garantirá que o conteúdo extra seja ocultado */
-    padding: 10px; /* Ajuste o padding conforme necessário */
-    background-color: #fff; /* Cor de fundo */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+p{
+    font-family: monospace;
+}
+
+#model3 {
+    background-color: black;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
