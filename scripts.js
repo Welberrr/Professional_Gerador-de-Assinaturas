@@ -41,72 +41,20 @@ $(document).ready(function() {
         $('#emailAquiThird').attr('href', 'mailto:' + email);
     });
 
-    $('#foto').on('input', function() {
-        var foto = $(this).val();
-        $("#preview-image-url2").attr('src', foto);
-        $("#preview-image-url-alt2").attr('src', foto);
-        $("#preview-image-url-third2").attr('src', foto);
-    });
-
-    $('#site').on('input', function() {
-        var primeiroNome = $('#primeiroNome').val();
-        var segundoNome = $('#segundoNome').val();
-        var nomeCompleto = primeiroNome + '-' + segundoNome;
-        var site = $(this).val();
-        $('#siteAqui').text(site);
-        $('#siteAqui').attr('href', site + '?utm_source=assinatura&utm_medium=' + nomeCompleto);
-        $('#siteAquiAlt').text(site);
-        $('#siteAquiAlt').attr('href', site + '?utm_source=assinatura&utm_medium=' + nomeCompleto);
-        $('#siteAquiThird').text(site);
-        $('#siteAquiThird').attr('href', site + '?utm_source=assinatura&utm_medium=' + nomeCompleto);
-    });
-
-    $('#linkedin').on('input', function() {
-        var linkedin = $(this).val();
-        $('#linkedinAqui').attr('href', linkedin);
-        $('#linkedinAquiAlt').attr('href', linkedin);
-    });
-
-    $('#linkedinIco').on('input', function() {
-        var linkedinIco = $(this).val();
-        $(".linkedinIco").attr('src', linkedinIco);
-        $("#preview-linkedin-url-alt").attr('src', linkedinIco);
-    });
-
-    $('#instagram').on('input', function() {
-        var instagram = $(this).val();
-        $('#instagramAqui').attr('href', instagram);
-        $('#instagramAquiAlt').attr('href', instagram);
-    });
-
-    $('#instagramIco').on('input', function() {
-        var instagramIco = $(this).val();
-        $(".instagramIco").attr('src', instagramIco);
-        $("#preview-instagram-url-alt").attr('src', instagramIco);
-    });
-
-    $('#facebook').on('input', function() {
-        var facebook = $(this).val();
-        $('#facebookAqui').attr('href', facebook);
-        $('#facebookAquiAlt').attr('href', facebook);
-    });
-
-    $('#facebookIco').on('input', function() {
-        var facebookIco = $(this).val();
-        $(".facebookIco").attr('src', facebookIco);
-        $("#preview-facebook-url-alt").attr('src', facebookIco);
-    });
-
-    $("#clickToChange").on('click', function() {
-        var hexadecimal = $('#hexadecimal').val();
-        $('table').css('border-color', hexadecimal);
-        $('#primeiroNomeAqui').css('color', hexadecimal);
-        $('#segundoNome').css('color', hexadecimal);
-        $('.signature-name').css('color', hexadecimal);
-        $('.right-section .name').css('color', hexadecimal);
-        $('.right-section .contact').css('color', hexadecimal);
-        $('.signature').css('border-color', hexadecimal);
-        $('.left-section').css('border-right-color', hexadecimal);
+    $('#fotoUpload').on('change', function(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var output = document.getElementById('preview-image-url');
+            output.src = reader.result;
+            output.style.display = 'block';
+            var outputSecond = document.getElementById('preview-image-url-second');
+            outputSecond.src = reader.result;
+            outputSecond.style.display = 'block';
+            var outputThird = document.getElementById('preview-image-url-third');
+            outputThird.src = reader.result;
+            outputThird.style.display = 'block';
+        }
+        reader.readAsDataURL(event.target.files[0]);
     });
 });
 
@@ -152,6 +100,36 @@ function copyAlt() {
     showPopup(); // Mostrar o pop-up
 }
 
+function copyThird() {
+    var target = document.getElementById('assThird');
+
+    html2canvas(target).then(function(canvas) {
+        canvas.toBlob(function(blob) {
+            navigator.clipboard.write([
+                new ClipboardItem({
+                    [blob.type]: blob
+                })
+            ]).then(function() {
+                console.log('Imagem copiada com sucesso!');
+                showPopup(); // Mostrar o pop-up
+            }).catch(function(error) {
+                console.error('Erro ao copiar imagem: ', error);
+            });
+        });
+    });
+}
+
+function loadHtml2Canvas() {
+    var script = document.createElement('script');
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";
+    script.onload = function() {
+        console.log('html2canvas carregado com sucesso.');
+    };
+    document.head.appendChild(script);
+}
+
+window.onload = loadHtml2Canvas;
+
 function showPopup() {
     var popup = document.getElementById('popup');
     popup.style.display = 'block';
@@ -159,42 +137,3 @@ function showPopup() {
         popup.style.display = 'none';
     }, 2000);
 }
-
-document.getElementById('fotoUpload').addEventListener('change', function(event) {
-    var reader = new FileReader();
-    reader.onload = function() {
-        var output = document.getElementById('preview-image-upload');
-        output.src = reader.result;
-        output.style.display = 'block';
-    }
-    reader.readAsDataURL(event.target.files[0]);
-});
-
-document.getElementById('fotoUpload').addEventListener('change', function(event) {
-    var reader = new FileReader();
-    reader.onload = function() {
-        var output = document.getElementById('preview-image-url-third');
-        output.src = reader.result;
-    }
-    reader.readAsDataURL(event.target.files[0]);
-}); 
-
-document.getElementById('fotoUpload').addEventListener('change', function(event) {
-    var reader = new FileReader();
-    reader.onload = function() {
-        var output = document.getElementById('preview-image-url-second');
-        output.src = reader.result;
-        output.style.display = 'block';
-    }
-    reader.readAsDataURL(event.target.files[0]);
-});
-
-document.getElementById('fotoUpload').addEventListener('change', function(event) {
-    var reader = new FileReader();
-    reader.onload = function() {
-        var output = document.getElementById('preview-image-url-third');
-        output.src = reader.result;
-        output.style.display = 'block';
-    }
-    reader.readAsDataURL(event.target.files[0]);
-});
