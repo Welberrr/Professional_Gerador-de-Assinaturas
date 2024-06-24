@@ -30,7 +30,7 @@ $(document).ready(function() {
         $('#cargoAquiThird').text(cargo);
     });
 
-    $('#telefone').on('input', function() {
+    $('#telefone').mask('(00) 0 0000-0000').on('input', function() {
         var telefone = $(this).val();
         $('a#telefoneAqui').text('+55 ' + telefone);
         $('#telefoneAqui').attr('href', 'tel:' + telefone.replace(/[^\d]+/g, ''));
@@ -49,20 +49,67 @@ $(document).ready(function() {
         $('#emailAquiThird').attr('href', 'mailto:' + email);
     });
 
+    var cropper;
+    var image = document.getElementById('image');
+    var input = document.getElementById('fotoUpload');
+
     $('#fotoUpload').on('change', function(event) {
-        var reader = new FileReader();
-        reader.onload = function() {
-            var output = document.getElementById('preview-image-url');
-            output.src = reader.result;
-            output.style.display = 'block';
-            var outputSecond = document.getElementById('preview-image-url-second');
-            outputSecond.src = reader.result;
-            outputSecond.style.display = 'block';
-            var outputThird = document.getElementById('preview-image-url-third');
-            outputThird.src = reader.result;
-            outputThird.style.display = 'block';
+        var files = event.target.files;
+        var done = function(url) {
+            input.value = '';
+            image.src = url;
+            $('#cropModal').modal('show');
+        };
+        var reader;
+        var file;
+        var url;
+
+        if (files && files.length > 0) {
+            file = files[0];
+
+            if (URL) {
+                done(URL.createObjectURL(file));
+            } else if (FileReader) {
+                reader = new FileReader();
+                reader.onload = function(event) {
+                    done(reader.result);
+                };
+                reader.readAsDataURL(file);
+            }
         }
-        reader.readAsDataURL(event.target.files[0]);
+    });
+
+    $('#cropModal').on('shown.bs.modal', function() {
+        cropper = new Cropper(image, {
+            aspectRatio: 1,
+            viewMode: 3
+        });
+    }).on('hidden.bs.modal', function() {
+        cropper.destroy();
+        cropper = null;
+    });
+
+    $('#crop').click(function() {
+        var canvas;
+        $('#cropModal').modal('hide');
+
+        if (cropper) {
+            canvas = cropper.getCroppedCanvas({
+                width: 100,
+                height: 100,
+            });
+            canvas.toBlob(function(blob) {
+                var url = URL.createObjectURL(blob);
+                var reader = new FileReader();
+                reader.readAsDataURL(blob);
+                reader.onloadend = function() {
+                    var base64data = reader.result;
+                    $('#preview-image-url').attr('src', base64data).addClass('img-preview');
+                    $('#preview-image-url-second').attr('src', base64data).addClass('img-preview');
+                    $('#preview-image-url-third').attr('src', base64data).addClass('img-preview');
+                };
+            });
+        }
     });
 });
 
@@ -126,6 +173,21 @@ function copyThird() {
         document.execCommand('copy');
     }
     showPopup(); // Mostrar o pop-up
+}
+
+function copyThird() {
+    const businessCard = document.getElementById('assThird');
+
+    html2canvas(businessCard).then(canvas => {
+        canvas.toBlob(blob => {
+            const item = new ClipboardItem({ 'image/png': blob });
+            navigator.clipboard.write([item]).then(() => {
+                showPopup(); // Chama o popup ao copiar
+            }).catch(err => {
+                console.error('Erro ao copiar a imagem: ', err);
+            });
+        });
+    });
 }
 
 function showPopup() {

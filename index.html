@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="styles.css">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Cropper.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container my-5">
@@ -39,7 +44,7 @@
                             <label for="email">E-mail</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroupPrepend2" style="color: white;">@</span>
+                                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
                                 </div>
                                 <input type="text" class="form-control" id="email" placeholder="seu.email@seudomino.com" aria-describedby="inputGroupPrepend2" required>
                             </div>
@@ -56,7 +61,7 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="telefone">Telefone</label>
-                            <input type="text" class="form-control" id="telefone" value="" placeholder="(99) 999 999 999" required>
+                            <input type="text" class="form-control" id="telefone" value="" placeholder="(99) 99999-9999" required>
                         </div>
                         <div class="form-group">
                             <label for="fotoUpload">Foto</label>
@@ -110,17 +115,17 @@
                                         <td style="padding:0px 35px;">
                                             <ul style="margin: 0 auto; padding: 0; list-style: none; display: block;">
                                                 <li>
-                                                    <img style="width: 100px; height: 100px; border-radius:100px; display:block;" id="preview-image-url" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/referencia-seguros.png" alt="SBIZ" border="0">
+                                                    <img class="round-image" style="width: 100px; height: 100px; display:block;" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/referencia-seguros.png" alt="SBIZ" border="0">
                                                 </li>
                                                 <li style="padding-top: 18px;">
                                                     <a id="facebookAqui" style="float: right; padding-right: 5px;" href="https://www.facebook.com/referenciaseguros">
-                                                        <img class="facebookIco" id="preview-facebook-url" src="facebook.png" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
+                                                        <img class="facebookIco round-image" id="preview-facebook-url" src="facebook.png" style="width: 20px; height: 20px; display:block;" alt="SBIZ" border="0">
                                                     </a>
                                                     <a id="instagramAqui" style="float: right; padding-right: 5px;" href="https://www.instagram.com/referenciaseguros/">
-                                                        <img class="instagramIco" id="preview-instagram-url" src="instagram (1).png" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
+                                                        <img class="instagramIco round-image" id="preview-instagram-url" src="instagram (1).png" style="width: 20px; height: 20px; display:block;" alt="SBIZ" border="0">
                                                     </a>
                                                     <a id="linkedinAqui" style="float: right; padding-right: 5px;" href="https://br.linkedin.com/company/referenciasseguros">
-                                                        <img class="linkedinIco" id="preview-linkedin-url" src="linkedin.jpg" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
+                                                        <img class="linkedinIco round-image" id="preview-linkedin-url" src="linkedin.jpg" style="width: 20px; height: 20px; display:block;" alt="SBIZ" border="0">
                                                     </a>
                                                 </li>
                                             </ul>
@@ -145,18 +150,18 @@
                                         <td>
                                             <ul style="margin: 0 auto; list-style: none; display: block; margin-bottom: 30px;">
                                                 <div class="imagens" style="display: flex; align-items: center;">
-                                                    <img id="preview-image-url-second" class="img-preview" alt="Prévia da imagem" style="width: 60%; height: 50px;">
+                                                    <img id="preview-image-url-second" class="img-preview round-image" alt="Prévia da imagem" style="width: 60%; height: 50px;">
                                                     <img style="width: 60%; height: 100px;" src="ReferenciaSeguros_Logos_Vetor_Illustrator_referencia-seguros-simbolo-cores cópia 5.png" alt="SBIZ">
                                                 </div>                                                
                                                 <li style="padding-top: 18px; padding-right: 18px;">
                                                     <a id="facebookAqui" style="float: right; padding-right: 5px;" href="https://www.facebook.com/referenciaseguros">
-                                                        <img class="facebookIco" id="preview-facebook-url" src="facebook.png" style="width: 20px; height: 20px; border-radius:20px; display:block; margin-right: 21px;" alt="SBIZ" border="0">
+                                                        <img class="facebookIco round-image" id="preview-facebook-url" src="facebook.png" style="width: 20px; height: 20px; margin-right: 21px;" alt="SBIZ" border="0">
                                                     </a>
                                                     <a id="instagramAqui" style="float: right; padding-right: 5px;" href="https://www.instagram.com/referenciaseguros/">
-                                                        <img class="instagramIco" id="preview-instagram-url" src="instagram (1).png" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
+                                                        <img class="instagramIco round-image" id="preview-instagram-url" src="instagram (1).png" style="width: 20px; height: 20px;" alt="SBIZ" border="0">
                                                     </a>
                                                     <a id="linkedinAqui" style="float: right; padding-right: 5px;" href="https://br.linkedin.com/company/referenciasseguros">
-                                                        <img class="linkedinIco" id="preview-linkedin-url" src="linkedin.jpg" style="width: 20px; height: 20px; border-radius:20px; display:block;" alt="SBIZ" border="0">
+                                                        <img class="linkedinIco round-image" id="preview-linkedin-url" src="linkedin.jpg" style="width: 20px; height: 20px;" alt="SBIZ" border="0">
                                                     </a>
                                                 </li>
                                             </ul>
@@ -164,20 +169,20 @@
                                     </th>
                                     <th>
                                         <td style="position: relative;" valign="top">
-                                            <span id="primeiroNomeAqui" style="line-height: 1.5em; font-size:22px; text-align: left; font-family: 'Montserrat', sans-serif;color: rgb(0, 174, 255)"><b>Seu Nome Aqui</b></span>
+                                            <span id="primeiroNomeAquiAlt" style="line-height: 1.5em; font-size:22px; text-align: left; font-family: 'Montserrat', sans-serif;color:white"><b>Seu Nome Aqui</b></span>
                                             <ul style="margin: 0 auto; padding: 0; list-style: none; display: block;">
                                                 <li style="line-height: 0.5em; margin-left: 0!important; margin-top: 10px; margin-bottom: 3px;">
                                                     <span id="cargoAquiAlt" style="font-size:16px; text-align: left; font-family: 'Montserrat', sans-serif;color: white">Cargo</span>
                                                 </li>
                                                 <li style="padding-bottom: 5px;  margin-left: 0!important;">
                                                     <span style="font-size:16px; text-align: left; font-family: 'Montserrat', sans-serif;color:#575756;">
-                                                        <a id="telefoneAqui" style="color: white" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
+                                                        <a id="telefoneAquiAlt" style="color: white" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
                                                     </span>
                                                 </li>
                                             </ul>
                                             <ul style="margin: 0 auto; padding: 0; position: absolute; bottom: 0; list-style: none; display: block;">
                                                 <span style="font-size:8.5px; text-align: left; font-family: 'Montserrat', sans-serif;color: white">
-                                                    <a id="emailAqui" style="color: white !important">seuemail@seudominio.com</a>
+                                                    <a id="emailAquiAlt" style="color: white !important">seuemail@seudominio.com</a>
                                                 </span>
                                                 </li>
                                                 <li style="line-height: 0.5em; margin-left: 0!important; margin-bottom: 10px;">
@@ -202,10 +207,10 @@
                 <hr style="size: 10px;">
                 <div class="mb-5">
                     <h2>Modelo de Assinatura 3</h2>
-                    <href onclick="copyThird()">
-                    <div id="assThird" class="business-card">
+                    <href onclick="copyAlt()">
+                    <div id="assThird" class="business-card" style="background-image: url(backgroun.jpg);">
                         <div class="info">
-                            <img src="ReferenciaSeguros_Logos_Vetor_Illustrator_referencia-seguros-simbolo-cores cópia 5.png" alt="Logo" class="logo">
+                            <img class="round-image" src="teste2_trimmed.png" alt="Logo" class="logo" style="margin-bottom: 25px;">
                             <div class="text-info">
                                 <div>
                                     <span id="primeiroNomeAquiThird" style="font-size: 24px; margin: 0; color: #9FD4FF"><b>Seu Nome Aqui</b></span>
@@ -224,11 +229,11 @@
                             </div>
                         </div>
                         <div class="photo">
-                            <img id="preview-image-url-third" class="img-preview" alt="Prévia da imagem" style="width: 100px; height: 100px; border-radius: 50%;">
+                            <img id="preview-image-url-third" class="img-preview round-image" alt="Prévia da imagem" style="width: 100px; height: 100px;">
                         </div>
-                    </div>
+                    </div></href>
                     <a class="botLarge botForm" style="align-items: center;" onclick="copyThird()">Copiar</a>
-                </div></href>
+                </div>
             </div>
         </div>
     </div>
@@ -237,9 +242,36 @@
         Copiado com sucesso!
     </div>
 
+    <!-- Modal for Image Cropping -->
+    <div class="modal fade" id="cropModal" tabindex="-1" role="dialog" aria-labelledby="cropModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cropModalLabel">Recortar Imagem</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="img-container">
+                        <img id="image" src="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="crop">Recortar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <script src="scripts.js"></script>
+    
 </body>
 </html>
