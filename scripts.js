@@ -1,21 +1,29 @@
 $(document).ready(function() {
-    $('#primeiroNome').on('input', function() {
-        var primeiroNome = $(this).val();
+    function updateEmail() {
+        var primeiroNome = $('#primeiroNome').val();
+        var segundoNome = $('#segundoNome').val();
+        if (primeiroNome && segundoNome) {
+            var email = primeiroNome.toLowerCase() + '.' + segundoNome.toLowerCase() + '@referenciaseguros.com.br';
+            $('#email').val(email);
+            $('a#emailAqui').text(email);
+            $('#emailAqui').attr('href', 'mailto:' + email);
+            $('a#emailAquiAlt').text(email);
+            $('#emailAquiAlt').attr('href', 'mailto:' + email);
+            $('a#emailAquiThird').text(email);
+            $('#emailAquiThird').attr('href', 'mailto:' + email);
+        }
+    }
+
+    $('#primeiroNome, #segundoNome').on('input', function() {
+        updateEmail();
+        var primeiroNome = $('#primeiroNome').val();
         var segundoNome = $('#segundoNome').val();
         $('#primeiroNomeAqui b').text(primeiroNome + ' ' + segundoNome);
         $('#primeiroNomeAquiAlt').text(primeiroNome + ' ' + segundoNome);
         $('#primeiroNomeAquiThird').text(primeiroNome + ' ' + segundoNome);
     });
 
-    $('#segundoNome').on('input', function() {
-        var primeiroNome = $('#primeiroNome').val();
-        var segundoNome = $(this).val();
-        $('#primeiroNomeAqui b').text(primeiroNome + ' ' + segundoNome);
-        $('#primeiroNomeAquiAlt').text(primeiroNome + ' ' + segundoNome);
-        $('#primeiroNomeAquiThird').text(primeiroNome + ' ' + segundoNome);
-    });
-
-    $('#cargo').on('input', function() {
+    $('#cargo').on('change', function() {
         var cargo = $(this).val();
         $('#cargoAqui').text(cargo);
         $('#cargoAquiAlt').text(cargo);
@@ -102,33 +110,23 @@ function copyAlt() {
 
 function copyThird() {
     var target = document.getElementById('assThird');
-
-    html2canvas(target).then(function(canvas) {
-        canvas.toBlob(function(blob) {
-            navigator.clipboard.write([
-                new ClipboardItem({
-                    [blob.type]: blob
-                })
-            ]).then(function() {
-                console.log('Imagem copiada com sucesso!');
-                showPopup(); // Mostrar o pop-up
-            }).catch(function(error) {
-                console.error('Erro ao copiar imagem: ', error);
-            });
-        });
-    });
+    var range, select;
+    if (document.createRange) {
+        range = document.createRange();
+        range.selectNode(target);
+        select = window.getSelection();
+        select.removeAllRanges();
+        select.addRange(range);
+        document.execCommand('copy');
+        select.removeAllRanges();
+    } else {
+        range = document.body.createTextRange();
+        range.moveToElementText(target);
+        range.select();
+        document.execCommand('copy');
+    }
+    showPopup(); // Mostrar o pop-up
 }
-
-function loadHtml2Canvas() {
-    var script = document.createElement('script');
-    script.src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";
-    script.onload = function() {
-        console.log('html2canvas carregado com sucesso.');
-    };
-    document.head.appendChild(script);
-}
-
-window.onload = loadHtml2Canvas;
 
 function showPopup() {
     var popup = document.getElementById('popup');

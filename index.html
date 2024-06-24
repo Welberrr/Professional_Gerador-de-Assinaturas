@@ -39,7 +39,7 @@
                             <label for="email">E-mail</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                    <span class="input-group-text" id="inputGroupPrepend2" style="color: white;">@</span>
                                 </div>
                                 <input type="text" class="form-control" id="email" placeholder="seu.email@seudomino.com" aria-describedby="inputGroupPrepend2" required>
                             </div>
@@ -48,7 +48,11 @@
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label for="cargo">Cargo/Função</label>
-                            <input type="text" class="form-control" id="cargo" placeholder="Gerente/ Analista/ Assistente" required>
+                            <select class="form-control" id="cargo" required>
+                                <option value="Gerente">Gerente</option>
+                                <option value="Analista">Analista</option>
+                                <option value="Gestor">Gestor</option>
+                            </select>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="telefone">Telefone</label>
@@ -133,7 +137,7 @@
                 <div class="mb-5">
                     <h2>Modelo de Assinatura 2</h2>
                     <href onclick="copyAlt()">
-                    <div id="assAlt" style="width: 370px; height: auto;">
+                    <div id="assAlt" style="width: 66%; height: auto;">
                         <table>
                             <thead>
                                 <tr>
@@ -160,7 +164,7 @@
                                     </th>
                                     <th>
                                         <td style="position: relative;" valign="top">
-                                            <span id="primeiroNomeAqui" style="line-height: 1.5em; font-size:22px; text-align: left; font-family: 'Montserrat', sans-serif;color:white"><b>Seu Nome Aqui</b></span>
+                                            <span id="primeiroNomeAqui" style="line-height: 1.5em; font-size:22px; text-align: left; font-family: 'Montserrat', sans-serif;color: rgb(0, 174, 255)"><b>Seu Nome Aqui</b></span>
                                             <ul style="margin: 0 auto; padding: 0; list-style: none; display: block;">
                                                 <li style="line-height: 0.5em; margin-left: 0!important; margin-top: 10px; margin-bottom: 3px;">
                                                     <span id="cargoAquiAlt" style="font-size:16px; text-align: left; font-family: 'Montserrat', sans-serif;color: white">Cargo</span>
@@ -199,7 +203,7 @@
                 <div class="mb-5">
                     <h2>Modelo de Assinatura 3</h2>
                     <href onclick="copyThird()">
-                    <div id="assThird" class="business-card" style="background-image: url(image_fitted_to_template.jpg);">
+                    <div id="assThird" class="business-card">
                         <div class="info">
                             <img src="ReferenciaSeguros_Logos_Vetor_Illustrator_referencia-seguros-simbolo-cores cópia 5.png" alt="Logo" class="logo">
                             <div class="text-info">
@@ -220,11 +224,11 @@
                             </div>
                         </div>
                         <div class="photo">
-                            <img id="preview-image-url-third" class="img-preview" alt="Prévia da imagem">
+                            <img id="preview-image-url-third" class="img-preview" alt="Prévia da imagem" style="width: 100px; height: 100px; border-radius: 50%;">
                         </div>
-                    </div></href>
+                    </div>
                     <a class="botLarge botForm" style="align-items: center;" onclick="copyThird()">Copiar</a>
-                </div>
+                </div></href>
             </div>
         </div>
     </div>
@@ -237,7 +241,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </body>
 </html>
