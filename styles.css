@@ -400,20 +400,6 @@ p {
     margin: 5px 0;
 }
 
-.photo {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-}
-
-.photo img {
-    width: 100%;
-    height: auto;
-    border-radius: 0 10px 10px 0;
-}
-
 .dropdown {
     position: relative;
     padding: 0;
