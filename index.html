@@ -1,23 +1,30 @@
 <!doctype html>
 <html lang="pt-br">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Gerador de Assinatura de Email Profissional</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="AssinaturasStyle.css">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Cropper.js CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="container my-5">
         <div class="row">
@@ -25,14 +32,15 @@
                 <h1 class="p-2 title">Gerador de Assinatura</h1>
             </div>
         </div>
-        <div class="row mt-5">
+        <div class="row justify-content-center">
             <div class="col-12 col-lg-4 mb-5" id="data-form">
                 <h2>Dados</h2>
                 <form>
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label for="primeiroNome">Primeiro Nome</label>
-                            <input type="text" class="form-control" id="primeiroNome" placeholder="Primeiro Nome" required>
+                            <input type="text" class="form-control" id="primeiroNome" placeholder="Primeiro Nome"
+                                required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="segundoNome">Último Sobrenome</label>
@@ -46,7 +54,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroupPrepend2">@</span>
                                 </div>
-                                <input type="text" class="form-control" id="email" placeholder="seu.email@seudomino.com" aria-describedby="inputGroupPrepend2" required>
+                                <input type="text" class="form-control" id="email" placeholder="seu.email@seudomino.com"
+                                    aria-describedby="inputGroupPrepend2" required>
                             </div>
                         </div>
                     </div>
@@ -54,265 +63,383 @@
                         <div class="col-md-6 mb-3">
                             <label for="cargo">Cargo/Função</label>
                             <select class="form-control" id="cargo" required>
-                                <option value="SDR">SDR</option>
-                                <option value="CS">CS</option>
-                                <option value="Closer">Closer</option>
-                                <option value="Estagiário">Estagiário</option>
-                                <option value="Supervisor T.I">Supervisor T.I</option>
-                                <option value="Assessoria ADM">Assessoria ADM</option>
-                                <option value="RH">RH</option>
-                                <option value="Gestor de Processos">Gestor de Processos</option>
-                                <option value="Serviços Gerais">Serviços Gerais</option>
-                                <option value="T.I">T.I</option>
-                                <option value="Financeiro">Financeiro</option>
-                                <option value="Marketing">Marketing</option>
-                                <option value="Gestor de Projetos">Gestor de Projetos</option>
-                                <option value="Auxiliar Administrativo">Auxiliar Administrativo</option>
-                                <option value="Gestor de Marketing">Gestor de Marketing</option>
-                                <option value="Auxiliar ADM">Auxiliar ADM</option>
-                                <option value="Gestor do Comercial">Gestor do Comercial</option>
-                                <option value="HEAP Vendas">HEAP Vendas</option>
-                            </select>   
+                                <option value="Gerente">Gerente</option>
+                                <option value="Analista">Analista</option>
+                                <option value="Gestor">Gestor</option>
+                            </select>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="telefone">Telefone</label>
-                            <input type="text" class="form-control" id="telefone" placeholder="(99) 99999-9999" required>
+                            <input type="text" class="form-control" id="telefone" placeholder="(99) 99999-9999"
+                                required>
                         </div>
                         <div class="form-group">
                             <label for="fotoUpload">Foto</label>
                             <input type="file" class="form-control-file" id="fotoUpload" accept="image/*" required>
-                        </div>                        
+                        </div>
                     </div>
                 </form>
             </div>
-            
             <!-- MODELO 1 -->
             <div class="col-12 col-lg-6">
                 <div class="mb-5">
                     <h2>Modelo de Assinatura 1</h2>
                     <href onclick="copy()">
-                    <div id="ass">
-                        <table style="border-left: solid 16px;border-color: #4D47E2">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <td style="padding: 5px 25px;position: relative; background-color: rgb(141, 141, 141);" valign="top">
-                                            <span id="primeiroNomeAqui" style="line-height: 1.5em; font-size:20px; text-align: left; font-family: 'Montserrat', sans-serif;color: white"><b>Seu nome aqui</b></span>
+                        <div id="ass">
+                            <table style="border-left: solid 16px;border-color: #4D47E2">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                        <td style="padding: 5px 25px;position: relative; background-color: rgb(141, 141, 141);"
+                                            valign="top">
+                                            <span id="primeiroNomeAqui"
+                                                style="line-height: 1.5em; font-size:20px; text-align: left; font-family: 'Montserrat', sans-serif;color: white"><b>Seu
+                                                    nome aqui</b></span>
                                             <ul style="margin: 0 auto; padding: 0; list-style: none; display: block;">
                                                 <li style="line-height: 0.5em; margin-left: 0!important;">
-                                                    <span id="cargoAqui" style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">Gerente/ Analista/ Assistente</span>
+                                                    <span id="cargoAqui"
+                                                        style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">Gerente/
+                                                        Analista/ Assistente</span>
                                                 </li>
                                                 <li style="padding-bottom: 5px;  margin-left: 0!important;">
-                                                    <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">
-                                                        <a id="telefoneAqui" style="color: #ffffff" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
+                                                    <span
+                                                        style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">
+                                                        <a id="telefoneAqui" style="color: #ffffff"
+                                                            href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
                                                     </span>
                                                 </li>
                                             </ul>
-                                            <ul style="margin: 0 auto; padding: 0; position: absolute; bottom: 0; list-style: none; display: block;">
-                                                <span style="font-size: 8px; text-align: left; font-family: 'Montserrat', sans-serif;color: #ffffff">
-                                                    <a id="emailAqui" style="color: #ffffff!important">seuemail@seudominio.com</a>
+                                            <ul
+                                                style="margin: 0 auto; padding: 0; position: absolute; bottom: 0; list-style: none; display: block;">
+                                                <span
+                                                    style="font-size: 8px; text-align: left; font-family: 'Montserrat', sans-serif;color: #ffffff">
+                                                    <a id="emailAqui"
+                                                        style="color: #ffffff!important">seuemail@seudominio.com</a>
                                                 </span>
                                                 </li>
-                                                <li style="line-height: 0.5em; margin-left: 0!important; margin-bottom: 15px;">
-                                                    <span style="font-size:10px; text-align: left; font-family: 'Montserrat', sans-serif;">
-                                                        <a id="siteAqui" style="color: #ffffff" href="https://referenciaseguros.com.br/?utm_source=email&utm_medium=assinatura">referenciaseguros.com.br</a>
+                                                <li
+                                                    style="line-height: 0.5em; margin-left: 0!important; margin-bottom: 15px;">
+                                                    <span
+                                                        style="font-size:10px; text-align: left; font-family: 'Montserrat', sans-serif;">
+                                                        <a id="siteAqui" style="color: #ffffff"
+                                                            href="https://referenciaseguros.com.br/?utm_source=email&utm_medium=assinatura">referenciaseguros.com.br</a>
                                                     </span>
                                                 </li>
                                                 <li style="line-height: 0.5em; margin-left: 0!important;">
-                                                    <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">
-                                                        <a href="sbiz.app" style="color: #ffffff; text-decoration: none; font-weight: normal;"><b></b></a>
+                                                    <span
+                                                        style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">
+                                                        <a href="sbiz.app"
+                                                            style="color: #ffffff; text-decoration: none; font-weight: normal;"><b></b></a>
                                                     </span>
                                                 </li>
                                             </ul>
                                         </td>
-                                    </th>
-                                    <th>
+                                        </th>
+                                        <th>
                                         <td style="padding:0px 35px;">
                                             <ul style="margin: 0 auto; padding: 0; list-style: none; display: block;">
                                                 <li>
-                                                    <img class="round-image" style="width: 100px; height: 100px; display:block;" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/referencia-seguros.png" alt="SBIZ" border="0">
+                                                    <img class="round-image"
+                                                        style="width: 100px; height: 100px; display:block;"
+                                                        src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/referencia-seguros.png"
+                                                        alt="SBIZ" border="0">
                                                 </li>
                                                 <li style="padding-top: 18px;">
-                                                    <a id="facebookAqui" style="float: right; padding-right: 5px;" href="https://www.facebook.com/referenciaseguros">
-                                                        <img class="facebookIco round-image" id="preview-facebook-url" src="facebook.png" style="width: 20px; height: 20px; display:block;" alt="SBIZ" border="0">
+                                                    <a id="facebookAqui" style="float: right; padding-right: 5px;"
+                                                        href="https://www.facebook.com/referenciaseguros">
+                                                        <img class="facebookIco round-image" id="preview-facebook-url"
+                                                            src="facebook.png"
+                                                            style="width: 20px; height: 20px; display:block;" alt="SBIZ"
+                                                            border="0">
                                                     </a>
-                                                    <a id="instagramAqui" style="float: right; padding-right: 5px;" href="https://www.instagram.com/referenciaseguros/">
-                                                        <img class="instagramIco round-image" id="preview-instagram-url" src="instagram (1).png" style="width: 20px; height: 20px; display:block;" alt="SBIZ" border="0">
+                                                    <a id="instagramAqui" style="float: right; padding-right: 5px;"
+                                                        href="https://www.instagram.com/referenciaseguros/">
+                                                        <img class="instagramIco round-image" id="preview-instagram-url"
+                                                            src="instagram (1).png"
+                                                            style="width: 20px; height: 20px; display:block;" alt="SBIZ"
+                                                            border="0">
                                                     </a>
-                                                    <a id="linkedinAqui" style="float: right; padding-right: 5px;" href="https://br.linkedin.com/company/referenciasseguros">
-                                                        <img class="linkedinIco round-image" id="preview-linkedin-url" src="linkedin.jpg" style="width: 20px; height: 20px; display:block;" alt="SBIZ" border="0">
+                                                    <a id="linkedinAqui" style="float: right; padding-right: 5px;"
+                                                        href="https://br.linkedin.com/company/referenciasseguros">
+                                                        <img class="linkedinIco round-image" id="preview-linkedin-url"
+                                                            src="linkedin.jpg"
+                                                            style="width: 20px; height: 20px; display:block;" alt="SBIZ"
+                                                            border="0">
                                                     </a>
                                                 </li>
                                             </ul>
                                         </td>
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
                     </href>
                     <a class="botLarge botForm" style="align-items: center;" onclick="copy()">Copiar</a>
-                </div><hr style="size: 10px;">
+                </div>
+                <hr style="size: 10px;">
 
                 <!-- MODELO 2 -->
                 <div class="mb-5">
                     <h2>Modelo de Assinatura 2</h2>
                     <href onclick="copyAlt()">
-                    <div id="ass">
-                        <table style="border-left: solid 16px;border-color: #4D47E2">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <td style="padding: 5px 25px;position: relative; background-color: rgb(141, 141, 141);" valign="top">
-                                            <span id="primeiroNomeAqui" style="line-height: 1.5em; font-size:20px; text-align: left; font-family: 'Montserrat', sans-serif;color: white"><b>Seu nome aqui</b></span>
+                        <div id="ass">
+                            <table style="border-left: solid 16px;border-color: #4D47E2">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                        <td style="padding: 5px 25px;position: relative; background-color: rgb(141, 141, 141);"
+                                            valign="top">
+                                            <span id="primeiroNomeAqui"
+                                                style="line-height: 1.5em; font-size:20px; text-align: left; font-family: 'Montserrat', sans-serif;color: white"><b>Seu
+                                                    nome aqui</b></span>
                                             <ul style="margin: 0 auto; padding: 0; list-style: none; display: block;">
                                                 <li style="line-height: 0.5em; margin-left: 0!important;">
-                                                    <span id="cargoAqui" style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">Gerente/ Analista/ Assistente</span>
+                                                    <span id="cargoAqui"
+                                                        style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">Gerente/
+                                                        Analista/ Assistente</span>
                                                 </li>
                                                 <li style="padding-bottom: 5px;  margin-left: 0!important;">
-                                                    <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">
-                                                        <a id="telefoneAqui" style="color: #ffffff" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
+                                                    <span
+                                                        style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">
+                                                        <a id="telefoneAqui" style="color: #ffffff"
+                                                            href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
                                                     </span>
                                                 </li>
                                             </ul>
-                                            <ul style="margin: 0 auto; padding: 0; position: absolute; bottom: 0; list-style: none; display: block;">
-                                                <span style="font-size: 8px; text-align: left; font-family: 'Montserrat', sans-serif;color: #ffffff">
-                                                    <a id="emailAqui" style="color: #ffffff!important">seuemail@seudominio.com</a>
+                                            <ul
+                                                style="margin: 0 auto; padding: 0; position: absolute; bottom: 0; list-style: none; display: block;">
+                                                <span
+                                                    style="font-size: 8px; text-align: left; font-family: 'Montserrat', sans-serif;color: #ffffff">
+                                                    <a id="emailAqui"
+                                                        style="color: #ffffff!important">seuemail@seudominio.com</a>
                                                 </span>
                                                 </li>
-                                                <li style="line-height: 0.5em; margin-left: 0!important; margin-bottom: 15px;">
-                                                    <span style="font-size:10px; text-align: left; font-family: 'Montserrat', sans-serif;">
-                                                        <a id="siteAqui" style="color: #ffffff" href="https://referenciaseguros.com.br/?utm_source=email&utm_medium=assinatura">referenciaseguros.com.br</a>
+                                                <li
+                                                    style="line-height: 0.5em; margin-left: 0!important; margin-bottom: 15px;">
+                                                    <span
+                                                        style="font-size:10px; text-align: left; font-family: 'Montserrat', sans-serif;">
+                                                        <a id="siteAqui" style="color: #ffffff"
+                                                            href="https://referenciaseguros.com.br/?utm_source=email&utm_medium=assinatura">referenciaseguros.com.br</a>
                                                     </span>
                                                 </li>
                                                 <li style="line-height: 0.5em; margin-left: 0!important;">
-                                                    <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">
-                                                        <a href="sbiz.app" style="color: #ffffff; text-decoration: none; font-weight: normal;"><b></b></a>
+                                                    <span
+                                                        style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">
+                                                        <a href="sbiz.app"
+                                                            style="color: #ffffff; text-decoration: none; font-weight: normal;"><b></b></a>
                                                     </span>
                                                 </li>
                                             </ul>
                                         </td>
-                                    </th>
-                                    <th>
+                                        </th>
+                                        <th>
                                         <td style="padding:0px 35px;">
                                             <ul style="margin: 0 auto; padding: 0; list-style: none; display: block;">
                                                 <li>
-                                                    <img class="round-image" style="width: 100px; height: 100px; display:block;" src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/referencia-seguros.png" alt="SBIZ" border="0">
+                                                    <img class="round-image"
+                                                        style="width: 100px; height: 100px; display:block;"
+                                                        src="https://referenciaseguros.com.br/gerador-de-assinatura-de-email/referencia-seguros.png"
+                                                        alt="SBIZ" border="0">
                                                 </li>
                                                 <li style="padding-top: 18px;">
-                                                    <a id="facebookAqui" style="float: right; padding-right: 5px;" href="https://www.facebook.com/referenciaseguros">
-                                                        <img class="facebookIco round-image" id="preview-facebook-url" src="facebook.png" style="width: 20px; height: 20px; display:block;" alt="SBIZ" border="0">
+                                                    <a id="facebookAqui" style="float: right; padding-right: 5px;"
+                                                        href="https://www.facebook.com/referenciaseguros">
+                                                        <img class="facebookIco round-image" id="preview-facebook-url"
+                                                            src="facebook.png"
+                                                            style="width: 20px; height: 20px; display:block;" alt="SBIZ"
+                                                            border="0">
                                                     </a>
-                                                    <a id="instagramAqui" style="float: right; padding-right: 5px;" href="https://www.instagram.com/referenciaseguros/">
-                                                        <img class="instagramIco round-image" id="preview-instagram-url" src="instagram (1).png" style="width: 20px; height: 20px; display:block;" alt="SBIZ" border="0">
+                                                    <a id="instagramAqui" style="float: right; padding-right: 5px;"
+                                                        href="https://www.instagram.com/referenciaseguros/">
+                                                        <img class="instagramIco round-image" id="preview-instagram-url"
+                                                            src="instagram (1).png"
+                                                            style="width: 20px; height: 20px; display:block;" alt="SBIZ"
+                                                            border="0">
                                                     </a>
-                                                    <a id="linkedinAqui" style="float: right; padding-right: 5px;" href="https://br.linkedin.com/company/referenciasseguros">
-                                                        <img class="linkedinIco round-image" id="preview-linkedin-url" src="linkedin.jpg" style="width: 20px; height: 20px; display:block;" alt="SBIZ" border="0">
+                                                    <a id="linkedinAqui" style="float: right; padding-right: 5px;"
+                                                        href="https://br.linkedin.com/company/referenciasseguros">
+                                                        <img class="linkedinIco round-image" id="preview-linkedin-url"
+                                                            src="linkedin.jpg"
+                                                            style="width: 20px; height: 20px; display:block;" alt="SBIZ"
+                                                            border="0">
                                                     </a>
                                                 </li>
                                             </ul>
                                         </td>
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
                     </href>
                     <a class="botLarge botForm" style="align-items: center;" onclick="copyAlt()">Copiar</a>
-                </div><hr style="size: 10px;">
+                </div>
+                <hr style="size: 10px;">
 
                 <!--MODELO DE ASSINATURA 3-->
                 <div class="mb-5">
                     <h2>Modelo de Assinatura 3</h2>
                     <href onclick="copyThird()">
-                    <div id="ass">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <td style="padding: 5px 25px;position: relative; background-color: rgb(0, 0, 0);" valign="top">
-                                            <span id="primeiroNomeAqui" style="line-height: 1.5em; font-size:20px; text-align: left; font-family: 'Montserrat', sans-serif;color: white"><b>Seu nome aqui</b></span>
+                        <div id="ass">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                        <td style="padding: 5px 25px;position: relative;" valign="top">
+                                            <span id="primeiroNomeAqui"
+                                                style="line-height: 1.5em; font-size:20px; text-align: left; font-family: 'Montserrat', sans-serif;color: rgb(0, 0, 0)"><b>Seu
+                                                    nome aqui</b></span>
                                             <ul style="padding: 0; list-style: none; margin-bottom: 50px;">
                                                 <li style="line-height: 0.5em; margin-left: 0!important;">
-                                                    <span id="cargoAqui" style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">Gerente/ Analista/ Assistente</span>
+                                                    <span id="cargoAqui"
+                                                        style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#000000">Gerente/
+                                                        Analista/ Assistente</span>
                                                 </li>
                                                 <li>
-                                                    <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">
-                                                        <a id="telefoneAqui" style="color: #ffffff" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
+                                                    <span
+                                                        style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#000000">
+                                                        <a id="telefoneAqui" style="color: #000000"
+                                                            href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
                                                     </span>
                                                 </li>
                                             </ul>
-                                            <ul style="margin: 0 auto; padding: 0; position: absolute; bottom: 0; list-style: none; display: block;">
-                                                <span style="font-size: 8px; text-align: left; font-family: 'Montserrat', sans-serif;color: #ffffff">
-                                                    <a id="emailAqui" style="color: #ffffff!important">seuemail@seudominio.com</a>
+                                            <ul
+                                                style="margin: 0 auto; padding: 0; position: absolute; bottom: 0; list-style: none; display: block;">
+                                                <span
+                                                    style="font-size: 8px; text-align: left; font-family: 'Montserrat', sans-serif;color: #000000">
+                                                    <a id="emailAqui"
+                                                        style="color: #000000!important">seuemail@seudominio.com</a>
                                                 </span>
                                                 </li>
-                                                <li style="line-height: 0.5em; margin-left: 0!important; margin-bottom: 15px;">
-                                                    <span style="font-size:10px; text-align: left; font-family: 'Montserrat', sans-serif;">
-                                                        <a id="siteAqui" style="color: #ffffff" href="https://referenciaseguros.com.br/?utm_source=email&utm_medium=assinatura">referenciaseguros.com.br</a>
+                                                <li
+                                                    style="line-height: 0.5em; margin-left: 0!important; margin-bottom: 15px;">
+                                                    <span
+                                                        style="font-size:10px; text-align: left; font-family: 'Montserrat', sans-serif;">
+                                                        <a id="siteAqui" style="color: #000000"
+                                                            href="https://referenciaseguros.com.br/?utm_source=email&utm_medium=assinatura">referenciaseguros.com.br</a>
                                                     </span>
                                                 </li>
                                                 <li style="line-height: 0.5em; margin-left: 0!important;">
-                                                    <span style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">
-                                                        <a href="sbiz.app" style="color: #ffffff; text-decoration: none; font-weight: normal;"><b></b></a>
+                                                    <span
+                                                        style="font-size:12px; text-align: left; font-family: 'Montserrat', sans-serif;color:#ffffff">
+                                                        <a href="sbiz.app"
+                                                            style="color: #000000; text-decoration: none; font-weight: normal;"><b></b></a>
                                                     </span>
                                                 </li>
                                             </ul>
                                         </td>
-                                    </th>
-                                    <th>
+                                        </th>
+                                        <th>
                                         <td style="padding:0px 35px;">
                                             <ul style="margin: 0 auto; padding: 0; list-style: none; display: block;">
                                                 <li>
-                                                        <img id="preview-image-url-third" class="img-preview round-image" alt="Prévia da imagem" style="width: 100px; height: 100px;">
+                                                    <img id="preview-image-url-third" class="img-preview round-image"
+                                                        alt="Prévia da imagem" style="width: 100px; height: 100px;">
                                                 </li>
                                             </ul>
                                         </td>
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
                     </href>
                     <a class="botLarge botForm" style="align-items: center;" onclick="copyThird()">Copiar</a>
                 </div>
-        </div>
-    </div>
-
-    <div id="popup" class="popup">
-        Copiado com sucesso!
-    </div>
-
-    <!-- Modal for Image Cropping -->
-    <div class="modal fade" id="cropModal" tabindex="-1" role="dialog" aria-labelledby="cropModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="cropModalLabel">Recortar Imagem</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="img-container">
-                        <img id="image" src="">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" id="crop">Recortar</button>
-                </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-    <script src="scripts.js"></script>
-    
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+            <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+        </head>
+
+        <body>
+            <div
+                class="flex flex-col md:flex-row items-center bg-card text-card-foreground p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+                <div class="flex-shrink-0 bg-black p-6 rounded-full">
+                    <img class="w-32 h-32 rounded-full" src="https://placehold.co/128x128"
+                        alt="Profile picture of Brodie William">
+                </div>
+                <div class="md:ml-6 mt-4 md:mt-0 text-center md:text-left flex-grow">
+                    <span id="primeiroNomeAqui" class="text-2xl font-bold"><b>Primeiro Nome</b></span>
+                    <p class="text-muted-foreground">Designer gráfico</p>
+                </div>
+                <div class="hidden md:block border-l border-muted h-32 mx-6 border-l-2"></div>
+                <div class="mt-6 md:mt-0 text-center md:text-left">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <img aria-hidden="true" alt="phone" src="https://openui.fly.dev/openui/24x24.svg?text=📞" />
+                            <span
+                                style="font-family: 'Montserrat', sans-serif;color:#000000">
+                                <a id="telefoneAqui" style="color: #000000" href="tel:(xx) 999 999 999">+55 (xx) 999 999
+                                    999</a>
+                            </span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img aria-hidden="true" alt="email" src="https://openui.fly.dev/openui/24x24.svg?text=✉️" />
+                            <span>seuemail@email.com</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img aria-hidden="true" alt="website"
+                                src="https://openui.fly.dev/openui/24x24.svg?text=🌐" />
+                            <a href="https://lp.referenciaseguros.com.br/"><span>referenciaseguros.com.br</span></a>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img aria-hidden="true" alt="location"
+                                src="https://openui.fly.dev/openui/24x24.svg?text=📍" />
+                            <span>Taguatinga, Brasília - DF, 71950-904</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="popup" class="popup">
+                Copiado com sucesso!
+            </div>
+
+            <!-- Modal for Image Cropping -->
+            <div class="modal fade" id="cropModal" tabindex="-1" role="dialog" aria-labelledby="cropModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="cropModalLabel">Recortar Imagem</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="img-container">
+                                <img id="image" src="">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" id="crop">Recortar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+            <script src="scripts.js"></script>
+            <script src="scripts.js"></script>
+
+        </body>
+
 </html>
