@@ -23,6 +23,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
 </head>
 
 <body>
@@ -63,9 +66,24 @@
                         <div class="col-md-6 mb-3">
                             <label for="cargo">Cargo/Função</label>
                             <select class="form-control" id="cargo" required>
-                                <option value="Gerente">Gerente</option>
-                                <option value="Analista">Analista</option>
-                                <option value="Gestor">Gestor</option>
+                                <option value="SDR">SDR</option>
+                                <option value="CS">CS</option>
+                                <option value="Closer">CLOSER</option>
+                                <option value="Estagiário">ESTAGIARIO</option>
+                                <option value="Supervisor T.I">SUPERVISOR T.I</option>
+                                <option value="Assesora ADM">ASSESORA ADM</option>
+                                <option value="RH">RECURSOS HUMANOS</option>
+                                <option value="Gestão de Processos">GESTÃO DE PROCESSOS</option>
+                                <option value="Serviços Gerais">SERVIÇOS GERAIS</option>
+                                <option value="T.I">T.I</option>
+                                <option value="Financeiro">FINANCEIRO</option>
+                                <option value="Marketing">MARKETING</option>
+                                <option value="Gestor de Projetos">GESTOR DE PROJETOS</option>
+                                <option value="Auxiliar Administrativo">AUXILIAR ADMINISTRATIVO</option>
+                                <option value="Gestor de Marketing">GESTOR DE MARKETING</option>
+                                <option value="Auxiliar de ADM">AUXILIAR DE ADM</option>
+                                <option value="Gestor Comercial">GESTOR COMERCIAL</option>
+                                <option value="Heap Vendas">HEAP VENDAS</option>
                             </select>
                         </div>
                         <div class="col-md-6 mb-3">
@@ -350,96 +368,83 @@
             </div>
         </div>
 
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-            <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
-        </head>
-
-        <body>
-            <div
-                class="flex flex-col md:flex-row items-center bg-card text-card-foreground p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
-                <div class="flex-shrink-0 bg-black p-6 rounded-full">
-                    <img class="w-32 h-32 rounded-full" src="https://placehold.co/128x128"
-                        alt="Profile picture of Brodie William">
-                </div>
-                <div class="md:ml-6 mt-4 md:mt-0 text-center md:text-left flex-grow">
-                    <span id="primeiroNomeAqui" class="text-2xl font-bold"><b>Primeiro Nome</b></span>
-                    <p class="text-muted-foreground">Designer gráfico</p>
-                </div>
-                <div class="hidden md:block border-l border-muted h-32 mx-6 border-l-2"></div>
-                <div class="mt-6 md:mt-0 text-center md:text-left">
-                    <div class="space-y-2">
-                        <div class="flex items-center space-x-2">
-                            <img aria-hidden="true" alt="phone" src="https://openui.fly.dev/openui/24x24.svg?text=📞" />
-                            <span
-                                style="font-family: 'Montserrat', sans-serif;color:#000000">
-                                <a id="telefoneAqui" style="color: #000000" href="tel:(xx) 999 999 999">+55 (xx) 999 999
-                                    999</a>
-                            </span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <img aria-hidden="true" alt="email" src="https://openui.fly.dev/openui/24x24.svg?text=✉️" />
-                            <span>seuemail@email.com</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <img aria-hidden="true" alt="website"
-                                src="https://openui.fly.dev/openui/24x24.svg?text=🌐" />
-                            <a href="https://lp.referenciaseguros.com.br/"><span>referenciaseguros.com.br</span></a>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <img aria-hidden="true" alt="location"
-                                src="https://openui.fly.dev/openui/24x24.svg?text=📍" />
-                            <span>Taguatinga, Brasília - DF, 71950-904</span>
-                        </div>
+        <div
+            class="flex flex-col md:flex-row items-center bg-card text-card-foreground p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+            <div class="flex-shrink-0 bg-black p-6 rounded-full">
+                <img id="preview-image-url" class="img-preview round-image" alt="Prévia da imagem"
+                    style="width: 100px; height: 100px; color: white">
+            </div>
+            <div class="md:ml-6 mt-4 md:mt-0 text-center md:text-left flex-grow">
+                <span id="primeiroNomeAqui" class="text-2xl font-bold"><b>Primeiro Nome</b></span>
+                <div id="cargoAquiAlt" class="text-muted-foreground">Cargo</div>
+            </div>
+            <div class="hidden md:block border-1 border-muted h-40 mx-6 border-l-2"></div>
+            <div class="mt-6 md:mt-0 text-center md:text-left">
+                <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <img aria-hidden="true" alt="phone" src="https://openui.fly.dev/openui/24x24.svg?text=📞" />
+                        <span style="font-family: 'Montserrat', sans-serif;color:#000000">
+                            <a id="telefoneAqui" style="color: #000000" href="tel:(xx) 999 999 999">+55 (xx) 999 999
+                                999</a>
+                        </span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <img aria-hidden="true" alt="email" src="https://openui.fly.dev/openui/24x24.svg?text=✉️" />
+                        <a id="emailAquiAlt"><span>seuemail@email.com</span></a>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <img aria-hidden="true" alt="website" src="https://openui.fly.dev/openui/24x24.svg?text=🌐" />
+                        <a href="https://lp.referenciaseguros.com.br/"><span>referenciaseguros.com.br</span></a>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <img aria-hidden="true" alt="location" src="https://openui.fly.dev/openui/24x24.svg?text=📍" />
+                        <span>Taguatinga, Brasília - DF, 71950-904</span>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div id="popup" class="popup">
-                Copiado com sucesso!
-            </div>
+        <div id="popup" class="popup">
+            Copiado com sucesso!
+        </div>
 
-            <!-- Modal for Image Cropping -->
-            <div class="modal fade" id="cropModal" tabindex="-1" role="dialog" aria-labelledby="cropModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="cropModalLabel">Recortar Imagem</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+        <!-- Modal for Image Cropping -->
+        <div class="modal fade" id="cropModal" tabindex="-1" role="dialog" aria-labelledby="cropModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cropModalLabel">Recortar Imagem</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="img-container">
+                            <img id="image" src="">
                         </div>
-                        <div class="modal-body">
-                            <div class="img-container">
-                                <img id="image" src="">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary" id="crop">Recortar</button>
-                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" id="crop">Recortar</button>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-                crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-                crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-            <script src="scripts.js"></script>
-            <script src="scripts.js"></script>
-
-        </body>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+        <script src="scripts.js"></script>
+        <script src="scripts.js"></script>
 
 </html>
