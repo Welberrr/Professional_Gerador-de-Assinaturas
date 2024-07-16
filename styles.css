@@ -509,3 +509,65 @@ p {
     position: sticky;
     background-color: #ffffff;
 }
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    background-color: #fff;
+    margin: auto;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.flex-grow {
+    flex-grow: 1;
+    padding: 16px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.img-preview {
+    width: 100px;
+    height: 100px;
+    color: white;
+    object-fit: cover;
+}
+
+.round-image {
+    border-radius: 50%;
+}
+
+.space-y-2 > * + * {
+    margin-top: 0.5rem;
+}
+
+.separator {
+    border-left: 2px solid #ccc;
+    height: 100px;
+    margin: 0 16px;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .flex-col {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .text-center-md {
+        text-align: left;
+    }
+}
