@@ -175,25 +175,23 @@ function copyThird() {
     showPopup(); // Mostrar o pop-up
 }
 
-function copyFourth() {
-    var target = document.getElementById('assFourth');
-    var range, select;
-    if (document.createRange) {
-        range = document.createRange();
-        range.selectNodeContents(target);
-        select = window.getSelection();
-        select.removeAllRanges();
-        select.addRange(range);
-        document.execCommand('copy');
-        select.removeAllRanges();
-    } else {
-        range = document.body.createTextRange();
-        range.moveToElementText(target);
-        range.select();
-        document.execCommand('copy');
-    }
-    alert("Assinatura copiada!");
+function copyAsImage() {
+    var target = document.getElementById('model4');
+
+    htmlToImage.toBlob(target).then(function(blob) {
+        var item = new ClipboardItem({ "image/png": blob });
+        navigator.clipboard.write([item]).then(function() {
+            console.log('Image copied to clipboard');
+            showPopup(); // Mostrar o pop-up, certifique-se de que a função showPopup() está definida
+        }).catch(function(error) {
+            console.error('Failed to copy: ', error);
+        });
+    }).catch(function(error) {
+        console.error('Failed to capture image: ', error);
+    });
 }
+
+
 
 
 function showPopup() {
