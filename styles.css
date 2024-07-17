@@ -263,7 +263,7 @@ form .form-control, form .input-group-text {
 }
 
 .mb-5 img {
-    border-radius: 1%;
+    border-radius: 100%;
 }
 
 .mb-5 a {

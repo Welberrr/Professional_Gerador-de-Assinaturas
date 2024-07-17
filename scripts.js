@@ -175,20 +175,26 @@ function copyThird() {
     showPopup(); // Mostrar o pop-up
 }
 
-function copyThird() {
-    const businessCard = document.getElementById('assThird');
-
-    html2canvas(businessCard).then(canvas => {
-        canvas.toBlob(blob => {
-            const item = new ClipboardItem({ 'image/png': blob });
-            navigator.clipboard.write([item]).then(() => {
-                showPopup(); // Chama o popup ao copiar
-            }).catch(err => {
-                console.error('Erro ao copiar a imagem: ', err);
-            });
-        });
-    });
+function copyFourth() {
+    var target = document.getElementById('assFourth');
+    var range, select;
+    if (document.createRange) {
+        range = document.createRange();
+        range.selectNodeContents(target);
+        select = window.getSelection();
+        select.removeAllRanges();
+        select.addRange(range);
+        document.execCommand('copy');
+        select.removeAllRanges();
+    } else {
+        range = document.body.createTextRange();
+        range.moveToElementText(target);
+        range.select();
+        document.execCommand('copy');
+    }
+    alert("Assinatura copiada!");
 }
+
 
 function showPopup() {
     var popup = document.getElementById('popup');
