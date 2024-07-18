@@ -28,6 +28,7 @@ $(document).ready(function() {
         $('#cargoAqui').text(cargo);
         $('#cargoAquiAlt').text(cargo);
         $('#cargoAquiThird').text(cargo);
+        $('#cargoAquiFourth').text(cargo);
     });
 
     $('#telefone').mask('(00) 0 0000-0000').on('input', function() {
@@ -178,20 +179,21 @@ function copyThird() {
 function copyAsImage() {
     var target = document.getElementById('model4');
 
-    htmlToImage.toBlob(target).then(function(blob) {
-        var item = new ClipboardItem({ "image/png": blob });
-        navigator.clipboard.write([item]).then(function() {
-            console.log('Image copied to clipboard');
-            showPopup(); // Mostrar o pop-up, certifique-se de que a função showPopup() está definida
+    // Aumentar o tempo de espera para capturar a imagem corretamente
+    setTimeout(() => {
+        domtoimage.toBlob(target).then(function(blob) {
+            var item = new ClipboardItem({ "image/png": blob });
+            navigator.clipboard.write([item]).then(function() {
+                console.log('Image copied to clipboard');
+                showPopup(); // Mostrar o pop-up
+            }).catch(function(error) {
+                console.error('Failed to copy: ', error);
+            });
         }).catch(function(error) {
-            console.error('Failed to copy: ', error);
+            console.error('Failed to capture image: ', error);
         });
-    }).catch(function(error) {
-        console.error('Failed to capture image: ', error);
-    });
+    }, 50);
 }
-
-
 
 
 function showPopup() {
