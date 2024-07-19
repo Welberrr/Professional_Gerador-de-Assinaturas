@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Gerador de Assinatura de Email Profissional</title>
-    
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -23,8 +23,9 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -106,7 +107,7 @@
                         <h2>Modelo de Assinatura 1</h2>
                         <href onclick="copy()">
                             <div id="ass">
-                                
+
                             </div>
                         </href>
                         <a class="botLarge botForm" style="align-items: center;" onclick="copy()">Copiar</a>
@@ -115,98 +116,146 @@
                     <hr style="size: 10px;">
 
                     <!-- MODELO 2 -->
-                    <div class="mb-5">
+                    <div class="mb-5 font-ubuntu">
                         <h2>Modelo de Assinatura 2</h2>
                         <href onclick="copyAlt()">
-                        </href>
-                        <a class="botLarge botForm" style="align-items: center;" onclick="copyAlt()">Copiar</a>
-                    </div>
-
-                    <hr style="size: 10px;">
-
-                    <!--Modelo 3-->
-                    <div class="mb-5">
-                        <h2>Modelo de Assinatura 3</h2>
-                        <div class="flex items-center justify-center bg-zinc-100 py-2">
-                            <div class="flex bg-white shadow-lg rounded-lg overflow-hidden max-w-2xl w-full">
-                                <div class="w-20 flex-none" style="background-color: #4D47E2;"></div>
-                                <div class="flex items-center">
-                                    <div class="w-10 flex-none"></div> <!-- Espaço entre o azul e o conteúdo -->
-                                    <div class="flex justify-center items-center"> <!-- Centralizando a div que contém a imagem -->
-                                    </div>
-                                    <div class="border-l border-zinc-300 p-2 flex-1"> <!-- Adicionado flex-1 para ocupar o espaço restante -->
-                                        <span id="primeiroNomeAqui" class="text-2xl font-bold"><b>Primeiro Nome</b></span>
-                                        <div id="cargoAquiAlt" class="text-muted-foreground">Cargo</div>
-                                        <a id="telefoneAqui" style="color: #000000" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
-                                        <div class="mt-4 space-y-2">
-                                            <div class="flex items-center text-zinc-600">
+                            <div class="flex items-center justify-center bg-slate-200 py-2">
+                                <div
+                                    class="flex justify-center bg-gradient-to-b from-indigo-50 to-white rounded-xl overflow-hidden max-w-2xl w-full">
+                                    <div class="flex justify-center items-center w-full max-w-[80%]">
+                                        <div class="border-slate-300 p-2 text-right">
+                                            <span id="primeiroNomeAqui" class="text-3xl font-bold"><b>Primeiro
+                                                    Nome</b></span>
+                                            <div id="cargoAquiAlt" class="text-muted-foreground">Cargo</div>
+                                            <a id="telefoneAqui" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
+                                            <div class="mt-4 space-y-2">
                                                 <a id="emailAquiAlt"><span>seuemail@email.com</span></a>
+                                                <a
+                                                    href="https://lp.referenciaseguros.com.br/"><span>referenciaseguros.com.br</span></a>
                                             </div>
-                                            <div class="flex items-center text-zinc-600">
-                                                <a href="https://lp.referenciaseguros.com.br/"><span>referenciaseguros.com.br</span></a>
+                                        </div>
+                                        <div class="flex justify-center items-center px-8">
+                                            <div
+                                                class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-3 rounded-full">
+                                                <div
+                                                    class="bg-white p-1 rounded-full flex items-center justify-center w-24 h-24 overflow-hidden">
+                                                    <img id="preview-image-url-second"
+                                                        class="img-preview round-image overflow-hidden w-full bg-cover"
+                                                        alt="Prévia da imagem">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <a class="botLarge botForm" style="align-items: center;" onclick="copyAlt()">Copiar</a>
                     </div>
-
                     <hr style="size: 10px;">
-                                           
-                    <div class="mb-5">
-                        <h1>Modelo de assinatura 4</h1>
-                        <button onclick="copyAsImage()">Copiar Conteúdo</button>
-                        <div id="model4" class="model4">
-                            <!-- Ajuste da estrutura flex e cores -->
-                            <div class="flex flex-col md:flex-row items-center bg-card text-card-foreground p-4 rounded-lg shadow-lg max-w-4xl mx-auto" style="background-color: white;">
-                                <!-- Ajuste na borda da imagem e seu contorno -->
-                                <div class="flex-shrink-0 p-4 rounded-full">
-                                    <img id="preview-image-url" class="img-preview round-image" alt="Prévia da imagem" style="width: 120px; height: 120px; border-radius: 100%; border: 8px solid blue;">
-                                </div>                                                               
-                                <!-- Ajuste da margem e alinhamento de texto -->
-                                <div class="text-center">
-                                    <span id="primeiroNomeAqui" class="text-2xl font-bold"><b>Nome Aqui</b></span>
-                                    <div id="cargoAquiFourth" class="text-muted-foreground">Cargo</div>
+                    </href>
+                    <a class="botLarge botForm" style="align-items: center;" onclick="copyAlt()">Copiar</a>
+                </div>
+
+                <hr style="size: 10px;">
+
+                <!--Modelo 3-->
+                <div class="mb-5">
+                    <h2>Modelo de Assinatura 3</h2>
+                    <div class="flex items-center justify-center bg-zinc-100 py-2">
+                        <div class="flex bg-white shadow-lg rounded-lg overflow-hidden max-w-2xl w-full">
+                            <div class="w-20 flex-none" style="background-color: #4D47E2;"></div>
+                            <div class="flex items-center">
+                                <div class="w-10 flex-none"></div> <!-- Espaço entre o azul e o conteúdo -->
+                                <div class="flex justify-center items-center">
+                                    <!-- Centralizando a div que contém a imagem -->
                                 </div>
-                                <!-- Ajuste da borda entre seções para cor azul -->
-                                <div class="hidden md:block border-1 h-24 mx-4 border-l-2" style="border-color: blue;"></div>
-                                <!-- Ajuste do espaço e alinhamento dos itens -->
-                                <div class="mt-2 text-center md:text-left">
-                                    <div class="space-y-1">
-                                        <!-- Ícone de telefone e seu tamanho -->
-                                        <div class="flex items-center space-x-1">
-                                            <img aria-hidden="true" alt="phone" src="images/ligar.png" style="width: 20px;" />
-                                            <span style="font-family: 'Montserrat', sans-serif; color: #000000;">
-                                                <a id="telefoneAqui" style="color: #000000;" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
-                                            </span>
-                                        </div>
-                                        <!-- Ícone de e-mail e seu tamanho -->
-                                        <div class="flex items-center space-x-1">
-                                            <img aria-hidden="true" alt="email" src="images/e-mail.png" style="width: 20px;" />
+                                <div class="border-l border-zinc-300 p-2 flex-1">
+                                    <!-- Adicionado flex-1 para ocupar o espaço restante -->
+                                    <span id="primeiroNomeAqui" class="text-2xl font-bold"><b>Primeiro Nome</b></span>
+                                    <div id="cargoAquiAlt" class="text-muted-foreground">Cargo</div>
+                                    <a id="telefoneAqui" style="color: #000000" href="tel:(xx) 999 999 999">+55 (xx) 999
+                                        999 999</a>
+                                    <div class="mt-4 space-y-2">
+                                        <div class="flex items-center text-zinc-600">
                                             <a id="emailAquiAlt"><span>seuemail@email.com</span></a>
                                         </div>
-                                        <!-- Ícone de website e seu tamanho -->
-                                        <div class="flex items-center space-x-1">
-                                            <img aria-hidden="true" alt="website" src="images/rede.png" style="width: 20px;" />
-                                            <a href="https://lp.referenciaseguros.com.br/"><span>referenciaseguros.com.br</span></a>
-                                        </div>
-                                        <!-- Ícone de localização e seu tamanho -->
-                                        <div class="flex items-center space-x-1">
-                                            <img aria-hidden="true" alt="location" src="images/pin.png" style="width: 20px;" />
-                                            <p class="flex items-center space-x-1 Montserrat">Taguatinga, Brasília - DF</p>
+                                        <div class="flex items-center text-zinc-600">
+                                            <a
+                                                href="https://lp.referenciaseguros.com.br/"><span>referenciaseguros.com.br</span></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                                                           
+                    <a class="botLarge botForm" style="align-items: center;" onclick="copyAlt()">Copiar</a>
+                </div>
+
+                <hr style="size: 10px;">
+
+                <div class="mb-5">
+                    <h1>Modelo de assinatura 4</h1>
+                    <button onclick="copyAsImage()">Copiar Conteúdo</button>
+                    <div id="model4" class="model4">
+                        <!-- Ajuste da estrutura flex e cores -->
+                        <div class="flex flex-col md:flex-row items-center bg-card text-card-foreground p-4 rounded-lg shadow-lg max-w-4xl mx-auto"
+                            style="background-color: white;">
+                            <!-- Ajuste na borda da imagem e seu contorno -->
+                            <div class="flex-shrink-0 p-4 rounded-full">
+                                <img id="preview-image-url" class="img-preview round-image" alt="Prévia da imagem"
+                                    style="width: 120px; height: 120px; border-radius: 100%; border: 8px solid blue;">
+                            </div>
+                            <!-- Ajuste da margem e alinhamento de texto -->
+                            <div class="text-center">
+                                <span id="primeiroNomeAqui" class="text-2xl font-bold"><b>Nome Aqui</b></span>
+                                <div id="cargoAquiFourth" class="text-muted-foreground">Cargo</div>
+                            </div>
+                            <!-- Ajuste da borda entre seções para cor azul -->
+                            <div class="hidden md:block border-1 h-24 mx-4 border-l-2" style="border-color: blue;">
+                            </div>
+                            <!-- Ajuste do espaço e alinhamento dos itens -->
+                            <div class="mt-2 text-center md:text-left">
+                                <div class="space-y-1">
+                                    <!-- Ícone de telefone e seu tamanho -->
+                                    <div class="flex items-center space-x-1">
+                                        <img aria-hidden="true" alt="phone" src="images/ligar.png"
+                                            style="width: 20px;" />
+                                        <span style="font-family: 'Montserrat', sans-serif; color: #000000;">
+                                            <a id="telefoneAqui" style="color: #000000;" href="tel:(xx) 999 999 999">+55
+                                                (xx) 999 999 999</a>
+                                        </span>
+                                    </div>
+                                    <!-- Ícone de e-mail e seu tamanho -->
+                                    <div class="flex items-center space-x-1">
+                                        <img aria-hidden="true" alt="email" src="images/e-mail.png"
+                                            style="width: 20px;" />
+                                        <a id="emailAquiAlt"><span>seuemail@email.com</span></a>
+                                    </div>
+                                    <!-- Ícone de website e seu tamanho -->
+                                    <div class="flex items-center space-x-1">
+                                        <img aria-hidden="true" alt="website" src="images/rede.png"
+                                            style="width: 20px;" />
+                                        <a
+                                            href="https://lp.referenciaseguros.com.br/"><span>referenciaseguros.com.br</span></a>
+                                    </div>
+                                    <!-- Ícone de localização e seu tamanho -->
+                                    <div class="flex items-center space-x-1">
+                                        <img aria-hidden="true" alt="location" src="images/pin.png"
+                                            style="width: 20px;" />
+                                        <p class="flex items-center space-x-1 Montserrat">Taguatinga, Brasília - DF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div id="popup" class="popup">
                     Copiado com sucesso!
                 </div>
             </div>
+
+            <footer class="text-center text-white bg-[#4D47E2] p-3 fixed w-screen bottom-0 left-0 right-0 w-10 pt-10">
+                © 2024 Referência Seguros - Todos os direitos reservados
+            </footer>
 
             <!-- Modal for Image Cropping -->
             <div class="modal fade" id="cropModal" tabindex="-1" role="dialog" aria-labelledby="cropModalLabel"
@@ -248,4 +297,5 @@
             <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
             <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
 </html>
