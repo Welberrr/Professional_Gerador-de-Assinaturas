@@ -156,6 +156,26 @@ function copyAlt() {
     showPopup(); // Mostrar o pop-up
 }
 
+function copyModelo2() {
+    var target = document.getElementById('modelo2');
+    var range, select;
+    if (document.createRange) {
+        range = document.createRange();
+        range.selectNode(target);
+        select = window.getSelection();
+        select.removeAllRanges();
+        select.addRange(range);
+        document.execCommand('copy');
+        select.removeAllRanges();
+    } else {
+        range = document.body.createTextRange();
+        range.moveToElementText(target);
+        range.select();
+        document.execCommand('copy');
+    }
+    showPopup(); // Mostrar o pop-up
+}
+
 function copyThird() {
     var target = document.getElementById('assThird');
     var range, select;
