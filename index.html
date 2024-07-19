@@ -32,7 +32,9 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="p-2 title">Gerador de Assinatura</h1>
+                <h1 class="p-2 title"
+                    style="font-size: 50px; color: #4D47E2; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; font-weight: bold;">
+                    Gerador de Assinatura</h1>
             </div>
         </div>
         <!-- CAIXA DE FORMULÁRIO-->
@@ -48,7 +50,8 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="segundoNome">Último Sobrenome</label>
-                            <input type="text" class="form-control input" id="segundoNome" placeholder="Último Nome" required>
+                            <input type="text" class="form-control input" id="segundoNome" placeholder="Último Nome"
+                                required>
                         </div>
                     </div>
                     <div class="form-row">
@@ -56,7 +59,8 @@
                             <label for="email">E-mail</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span" class="input-group-text" id="inputGroupPrepend2" style="background-color: #4D47E2; color: white">@</span>
+                                    <span" class="input-group-text" id="inputGroupPrepend2"
+                                        style="background-color: #4D47E2; color: white">@</span>
                                 </div>
                                 <input type="text" class="form-control" id="email" placeholder="seu.email@seudomino.com"
                                     aria-describedby="inputGroupPrepend2" required>
@@ -72,7 +76,7 @@
                                 <option value="Closer">CLOSER</option>
                                 <option value="Estagiário">ESTAGIARIO</option>
                                 <option value="Supervisor T.I">SUPERVISOR T.I</option>
-                                <option value="Assesora ADM">ASSESORA ADM</option>
+                                <option value="Assesora ADM">ASSESORIA ADM</option>
                                 <option value="RH">RECURSOS HUMANOS</option>
                                 <option value="Gestão de Processos">GESTÃO DE PROCESSOS</option>
                                 <option value="Serviços Gerais">SERVIÇOS GERAIS</option>
@@ -104,7 +108,9 @@
             <div class="col-12 col-lg-6">
                 <div class="scroll-box">
                     <div class="mb-5">
-                        <h3>Modelo de Assinatura 1</h3>
+                        <h3
+                            style="font-size: 30px; color: #4D47E2; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                            Modelo de Assinatura 1</h3>
                         <div id="model1">
                             <div
                                 class="d-flex align-items-center px-4 py-4 bg-card text-card-foreground rounded-lg shadow-md w-75">
@@ -140,20 +146,47 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn" onclick="copyAsImage1()">Copiar</button>
+                        <button class="btn" onclick="copyAsImage1()" style="margin-left: 40%;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #4d48e2;
+    color: rgb(234, 234, 234);
+    font-weight: 750;
+    transition: 0.6s;
+    box-shadow: 0px 0px 50px #1f4c65;
+    -webkit-box-reflect: below 2px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));"
+                            onmousedown="this.style.transform='scale(0.92)'" onmouseup="this.style.transform='scale(1)'"
+                            onmouseleave="this.style.transform='scale(1)'"
+                            onmouseover="this.style.backgroundColor='rgb(2,29,78)'; this.style.background='linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%)'; this.style.color='rgb(4, 4, 38)'"
+                            onmouseout="this.style.backgroundColor='#4d48e2'; this.style.color='rgb(234, 234, 234)'">
+                            Copiar
+                        </button>
+
                     </div>
-                    <hr style="size: 10px;">
+                    <hr style="size: 10px;
+                        height: 5px;
+                        background-image: linear-gradient(to left, #0051f4, #0790b8, #02abdf);
+                        background-size: 100% 10px;
+                        background-repeat: no-repeat;">
 
                     <!-- MODELO 2 -->
                     <div class="mb-5 font-ubuntu">
-                        <h3>Modelo de Assinatura 2</h3>
+                        <h3
+                            style="font-size: 30px; color: #4D47E2; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                            Modelo de Assinatura 2</h3>
                         <div id="model2">
                             <div class="flex items-center justify-center bg-slate-200 py-2">
                                 <div
-                                    class="flex justify-center bg-gradient-to-b from-indigo-50 to-white rounded-xl overflow-hidden max-w-2xl w-full">
+                                    class="flex justify-center bg-gradient-to-b from-indigo-50 to-white rounded-xl overflow-hidden max-w-2xl w-75">
                                     <div class="flex justify-center items-center w-full max-w-[80%]">
                                         <div class="border-slate-300 p-2 text-right">
-                                            <span id="primeiroNomeAqui" class="text-3xl font-bold"><b>Nome Aqui</b></span>
+                                            <span id="primeiroNomeAqui" class="text-3xl font-bold"><b>Nome
+                                                    Aqui</b></span>
                                             <div id="cargoAquiAlt" class="text-muted-foreground">Cargo</div>
                                             <a id="telefoneAqui" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
                                             <div class="mt-4 space-y-2">
@@ -177,18 +210,43 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn" onclick="copyAsImage2()">Copiar</button>
+                        <button class="btn" onclick="copyAsImage1()" style="margin-left: 40%;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #4d48e2;
+    color: rgb(234, 234, 234);
+    font-weight: 750;
+    transition: 0.6s;
+    box-shadow: 0px 0px 50px #1f4c65;
+    -webkit-box-reflect: below 2px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));"
+                            onmousedown="this.style.transform='scale(0.92)'" onmouseup="this.style.transform='scale(1)'"
+                            onmouseleave="this.style.transform='scale(1)'"
+                            onmouseover="this.style.backgroundColor='rgb(2,29,78)'; this.style.background='linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%)'; this.style.color='rgb(4, 4, 38)'"
+                            onmouseout="this.style.backgroundColor='#4d48e2'; this.style.color='rgb(234, 234, 234)'">
+                            Copiar
+                        </button>
                     </div>
                     </href>
 
-                    <hr style="size: 10px;">
+                    <hr style="size: 10px;
+                        height: 5px;
+                        background-image: linear-gradient(to left, #0051f4, #0790b8, #02abdf);
+                        background-size: 100% 10px;
+                        background-repeat: no-repeat;">
 
                     <!--Modelo 3-->
                     <div class="mb-5">
-                        <h3>Modelo de Assinatura 3</h3>
+                        <h3
+                            style="font-size: 30px; color: #4D47E2; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                            Modelo de Assinatura 3</h3>
                         <div class="model3">
                             <div class="flex items-center justify-center bg-zinc-100 py-2">
-                                <div class="flex bg-white shadow-lg rounded-lg overflow-hidden max-w-2xl w-full"
+                                <div class="flex bg-white shadow-lg rounded-lg overflow-hidden max-w-2xl w-75"
                                     id="model3">
                                     <div class="w-20 flex-none" style="background-color: #4D47E2;"></div>
                                     <div class="flex items-center w-full">
@@ -221,15 +279,41 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn" onclick="copyAsImage3()">Copiar</button>
+                        <button class="btn" onclick="copyAsImage1()" style="margin-left: 40%;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #4d48e2;
+    color: rgb(234, 234, 234);
+    font-weight: 750;
+    transition: 0.6s;
+    box-shadow: 0px 0px 50px #1f4c65;
+    -webkit-box-reflect: below 2px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));"
+                            onmousedown="this.style.transform='scale(0.92)'" onmouseup="this.style.transform='scale(1)'"
+                            onmouseleave="this.style.transform='scale(1)'"
+                            onmouseover="this.style.backgroundColor='rgb(2,29,78)'; this.style.background='linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%)'; this.style.color='rgb(4, 4, 38)'"
+                            onmouseout="this.style.backgroundColor='#4d48e2'; this.style.color='rgb(234, 234, 234)'">
+                            Copiar
+                        </button>
                     </div>
-                    <hr style="size: 10px;">
+
+                    <hr style="size: 10px;
+                        height: 5px;
+                        background-image: linear-gradient(to left, #0051f4, #0790b8, #02abdf);
+                        background-size: 100% 10px;
+                        background-repeat: no-repeat;">
 
                     <div class="mb-5">
-                        <h3>Modelo de assinatura 4</h3>
+                        <h3
+                            style="font-size: 30px; color: #4D47E2; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                            Modelo de Assinatura 4</h3>
                         <div id="model4" class="model4">
                             <!-- Ajuste da estrutura flex e cores -->
-                            <div class="flex flex-col md:flex-row items-center bg-card text-card-foreground p-4 rounded-lg shadow-lg max-w-4xl mx-auto"
+                            <div class="d-flex align-items-center px-4 py-4 bg-card text-card-foreground rounded-lg shadow-md w-75"
                                 style="background-color: white;">
                                 <!-- Ajuste na borda da imagem e seu contorno -->
                                 <div class="flex-shrink-0 p-4 rounded-full">
@@ -281,17 +365,43 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn" onclick="copyAsImage4()">Copiar</button>
+                        <button class="btn" onclick="copyAsImage1()" style="margin-left: 40%;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #4d48e2;
+    color: rgb(234, 234, 234);
+    font-weight: 750;
+    transition: 0.6s;
+    box-shadow: 0px 0px 50px #1f4c65;
+    -webkit-box-reflect: below 2px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));"
+                            onmousedown="this.style.transform='scale(0.92)'" onmouseup="this.style.transform='scale(1)'"
+                            onmouseleave="this.style.transform='scale(1)'"
+                            onmouseover="this.style.backgroundColor='rgb(2,29,78)'; this.style.background='linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%)'; this.style.color='rgb(4, 4, 38)'"
+                            onmouseout="this.style.backgroundColor='#4d48e2'; this.style.color='rgb(234, 234, 234)'">
+                            Copiar
+                        </button>
                     </div>
 
-                    <hr style="size: 10px;">
+                    <hr style="size: 10px;
+                        height: 5px;
+                        background-image: linear-gradient(to left, #0051f4, #0790b8, #02abdf);
+                        background-size: 100% 10px;
+                        background-repeat: no-repeat;">
+
 
                     <div class="mb-5">
-                        <h3>Modelo de Assinatura 5</h3>
-                        <div id="model2" class="model2">
+                        <h3
+                            style="font-size: 30px; color: #4D47E2; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                            Modelo de Assinatura 5</h3>
+                        <div id="model5">
                             <!-- Estrutura flexível e cores ajustadas -->
                             <div
-                                class="flex flex-col md:flex-row items-center bg-white text-black p-4 rounded-lg shadow-lg max-w-4xl mx-auto">
+                                class="d-flex align-items-center px-4 py-4 bg-card text-card-foreground rounded-lg shadow-md w-75">
                                 <!-- Ajuste do espaço e alinhamento dos itens -->
                                 <div
                                     class="order-1 md:order-1 mt-2 text-center md:text-left md:mr-4 p-4 bg-gray-200 rounded-lg">
@@ -314,9 +424,10 @@
                                         </div>
                                         <!-- Ícone de localização e seu tamanho -->
                                         <div class="flex items-center space-x-1">
-                                            <a class="flex items-center space-x-1 Montserrat"
-                                                href="https://www.google.com/maps?q=Taguatinga,+Brasília+-+DF">Taguatinga,
-                                                Brasília - DF</a>
+                                            <href class="flex items-center space-x-1 Montserrat"
+                                                href="https://www.google.com/maps?q=Taguatinga,+Brasília+-+DF">
+                                                Taguatinga,
+                                                Brasília - DF</href>
                                         </div>
                                     </div>
                                 </div>
@@ -332,7 +443,26 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn" onclick="copyAsImage5()">Copiar</button>
+                        <button class="btn" onclick="copyAsImage1()" style="margin-left: 40%;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #4d48e2;
+    color: rgb(234, 234, 234);
+    font-weight: 750;
+    transition: 0.6s;
+    box-shadow: 0px 0px 50px #1f4c65;
+    -webkit-box-reflect: below 2px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));"
+                            onmousedown="this.style.transform='scale(0.92)'" onmouseup="this.style.transform='scale(1)'"
+                            onmouseleave="this.style.transform='scale(1)'"
+                            onmouseover="this.style.backgroundColor='rgb(2,29,78)'; this.style.background='linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%)'; this.style.color='rgb(4, 4, 38)'"
+                            onmouseout="this.style.backgroundColor='#4d48e2'; this.style.color='rgb(234, 234, 234)'">
+                            Copiar
+                        </button>
                     </div>
 
                     <div id="popup" class="popup">
@@ -376,5 +506,22 @@
                 <script src="scripts.js"></script>
                 <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.10.4/html-to-image.min.js"></script>
+                <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                    crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+                <script src="scripts.js"></script>
+                <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+                <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
 
 </html>

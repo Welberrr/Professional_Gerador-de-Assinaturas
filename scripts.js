@@ -114,20 +114,11 @@ $(document).ready(function() {
         }
     });
 });
-
 function copyAsImage5() {
-    var target = document.getElementById('model2');
+    var target = document.getElementById('model5');
 
     htmlToImage.toPng(target)
         .then(function (dataUrl) {
-            var img = new Image();
-            img.src = dataUrl;
-
-            var link = document.createElement('a');
-            link.href = dataUrl;
-            link.download = 'signature5.png';
-            link.click();
-
             navigator.clipboard.write([
                 new ClipboardItem({
                     'image/png': fetch(dataUrl).then(res => res.blob())
@@ -143,20 +134,11 @@ function copyAsImage5() {
         });
 }
 
-
 function copyAsImage4() {
     var target = document.getElementById('model4');
 
     htmlToImage.toPng(target)
         .then(function (dataUrl) {
-            var img = new Image();
-            img.src = dataUrl;
-
-            var link = document.createElement('a');
-            link.href = dataUrl;
-            link.download = 'signature4.png';
-            link.click();
-
             navigator.clipboard.write([
                 new ClipboardItem({
                     'image/png': fetch(dataUrl).then(res => res.blob())
@@ -177,14 +159,6 @@ function copyAsImage3() {
 
     htmlToImage.toPng(target)
         .then(function (dataUrl) {
-            var img = new Image();
-            img.src = dataUrl;
-
-            var link = document.createElement('a');
-            link.href = dataUrl;
-            link.download = 'signature3.png';
-            link.click();
-
             navigator.clipboard.write([
                 new ClipboardItem({
                     'image/png': fetch(dataUrl).then(res => res.blob())
@@ -205,14 +179,6 @@ function copyAsImage2() {
 
     htmlToImage.toPng(target)
         .then(function (dataUrl) {
-            var img = new Image();
-            img.src = dataUrl;
-
-            var link = document.createElement('a');
-            link.href = dataUrl;
-            link.download = 'signature2.png';
-            link.click();
-
             navigator.clipboard.write([
                 new ClipboardItem({
                     'image/png': fetch(dataUrl).then(res => res.blob())
@@ -233,14 +199,6 @@ function copyAsImage1() {
 
     htmlToImage.toPng(target)
         .then(function (dataUrl) {
-            var img = new Image();
-            img.src = dataUrl;
-
-            var link = document.createElement('a');
-            link.href = dataUrl;
-            link.download = 'signature1.png';
-            link.click();
-
             navigator.clipboard.write([
                 new ClipboardItem({
                     'image/png': fetch(dataUrl).then(res => res.blob())

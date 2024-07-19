@@ -18,14 +18,14 @@ form .form-control, form .input-group-text {
 
 .form-control:hover, .input-group-text:hover {
     border-color: var(--color);
-    box-shadow: 0 0 10px #0157EF;
+    box-shadow: 0 0 10px #0157EF; 
 }
 
 .mb-5 {
     transition: transform 0.3s ease;
 }
 
-.mb-5:hover {
+.mb-5:hover { 
     transform: scale(1.05);
 }
 
@@ -62,13 +62,6 @@ form .form-control, form .input-group-text {
     z-index: 1000;
     opacity: 0;
     animation: fadeInOut 2s forwards;
-}
-
-hr {
-    height: 5px;
-    background-image: linear-gradient(to left, #0051f4, #0790b8, #02abdf);
-    background-size: 100% 10px;
-    background-repeat: no-repeat;
 }
 
 /* Adicione ou ajuste estas regras CSS */
@@ -238,7 +231,7 @@ hr {
 }
 
 /* Estilização da barra de rolagem para Firefox */
-.scroll-box {
+.scroll-box { 
     scrollbar-width: thin;
     scrollbar-color: var(--button-background) #f1f1f1;
 }
@@ -265,39 +258,3 @@ hr {
 .scroll-box::-ms-scrollbar-thumb:hover {
     background: var(--dropdown-highlight);
 }
-
-button{
-    margin-left: 40%;
-    margin-top: 6px;
-}
-
-.btn {
-    font-size: 1.2rem;
-    padding: 1rem 2.5rem;
-    border: none;
-    outline: none;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    background-color: #4d48e2;
-    color: rgb(234, 234, 234);
-    font-weight: 750;
-    transition: 0.6s;
-    box-shadow: 0px 0px 50px #1f4c65;
-    -webkit-box-reflect: below 2px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
-  }
-  
-  .btn:active {
-    scale: 0.92;
-  }
-  
-  .btn:hover {
-    background: rgb(2,29,78);
-    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
-    color: rgb(4, 4, 38);
-  } 
-  
-  h3{
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  } 
