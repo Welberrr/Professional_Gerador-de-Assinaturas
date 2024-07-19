@@ -29,6 +29,7 @@ $(document).ready(function() {
         $('#cargoAquiAlt').text(cargo);
         $('#cargoAquiThird').text(cargo);
         $('#cargoAquiFourth').text(cargo);
+        $('#cargoAquiFifth').text(cargo);
     });
 
     $('#telefone').mask('(00) 0 0000-0000').on('input', function() {
@@ -114,107 +115,146 @@ $(document).ready(function() {
     });
 });
 
-function copy() {
-    var target = document.getElementById('ass');
-    var range, select;
-    if (document.createRange) {
-        range = document.createRange();
-        range.selectNode(target);
-        select = window.getSelection();
-        select.removeAllRanges();
-        select.addRange(range);
-        document.execCommand('copy');
-        select.removeAllRanges();
-    } else {
-        range = document.body.createTextRange();
-        range.moveToElementText(target);
-        range.select();
-        document.execCommand('copy');
-    }
-    showPopup(); // Mostrar o pop-up
+function copyAsImage5() {
+    var target = document.getElementById('model2');
+
+    htmlToImage.toPng(target)
+        .then(function (dataUrl) {
+            var img = new Image();
+            img.src = dataUrl;
+
+            var link = document.createElement('a');
+            link.href = dataUrl;
+            link.download = 'signature5.png';
+            link.click();
+
+            navigator.clipboard.write([
+                new ClipboardItem({
+                    'image/png': fetch(dataUrl).then(res => res.blob())
+                })
+            ]).then(() => {
+                showPopup();
+            }).catch(err => {
+                console.error('Erro ao copiar a imagem: ', err);
+            });
+        })
+        .catch(function (error) {
+            console.error('Erro ao gerar a imagem: ', error);
+        });
 }
 
-function copyAlt() {
-    var target = document.getElementById('assAlt');
-    var range, select;
-    var img = target.querySelector('img');
-    img.classList.add('round-image');
-    if (document.createRange) {
-        range = document.createRange();
-        range.selectNode(target);
-        select = window.getSelection();
-        select.removeAllRanges();
-        select.addRange(range);
-        document.execCommand('copy');
-        select.removeAllRanges();
-    } else {
-        range = document.body.createTextRange();
-        range.moveToElementText(target);
-        range.select();
-        document.execCommand('copy');
-    }
-    showPopup(); // Mostrar o pop-up
-}
 
-function copyModelo2() {
-    var target = document.getElementById('modelo2');
-    var range, select;
-    if (document.createRange) {
-        range = document.createRange();
-        range.selectNode(target);
-        select = window.getSelection();
-        select.removeAllRanges();
-        select.addRange(range);
-        document.execCommand('copy');
-        select.removeAllRanges();
-    } else {
-        range = document.body.createTextRange();
-        range.moveToElementText(target);
-        range.select();
-        document.execCommand('copy');
-    }
-    showPopup(); // Mostrar o pop-up
-}
-
-function copyThird() {
-    var target = document.getElementById('assThird');
-    var range, select;
-    if (document.createRange) {
-        range = document.createRange();
-        range.selectNode(target);
-        select = window.getSelection();
-        select.removeAllRanges();
-        select.addRange(range);
-        document.execCommand('copy');
-        select.removeAllRanges();
-    } else {
-        range = document.body.createTextRange();
-        range.moveToElementText(target);
-        range.select();
-        document.execCommand('copy');
-    }
-    showPopup(); // Mostrar o pop-up
-}
-
-function copyAsImage() {
+function copyAsImage4() {
     var target = document.getElementById('model4');
 
-    // Aumentar o tempo de espera para capturar a imagem corretamente
-    setTimeout(() => {
-        domtoimage.toBlob(target).then(function(blob) {
-            var item = new ClipboardItem({ "image/png": blob });
-            navigator.clipboard.write([item]).then(function() {
-                console.log('Image copied to clipboard');
-                showPopup(); // Mostrar o pop-up
-            }).catch(function(error) {
-                console.error('Failed to copy: ', error);
+    htmlToImage.toPng(target)
+        .then(function (dataUrl) {
+            var img = new Image();
+            img.src = dataUrl;
+
+            var link = document.createElement('a');
+            link.href = dataUrl;
+            link.download = 'signature4.png';
+            link.click();
+
+            navigator.clipboard.write([
+                new ClipboardItem({
+                    'image/png': fetch(dataUrl).then(res => res.blob())
+                })
+            ]).then(() => {
+                showPopup();
+            }).catch(err => {
+                console.error('Erro ao copiar a imagem: ', err);
             });
-        }).catch(function(error) {
-            console.error('Failed to capture image: ', error);
+        })
+        .catch(function (error) {
+            console.error('Erro ao gerar a imagem: ', error);
         });
-    }, 50);
 }
 
+function copyAsImage3() {
+    var target = document.getElementById('model3');
+
+    htmlToImage.toPng(target)
+        .then(function (dataUrl) {
+            var img = new Image();
+            img.src = dataUrl;
+
+            var link = document.createElement('a');
+            link.href = dataUrl;
+            link.download = 'signature3.png';
+            link.click();
+
+            navigator.clipboard.write([
+                new ClipboardItem({
+                    'image/png': fetch(dataUrl).then(res => res.blob())
+                })
+            ]).then(() => {
+                showPopup();
+            }).catch(err => {
+                console.error('Erro ao copiar a imagem: ', err);
+            });
+        })
+        .catch(function (error) {
+            console.error('Erro ao gerar a imagem: ', error);
+        });
+}
+
+function copyAsImage2() {
+    var target = document.getElementById('model2');
+
+    htmlToImage.toPng(target)
+        .then(function (dataUrl) {
+            var img = new Image();
+            img.src = dataUrl;
+
+            var link = document.createElement('a');
+            link.href = dataUrl;
+            link.download = 'signature2.png';
+            link.click();
+
+            navigator.clipboard.write([
+                new ClipboardItem({
+                    'image/png': fetch(dataUrl).then(res => res.blob())
+                })
+            ]).then(() => {
+                showPopup();
+            }).catch(err => {
+                console.error('Erro ao copiar a imagem: ', err);
+            });
+        })
+        .catch(function (error) {
+            console.error('Erro ao gerar a imagem: ', error);
+        });
+}
+
+function copyAsImage1() {
+    var target = document.getElementById('model1');
+
+    htmlToImage.toPng(target)
+        .then(function (dataUrl) {
+            var img = new Image();
+            img.src = dataUrl;
+
+            var link = document.createElement('a');
+            link.href = dataUrl;
+            link.download = 'signature1.png';
+            link.click();
+
+            navigator.clipboard.write([
+                new ClipboardItem({
+                    'image/png': fetch(dataUrl).then(res => res.blob())
+                })
+            ]).then(() => {
+                showPopup();
+            }).catch(err => {
+                console.error('Erro ao copiar a imagem: ', err);
+            });
+        })
+        .catch(function (error) {
+            console.error('Erro ao gerar a imagem: ', error);
+        });
+}
 
 function showPopup() {
     var popup = document.getElementById('popup');
