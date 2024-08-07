@@ -1,537 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Gerador de Assinatura de Email Profissional</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="AssinaturasStyle.css">
-    <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Cropper.js CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <title>Gerador de Assinaturas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showSection(sectionId) {
+            document.getElementById('insercao-dados').style.display = 'none';
+            document.getElementById('personalizacao-imagens').style.display = 'none';
+            document.getElementById('personalizacao-fontes').style.display = 'none';
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        window.onload = function() {
+            showSection('insercao-dados');
+        };
+    </script>
 </head>
-
 <body>
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-12 text-center" style="display: inline-block; white-space: nowrap; padding-bottom: 20px;">
-                <div style="display: inline-block; vertical-align: middle; padding-right: 30px;">
-                    <img src="images/logoCab.jpg" style="width: 250px; height: 100px;">
-                </div>
-                <h1 class="p-2 title"
-                    style="display: inline-block; vertical-align: middle; font-size: 50px; color: #0790b8; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; font-weight: bold;">
-                    Gerador de Assinatura
-                </h1>
-            </div>
-            
+    <div class="container">
+        <h1>Gerador de Assinaturas</h1>
+        <hr class="styled-hr"><br>
+        <div class="menu">
+            <button onclick="showSection('insercao-dados')">Inserção de Dados</button>
+            <button onclick="showSection('personalizacao-imagens')">Personalização de Imagens</button>
+            <button onclick="showSection('personalizacao-fontes')">Personalização de Fontes</button>
         </div>
-        <!-- CAIXA DE FORMULÁRIO-->
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-4" id="data-form">
-                <h2 class="p-2 title"
-                style="font-size: 30px; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; font-weight: bold; color: #1e254c;">
-                    Dados</h2>
-                <form>
-                    <div class="form-row">
-                        <div class="col-md-6 mb-3">
-                            <label for="primeiroNome">Nome Aqui</label>
-                            <input type="text" class="form-control input" id="primeiroNome" placeholder="Primeiro Nome"
-                                required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="segundoNome">Último Sobrenome</label>
-                            <input type="text" class="form-control input" id="segundoNome" placeholder="Último Nome"
-                                required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-12 mb-3">
-                            <label for="email">E-mail</label>
+        <div class="content">
+            <div id="insercao-dados" class="section">
+                <div class="form-container">
+                    <p>Insira seus dados e escolha entre as cinco opções disponíveis</p>
+                    <form>
+                        <div class="input-row">
                             <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span" class="input-group-text" id="inputGroupPrepend2"
-                                        style="background-color: #4D47E2; color: white">@</span>
-                                </div>
-                                <input type="text" class="form-control" id="email" placeholder="seu.email@seudomino.com"
-                                    aria-describedby="inputGroupPrepend2" required>
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" name="nome" style="width: 100%;">
+                            </div>
+                            <div class="input-group">
+                                <label for="sobrenome">Sobrenome</label>
+                                <input type="text" id="sobrenome" name="sobrenome" style=" width: 100%">
                             </div>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-6 mb-3">
-                            <label for="cargo">Cargo/Função</label>
-                            <select class="form-control" id="cargo" required>
-                                <option value="SDR">SDR</option>
-                                <option value="CS">CS</option>
-                                <option value="Closer">CLOSER</option>
-                                <option value="Estagiário">ESTAGIARIO</option>
-                                <option value="Supervisor T.I">SUPERVISOR T.I</option>
-                                <option value="Assesora ADM">ASSESORIA ADM</option>
-                                <option value="RH">RECURSOS HUMANOS</option>
-                                <option value="Gestão de Processos">GESTÃO DE PROCESSOS</option>
-                                <option value="Serviços Gerais">SERVIÇOS GERAIS</option>
-                                <option value="T.I">T.I</option>
-                                <option value="Financeiro">FINANCEIRO</option>
-                                <option value="Marketing">MARKETING</option>
-                                <option value="Gestor de Projetos">GESTOR DE PROJETOS</option>
-                                <option value="Auxiliar Administrativo">AUXILIAR ADMINISTRATIVO</option>
-                                <option value="Gestor de Marketing">GESTOR DE MARKETING</option>
-                                <option value="Auxiliar de ADM">AUXILIAR DE ADM</option>
-                                <option value="Gestor Comercial">GESTOR COMERCIAL</option>
-                                <option value="Heap Vendas">HEAP VENDAS</option>
-                            </select>
+                        <div class="input-row">
+                            <div class="input-group" style="width: 100%;">
+                                <label for="email">E-mail Corporativo</label>
+                                <input type="email" id="email" name="email">
+                            </div>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="telefone">Telefone</label>
-                            <input type="text" class="form-control" id="telefone" placeholder="(99) 99999-9999"
-                                required>
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="cargo">Cargo/Função</label>
+                                <select id="cargo" name="cargo" style="width: 100%;">
+                                    <option value="Gerente">Gerente</option>
+                                    <option value="Analista">Analista</option>
+                                    <option value="Desenvolvedor">Desenvolvedor</option>
+                                    <option value="Designer">Designer</option>
+                                    <option value="Consultor">Consultor</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" style="width: 100%;">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="fotoUpload">Foto</label>
-                            <input type="file" class="form-control-file" id="fotoUpload" accept="image/*" required>
+                        <div class="input-group">
+                            <label for="foto">Foto</label>
+                            <input type="file" id="foto" name="foto">
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-
-            <!-- MODELO 1 -->
-            <div class="col-12 col-lg-6">
-                <div class="scroll-box">
-                    <div class="mb-5">
-                        <h3
-                            style="font-size: 30px; color: #4D47E2; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
-                            Modelo de Assinatura 1</h3>
-                        <div id="model1">
-                            <div
-                                class="d-flex align-items-center px-4 py-4 bg-card text-card-foreground rounded-lg shadow-md w-75">
-                                <img class="w-28 h-28" src="images/logo1.jpg" alt="Doctor's profile picture" />
-                                <div class="hidden md:block border-1 h-28 ml-4 border-l-2"
-                                    style="border-color: #0051f4;"></div>
-                                <div class="ml-4">
-                                    <div class="flex items-center space-x-2">
-                                        <h3 id="primeiroNomeAquiAlt" class="text-lg font-semibold text-primary"
-                                            style="color: #1e254c;">Nome Aqui</h3>
-                                    </div>
-                                    <div id="cargoAqui" class="text-muted-foreground">Cargo</div>
-                                    <div><a id="telefoneAqui" style="color: #000000" href="tel:(xx) 999 999 999">+55
-                                            (xx) 999 999 999</a></div>
-                                    <div><a id="emailAquiAlt"><span>seuemail@email.com</span></a></div>
-                                    <div class="flex space-x-2 mt-2">
-                                        <a href="https://www.instagram.com/referenciaseguros/" target="_blank"
-                                            class="text-accent hover:text-accent-foreground">
-                                            <img aria-hidden="true" width="24px" height="24px" alt="instagram-icon"
-                                                src="images/instagram1.jpg" />
-                                        </a>
-                                        <a href="https://www.linkedin.com/company/referenciasseguros" target="_blank"
-                                            class="text-accent hover:text-accent-foreground">
-                                            <img aria-hidden="true" style="margin: 0 3px 0 3px;" width="24px"
-                                                height="24px" alt="linkedin-icon" src="images/linkedin1.jpg" />
-                                        </a>
-                                        <a href="https://www.facebook.com/referenciaseguros" target="_blank"
-                                            class="text-accent hover:text-accent-foreground">
-                                            <img aria-hidden="true" width="24px" height="24px" alt="facebook-icon"
-                                                src="images/facebook1.jpg" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="padding-top: 20px;">
-                        <button class="btn" onclick="copyAsImage1()" style="margin-left: 40%;
-    font-size: 1.2rem;
-    padding: 1rem 2.5rem;
-    border: none;
-    outline: none;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    background-color: #4d48e2;
-    color: rgb(234, 234, 234);
-    font-weight: 750;
-    transition: 0.6s;
-    box-shadow: 0px 0px 50px #1f4c65;
-    -webkit-box-reflect: below 2px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));"
-                            onmousedown="this.style.transform='scale(0.92)'" onmouseup="this.style.transform='scale(1)'"
-                            onmouseleave="this.style.transform='scale(1)'"
-                            onmouseover="this.style.backgroundColor='rgb(2,29,78)'; this.style.background='linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%)'; this.style.color='rgb(4, 4, 38)'"
-                            onmouseout="this.style.backgroundColor='#4d48e2'; this.style.color='rgb(234, 234, 234)'">
-                            Copiar
-                        </button></div>
-
-                    </div>
-                    <hr style="size: 10px;
-                        height: 5px;
-                        background-image: linear-gradient(to left, #0051f4, #0790b8, #02abdf);
-                        background-size: 100% 10px;
-                        background-repeat: no-repeat;">
-
-                    <!-- MODELO 2 -->
-                    <div class="mb-5 font-ubuntu">
-                        <h3
-                            style="font-size: 30px; color: #4D47E2; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; padding-top: 20px;">
-                            Modelo de Assinatura 2</h3>
-                        <div id="model2">
-                            <div class="flex items-center justify-center bg-slate-0 py-0 px-0">
-                                <div
-                                    class="flex justify-center bg-gradient-to-b from-indigo-50 to-white rounded-xl overflow-hidden max-w-2xl w-75">
-                                    <div class="flex justify-center items-center w-full max-w-[80%]">
-                                        <div class="border-slate-300 p-2 text-right">
-                                            <span id="primeiroNomeAqui" class="text-3xl font-bold"><b>Nome
-                                                    Aqui</b></span>
-                                            <div id="cargoAquiAlt" class="text-muted-foreground">Cargo</div>
-                                            <a id="telefoneAqui" href="tel:(xx) 999 999 999">+55 (xx) 999 999 999</a>
-                                            <div class="mt-4 space-y-2">
-                                                <a id="emailAquiAlt"><span>seuemail@email.com</span></a>
-                                                <a
-                                                    href="https://lp.referenciaseguros.com.br/"><span>referenciaseguros.com.br</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="flex justify-center items-center px-8">
-                                            <div
-                                                class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-3 rounded-full">
-                                                <div
-                                                    class="bg-white p-1 rounded-full flex items-center justify-center w-24 h-24 overflow-hidden">
-                                                    <img id="preview-image-url-second"
-                                                        class="img-preview round-image overflow-hidden w-full bg-cover"
-                                                        alt="Prévia da imagem">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="padding-top: 20px;">
-                        <button class="btn" onclick="copyAsImage2()" style="margin-left: 40%;
-    font-size: 1.2rem;
-    padding: 1rem 2.5rem;
-    border: none;
-    outline: none;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    background-color: #4d48e2;
-    color: rgb(234, 234, 234);
-    font-weight: 750;
-    transition: 0.6s;
-    box-shadow: 0px 0px 50px #1f4c65;
-    -webkit-box-reflect: below 2px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));"
-                            onmousedown="this.style.transform='scale(0.92)'" onmouseup="this.style.transform='scale(1)'"
-                            onmouseleave="this.style.transform='scale(1)'"
-                            onmouseover="this.style.backgroundColor='rgb(2,29,78)'; this.style.background='linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%)'; this.style.color='rgb(4, 4, 38)'"
-                            onmouseout="this.style.backgroundColor='#4d48e2'; this.style.color='rgb(234, 234, 234)'">
-                            Copiar
-                        </button></div>
-                    </div>
-                    </href>
-
-                    <hr style="size: 10px;
-                        height: 5px;
-                        background-image: linear-gradient(to left, #0051f4, #0790b8, #02abdf);
-                        background-size: 100% 10px;
-                        background-repeat: no-repeat;">
-
-                    <!--Modelo 3-->
-                    <div class="mb-5">
-                        <h3
-                            style="font-size: 30px; color: #4D47E2; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; padding-top: 20px;">
-                            Modelo de Assinatura 3</h3>
-                        <div class="model3">
-                            <div class="flex items-center justify-center bg-zinc-100 py-2">
-                                <div class="flex bg-white shadow-lg rounded-lg overflow-hidden max-w-2xl w-75"
-                                    id="model3">
-                                    <div class="w-20 flex-none" style="background-color: #4D47E2;"></div>
-                                    <div class="flex items-center w-full">
-                                        <div class="w-10 flex-none"></div>
-                                        <div class="flex justify-center items-start w-full"
-                                            style="max-width: 150px; height: auto;">
-                                            <img class="round-image"
-                                                style="max-width: 150px; height: auto; display:block;"
-                                                src="images/Logo.jpg" alt="SBIZ">
-                                        </div>
-                                        <div class="border-l border-zinc-300 p-2 flex-1">
-                                            <span id="primeiroNomeAqui" class="text-2xl font-bold"
-                                                style="font-size: 24px; font-weight: bold;"><b>Nome Aqui</b></span>
-                                            <div id="cargoAquiThird" class="text-muted-foreground"
-                                                style="color: #6c757d;">Cargo</div>
-                                            <a id="telefoneAqui" style="color: #000000" href="tel:(xx) 999 999 999">+55
-                                                (xx) 999 999 999</a>
-                                            <div class="mt-4 space-y-2">
-                                                <div class="flex items-center text-zinc-600" style="color: #6c757d;">
-                                                    <a id="emailAquiAlt"
-                                                        style="color: #6c757d;"><span>seuemail@email.com</span></a>
-                                                </div>
-                                                <div class="flex items-center text-zinc-600" style="color: #6c757d;">
-                                                    <a href="https://lp.referenciaseguros.com.br/"
-                                                        style="color: #6c757d;"><span>referenciaseguros.com.br</span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="padding-top: 20px">
-                        <button class="btn" onclick="copyAsImage3()" style="margin-left: 40%;
-    font-size: 1.2rem;
-    padding: 1rem 2.5rem;
-    border: none;
-    outline: none;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    background-color: #4d48e2;
-    color: rgb(234, 234, 234);
-    font-weight: 750;
-    transition: 0.6s;
-    box-shadow: 0px 0px 50px #1f4c65;
-    -webkit-box-reflect: below 2px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));"
-                            onmousedown="this.style.transform='scale(0.92)'" onmouseup="this.style.transform='scale(1)'"
-                            onmouseleave="this.style.transform='scale(1)'"
-                            onmouseover="this.style.backgroundColor='rgb(2,29,78)'; this.style.background='linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%)'; this.style.color='rgb(4, 4, 38)'"
-                            onmouseout="this.style.backgroundColor='#4d48e2'; this.style.color='rgb(234, 234, 234)'">
-                            Copiar
-                        </button></div>
-                    </div>
-
-                    <hr style="size: 10px;
-                        height: 5px;
-                        background-image: linear-gradient(to left, #0051f4, #0790b8, #02abdf);
-                        background-size: 100% 10px;
-                        background-repeat: no-repeat;">
-
-                    <div class="mb-5">
-                        <h3
-                            style="font-size: 30px; color: #4D47E2; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; padding-top: 20px;">
-                            Modelo de Assinatura 4</h3>
-                            <div id="model4" class="model4">
-                                <!-- Ajuste da estrutura flex e cores -->
-                                <div class="flex flex-col md:flex-row items-center bg-card text-card-foreground p-4 rounded-lg shadow-lg max-w-4xl mx-auto"
-                                    style="background-color: white;">
-                                    <!-- Ajuste na borda da imagem e seu contorno -->
-                                    <div class="flex-shrink-0 p-4 rounded-full">
-                                        <img id="preview-image-url" class="img-preview round-image" alt="Prévia da imagem"
-                                            style="width: 120px; height: 120px; border-radius: 100%; border: 10px solid blue;">
-                                    </div>
-                                    <!-- Ajuste da margem e alinhamento de texto -->
-                                    <div class="text-center">
-                                        <span id="primeiroNomeAqui" class="text-2xl font-bold"><b>Nome Aqui</b></span>
-                                        <div id="cargoAquiFourth" class="text-muted-foreground">Cargo</div>
-                                    </div>
-                                    <!-- Ajuste da borda entre seções para cor azul -->
-                                    <div class="hidden md:block border-1 h-24 mx-4 border-l-2" style="border-color: blue;">
-                                    </div>
-                                    <!-- Ajuste do espaço e alinhamento dos itens -->
-                                    <div class="mt-2 text-center md:text-left">
-                                        <div class="space-y-1">
-                                            <!-- Ícone de telefone e seu tamanho -->
-                                            <div class="flex items-center space-x-1">
-                                                <img aria-hidden="true" alt="phone" src="images/ligar.png"
-                                                    style="width: 20px;" />
-                                                <span style="font-family: 'Montserrat', sans-serif; color: #000000;">
-                                                    <a id="telefoneAqui" style="color: #000000;"
-                                                        href="tel:(xx) 999 999 999">+55
-                                                        (xx) 999 999 999</a>
-                                                </span>
-                                            </div>
-                                            <!-- Ícone de e-mail e seu tamanho -->
-                                            <div class="flex items-center space-x-1">
-                                                <img aria-hidden="true" alt="email" src="images/e-mail.png"
-                                                    style="width: 20px;" />
-                                                <a id="emailAquiAlt"><span>seuemail@email.com</span></a>
-                                            </div>
-                                            <!-- Ícone de website e seu tamanho -->
-                                            <div class="flex items-center space-x-1">
-                                                <img aria-hidden="true" alt="website" src="images/rede.png"
-                                                    style="width: 20px;" />
-                                                <a
-                                                    href="https://lp.referenciaseguros.com.br/"><span>referenciaseguros.com.br</span></a>
-                                            </div>
-                                            <!-- Ícone de localização e seu tamanho -->
-                                            <div class="flex items-center space-x-1">
-                                                <img aria-hidden="true" alt="location" src="images/pin.png"
-                                                    style="width: 20px;" />
-                                                <p class="flex items-center space-x-1 Montserrat">Taguatinga, Brasília - DF
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <div style="padding-top: 20px;">
-                        <button class="btn" onclick="copyAsImage4()" style="margin-left: 40%;
-    font-size: 1.2rem;
-    padding: 1rem 2.5rem;
-    border: none;
-    outline: none;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    background-color: #4d48e2;
-    color: rgb(234, 234, 234);
-    font-weight: 750;
-    transition: 0.6s;
-    box-shadow: 0px 0px 50px #1f4c65;
-    -webkit-box-reflect: below 2px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));"
-                            onmousedown="this.style.transform='scale(0.92)'" onmouseup="this.style.transform='scale(1)'"
-                            onmouseleave="this.style.transform='scale(1)'"
-                            onmouseover="this.style.backgroundColor='rgb(2,29,78)'; this.style.background='linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%)'; this.style.color='rgb(4, 4, 38)'"
-                            onmouseout="this.style.backgroundColor='#4d48e2'; this.style.color='rgb(234, 234, 234)'">
-                            Copiar
-                        </button></div>
-                    </div>
-
-                    <hr style="size: 10px;
-                        height: 5px;
-                        background-image: linear-gradient(to left, #0051f4, #0790b8, #02abdf);
-                        background-size: 100% 10px;
-                        background-repeat: no-repeat;">
-
-
-                    <div class="mb-5">
-                        <h3
-                            style="font-size: 30px; color: #4D47E2; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; padding-top: 20px;">
-                            Modelo de Assinatura 5</h3>
-                            <div id="model2" class="model2">
-                                <!-- Estrutura flexível e cores ajustadas -->
-                                <div
-                                    class="flex flex-col md:flex-row items-center bg-white text-black p-4 rounded-lg shadow-lg max-w-4xl mx-auto">
-                                    <!-- Ajuste do espaço e alinhamento dos itens -->
-                                    <div
-                                        class="order-1 md:order-1 mt-2 text-center md:text-left md:mr-4 p-4 bg-gray-200 rounded-lg">
-                                        <div class="space-y-0.5"> <!-- Reduzido o espaçamento entre os dados -->
-                                            <!-- Ícone de telefone e seu tamanho -->
-                                            <div class="flex items-center space-x-1">
-                                                <span style="font-family: 'Montserrat', sans-serif; color: #000000;">
-                                                    <a id="telefoneAqui" style="color: #000000;"
-                                                        href="tel:(xx) 9 9999 9999">+55 (xx) 999 999 999</a>
-                                                </span>
-                                            </div>
-                                            <!-- Ícone de e-mail e seu tamanho -->
-                                            <div class="flex items-center space-x-1">
-                                                <a id="emailAquiAlt"><span>seuemail@example.com</span></a>
-                                            </div>
-                                            <!-- Ícone de website e seu tamanho -->
-                                            <div class="flex items-center space-x-1">
-                                                <a
-                                                    href="https://referenciaseguros.com.br/"><span>www.referenciaseguros.com.br</span></a>
-                                            </div>
-                                            <!-- Ícone de localização e seu tamanho -->
-                                            <div class="flex items-center space-x-1">
-                                                <a class="flex items-center space-x-1 Montserrat"
-                                                    href="https://www.google.com/maps?q=Taguatinga,+Brasília+-+DF">Taguatinga,
-                                                    Brasília - DF</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Ajuste da margem e alinhamento de texto -->
-                                    <div class="order-2 md:order-2 text-center md:text-left md:ml-4">
-                                        <span id="primeiroNomeAqui" class="text-2xl font-bold"><b> Nome Aqui </b></span>
-                                        <div id="cargoAquiFifth" class="text-black">Cargo</div>
-                                    </div>
-                                    <!-- Ajuste da borda da imagem e seu contorno -->
-                                    <div class="order-3 md:order-3 flex-shrink-0 p-4">
-                                        <img id="preview-image-url-third" class="img-preview"
-                                            style="width: 120px; height: 120px; clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); border: 8px solid blue;">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding-top: 20px;">
-                        <button class="btn" onclick="copyAsImage5()" style="margin-left: 40%;
-    font-size: 1.2rem;
-    padding: 1rem 2.5rem;
-    border: none;
-    outline: none;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    background-color: #4d48e2;
-    color: rgb(234, 234, 234);
-    font-weight: 750;
-    transition: 0.6s;
-    box-shadow: 0px 0px 50px #1f4c65;
-    -webkit-box-reflect: below 2px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));"
-                            onmousedown="this.style.transform='scale(0.92)'" onmouseup="this.style.transform='scale(1)'"
-                            onmouseleave="this.style.transform='scale(1)'"
-                            onmouseover="this.style.backgroundColor='rgb(2,29,78)'; this.style.background='linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%)'; this.style.color='rgb(4, 4, 38)'"
-                            onmouseout="this.style.backgroundColor='#4d48e2'; this.style.color='rgb(234, 234, 234)'">
-                            Copiar
-                        </button></div>
-                    </div>
-
-                    <div id="popup" class="popup">
-                        Copiado com sucesso!
-                    </div>
+            <div id="personalizacao-imagens" class="section" style="display: none;">
+                <div class="form-container">
+                    <h1>Personalização de Imagens</h1>
+                    <p>Opções para personalizar imagens...</p>
                 </div>
-
-                <footer class="text-center text-white bg-[#1e254c] p-3 fixed w-screen bottom-0 left-0 right-0 w-10 pt-10">
-                    © 2024 Referência Seguros - Todos os direitos reservados
-                </footer>
-
-                <!-- Modal for Image Cropping -->
-                <div class="modal fade" id="cropModal" tabindex="-1" role="dialog" aria-labelledby="cropModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="cropModalLabel">Recortar Imagem</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="img-container">
-                                    <img id="image" src="">
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-primary" id="crop">Recortar</button>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div id="personalizacao-fontes" class="section" style="display: none;">
+                <div class="form-container">
+                    <h1>Personalização de Fontes</h1>
+                    <p>Opções para personalizar fontes...</p>
                 </div>
-
-
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-                    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-                    crossorigin="anonymous"></script>
-                <script src="scripts.js"></script>
-                <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.10.4/html-to-image.min.js"></script>
-                <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-                    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-                    crossorigin="anonymous"></script>
-                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-                    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-                    crossorigin="anonymous"></script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-                    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-                    crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-                <script src="scripts.js"></script>
-                <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-                <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
-
-
+            </div>
+            <div class="modelos-container">
+                <div class="modelo">
+                    <p>Nome Sobrenome</p>
+                    <p>Cargo</p>
+                    <p>(00) 9 9999-9999</p>
+                </div>
+                <div class="modelo">
+                    <p>Nome Sobrenome</p>
+                    <p>Cargo</p>
+                    <p>(00) 9 9999-9999</p>
+                </div>
+                <div class="modelo">
+                    <p>Nome Sobrenome</p>
+                    <p>Cargo</p>
+                    <p>(00) 9 9999-9999</p>
+                </div>
+                <div class="modelo">
+                    <p>Nome Sobrenome</p>
+                    <p>Cargo</p>
+                    <p>(00) 9 9999-9999</p>
+                </div>
+                <div class="modelo">
+                    <p>Nome Sobrenome</p>
+                    <p>Cargo</p>
+                    <p>(00) 9 9999-9999</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="styled-hr2">
+    <footer>
+        <p>&copy; 2024 - Referência Internacional Corretora de Seguros</p>
+    </footer>
+</body>
 </html>

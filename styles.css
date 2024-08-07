@@ -1,260 +1,195 @@
-form label {
-    font-weight: 600;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-form .form-control, form .input-group-text {
-    border-radius: 50px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    border-color: #3802ff;
-}
-
-#ass a {
-    text-decoration: none;
-}
-
-.input-group-text {
-    border: none;
-}
-
-.form-control:hover, .input-group-text:hover {
-    border-color: var(--color);
-    box-shadow: 0 0 10px #0157EF; 
-}
-
-.mb-5 {
-    transition: transform 0.3s ease;
-}
-
-.mb-5:hover { 
-    transform: scale(1.05);
-}
-
-.mb-5 a {
-    text-decoration: none;
-}
-
-.mb-5 a:hover {
-    text-decoration: underline;
-}
-
-/* Animation for the pop-up */
-@keyframes fadeInOut {
-    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
-    10% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-    90% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-    100% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #4d48e2;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    opacity: 0;
-    animation: fadeInOut 2s forwards;
-}
-
-/* Adicione ou ajuste estas regras CSS */
-.img-preview {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-}
-
-.round-image {
-    width: 100%;
-    height: 20px;
-}
-
-.form-row{
-    position: sticky;
-    background-color: #ffffff;
-}
-
-.flex-col {
+body {
+    background-color: #0b113e;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    background-color: #fff;
-    margin: auto;
+    min-height: 100vh;
 }
 
-.flex-row {
+.container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-}
-
-.flex-grow {
-    flex-grow: 1;
-    padding: 16px;
-    word-wrap: break-word;
-    text-align: center;
-}
-
-.img-preview {
-    width: 100px;
-    height: 100px;
-    color: white;
-    object-fit: cover;
-}
-
-@media (min-width: 768px) {
-    .flex-col {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .text-center-md {
-        text-align: left;
-    }
-}
-
-/* BARRA DE ROLAGEM DAS ASSINATURAS */
-.scroll-box {
-    width: 800px;
-    height: 800px;
-    border: none;
-    padding: 10px;
-    overflow-y: scroll; /* Sempre mostra a barra de rolagem vertical */
-    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
-  }:root {
-    --button-background: #4d48e2;
-    --button-color: white;
-    --dropdown-highlight: #4d48e2;
-    --dropdown-width: 160px;
-    --dropdown-background: white;
-    --dropdown-color: black;
-}
-
-.signature {
-    width: 300px;
-    border: 1px solid #e1e1e1;
-    padding: 20px;
-    align-items: center;
-    border-radius: 8px;
-    background-color: #ffffff;
-    margin-top: 20px;
-}
-
-.photo {
+    flex-direction: column;
     flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    line-height: 1.2;
     text-align: center;
 }
 
-.photo img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 2px solid #1e90ff;
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.details {
-    flex: 2;
-    padding-left: 20px;
+.menu button {
+    background-color: #0044cc;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.name {
-    font-size: 18px;
-    font-weight: bold;
-    color: #1e90ff;
+.menu button:hover {
+    background-color: #003399;
 }
 
-.position {
-    font-size: 14px;
-    color: #333;
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Adicionando espaço entre as divs */
+    flex: 1;
+}
+
+.section {
+    display: none;
+}
+
+.section h1 {
+    font-size: 2.5em;
+}
+
+.form-container {
+    flex: 0.6;
+    margin-right: 20px; /* Adicionando margem entre inputs e modelos */
+}
+
+.modelos-container {
+    flex: 0.4;
+    overflow-y: scroll;
+    height: 600px;
+    border: 2px solid #0044cc;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 68, 204, 0.5);
+}
+
+.modelos-container .modelo {
+    background-color: #ffffff;
+    color: #000000;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+p {
     margin-bottom: 10px;
 }
 
-.contact-info {
-    font-size: 14px;
-    color: #666;
+.input-row {
+    display: flex;
+    margin-bottom: 15px;
 }
 
-.contact-info div {
-    margin-bottom: 5px;
+input[type="text"],
+input[type="tel"],
+select {
+    width: calc(50% - 5px); /* Ajustando a largura para inputs mais juntos */
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ffffff;
+    background-color: #0b113e;
+    color: #ffffff;
+    border-radius: 15px;
 }
 
+input[type="email"] {
+    width: 60%; /* Ajustando a largura do input de e-mail */
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ffffff;
+    background-color: #0b113e;
+    color: #ffffff;
+    border-radius: 15px;
+}
 
-.scroll-box {
-    width: 800px;
-    height: 800px;
+input[type="file"] {
+    background-color: #0b113e;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 15px;
+    display: inline-block;
+    border: 1px solid #ffffff;
+    width: auto;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #0044cc;
+    color: white;
     border: none;
-    padding: 10px;
-    overflow-y: scroll; /* Sempre mostra a barra de rolagem vertical */
-    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+    padding: 8px 16px;
+    margin-right: 10px;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
-:root {
-    --button-background: #4d48e2;
-    --button-color: white;
-    --dropdown-highlight: #4d48e2;
-    --dropdown-width: 160px;
-    --dropdown-background: white;
-    --dropdown-color: black;
+input[type="file"]::file-selector-button:hover {
+    background-color: #003399;
 }
 
-/* Estilização da barra de rolagem para navegadores baseados em WebKit (Chrome, Safari) */
-.scroll-box::-webkit-scrollbar {
-    width: 12px;
+input[type="file"]::after {
+    content: '';
 }
 
-.scroll-box::-webkit-scrollbar-track {
-    background: #f1f1f1;
+hr {
+    border: 1px solid #ffffff;
+    margin-top: auto;
+}
+
+footer {
+    background-color: #0b113e;
+    text-align: center;
+    padding: 20px 0;
+    color: #ffffff;
+    width: 100%;
+}
+
+.modelos-container::-webkit-scrollbar {
+    width: 6px;
+    margin-right: 10px;
+}
+
+.modelos-container::-webkit-scrollbar-thumb {
+    background-color: #0044cc;
     border-radius: 10px;
 }
 
-.scroll-box::-webkit-scrollbar-thumb {
-    background: var(--button-background);
-    border-radius: 10px;
+.modelos-container::-webkit-scrollbar-track {
+    background-color: #0b113e;
 }
 
-.scroll-box::-webkit-scrollbar-thumb:hover {
-    background: var(--dropdown-highlight);
+label{
+    color: #76a3d6;
 }
 
-/* Estilização da barra de rolagem para Firefox */
-.scroll-box { 
-    scrollbar-width: thin;
-    scrollbar-color: var(--button-background) #f1f1f1;
+.styled-hr {
+    width: 50%;
+    margin: 20px auto; /* Centraliza a linha horizontal */
+    border: 0;
+    height: 4px; /* Ajuste a altura da linha */
+    border-radius: 100%;
+    background: linear-gradient(to right, #92a1c0, #0044cc, #92a1c0);
 }
 
-/* Estilização da barra de rolagem para IE e Edge */
-.scroll-box {
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-}
-
-.scroll-box::-ms-scrollbar {
-    width: 12px;
-}
-
-.scroll-box::-ms-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-.scroll-box::-ms-scrollbar-thumb {
-    background: var(--button-background);
-    border-radius: 10px;
-}
-
-.scroll-box::-ms-scrollbar-thumb:hover {
-    background: var(--dropdown-highlight);
+.styled-hr2 {
+    width: 80%;
+    margin: 20px auto;
+    border: 0;
+    height: 4px; /* Ajuste a altura da linha */
+    border-radius: 100%;
+    background: linear-gradient(to right, #92a1c0, #0044cc, #92a1c0);
 }
