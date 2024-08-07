@@ -20,7 +20,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>Gerador de Assinaturas</h1>
+        <div class="cabecalho">
+            <img src="Logo_ReferenciaSeguros.png" class="logo">
+            <div class="titulo-container">
+                <h1>Gerador de Assinaturas</h1>
+            </div>
+        </div>          
         <hr class="styled-hr"><br>
         <div class="menu">
             <button onclick="showSection('insercao-dados')">Inserção de Dados</button>
@@ -30,7 +35,9 @@
         <div class="content">
             <div id="insercao-dados" class="section">
                 <div class="form-container">
-                    <p>Insira seus dados e escolha entre as cinco opções disponíveis</p>
+                    <div class="h3">
+                    <h3 style="margin-bottom: 45px; font-size: 30px; width: 55%;">Insira seus dados e escolha entre as cinco opções disponíveis</h3>
+                    </div>
                     <form>
                         <div class="input-row">
                             <div class="input-group">
@@ -43,10 +50,10 @@
                             </div>
                         </div>
                         <div class="input-row">
-                            <div class="input-group" style="width: 100%;">
+                            <div class="input-group" style="width: 100%; display: flex; flex-direction: column;">
                                 <label for="email">E-mail Corporativo</label>
                                 <input type="email" id="email" name="email">
-                            </div>
+                            </div>                            
                         </div>
                         <div class="input-row">
                             <div class="input-group">
@@ -84,6 +91,11 @@
                 </div>
             </div>
             <div class="modelos-container">
+                <div class="modelo">
+                    <p>Nome Sobrenome</p>
+                    <p>Cargo</p>
+                    <p>(00) 9 9999-9999</p>
+                </div>
                 <div class="modelo">
                     <p>Nome Sobrenome</p>
                     <p>Cargo</p>

@@ -25,16 +25,20 @@ h1 {
     margin-bottom: 10px;
     line-height: 1.2;
     text-align: center;
+    width: 20%;
+    margin-left: 36%;
+    margin-right: auto;
+    line-height: 1.2;
 }
 
 .menu {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .menu button {
-    background-color: #0044cc;
+    background-color: #003399;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -44,34 +48,26 @@ h1 {
 }
 
 .menu button:hover {
-    background-color: #003399;
+    background-color: #93cafe;
+    color: black;
 }
 
 .content {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Adicionando espaço entre as divs */
+    gap: 1px; /* Diminua o espaço entre as divs */
     flex: 1;
 }
 
 .section {
-    display: none;
-}
-
-.section h1 {
-    font-size: 2.5em;
-}
-
-.form-container {
-    flex: 0.6;
-    margin-right: 20px; /* Adicionando margem entre inputs e modelos */
+    margin-top: 40px;
 }
 
 .modelos-container {
-    flex: 0.4;
+    flex: 0.5; /* Aumentando a largura da div dos modelos */
     overflow-y: scroll;
     height: 600px;
-    border: 2px solid #0044cc;
+    border: 2px solid #93cafe;
     border-radius: 15px;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 68, 204, 0.5);
@@ -85,21 +81,19 @@ h1 {
     border-radius: 15px;
 }
 
-p {
-    margin-bottom: 10px;
-}
-
 .input-row {
     display: flex;
-    margin-bottom: 15px;
+    margin: 10px;
+}
+
+.form-container {
+    flex: 0.6;
 }
 
 input[type="text"],
 input[type="tel"],
 select {
-    width: calc(50% - 5px); /* Ajustando a largura para inputs mais juntos */
     padding: 8px;
-    margin-top: 5px;
     border: 1px solid #ffffff;
     background-color: #0b113e;
     color: #ffffff;
@@ -107,9 +101,8 @@ select {
 }
 
 input[type="email"] {
-    width: 60%; /* Ajustando a largura do input de e-mail */
+    width: 40%; /* Ajustando a largura do input de e-mail */
     padding: 8px;
-    margin-top: 5px;
     border: 1px solid #ffffff;
     background-color: #0b113e;
     color: #ffffff;
@@ -160,36 +153,59 @@ footer {
 
 .modelos-container::-webkit-scrollbar {
     width: 6px;
-    margin-right: 10px;
-}
-
-.modelos-container::-webkit-scrollbar-thumb {
-    background-color: #0044cc;
     border-radius: 10px;
 }
 
 .modelos-container::-webkit-scrollbar-track {
-    background-color: #0b113e;
+    background: #0b113e;
+    margin: 10px;
+    border-radius: 10px;
 }
 
-label{
+.modelos-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom,#0044cc, #93cafe, #0044cc);
+    border-radius: 10px;
+}
+
+label {
     color: #76a3d6;
 }
 
 .styled-hr {
     width: 50%;
-    margin: 20px auto; /* Centraliza a linha horizontal */
+    margin: 0px auto; /* Centraliza a linha horizontal */
     border: 0;
     height: 4px; /* Ajuste a altura da linha */
     border-radius: 100%;
-    background: linear-gradient(to right, #92a1c0, #0044cc, #92a1c0);
+    background: linear-gradient(to right, #0044cc, #93cafe, #0044cc);
 }
 
 .styled-hr2 {
     width: 80%;
-    margin: 20px auto;
+    margin: 10px auto;
     border: 0;
     height: 4px; /* Ajuste a altura da linha */
     border-radius: 100%;
-    background: linear-gradient(to right, #92a1c0, #0044cc, #92a1c0);
+    background: linear-gradient(to right, #0044cc, #93cafe, #0044cc);
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Adiciona espaço entre a imagem e o título */
+}
+
+.logo {
+    max-width: 130px; /* Garante que a logo não fique muito grande */
+}
+
+.titulo-container {
+    flex: 1; /* Faz com que o contêiner do título ocupe o espaço restante */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
 }
