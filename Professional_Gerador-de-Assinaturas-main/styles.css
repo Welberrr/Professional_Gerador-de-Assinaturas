@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+    
+}
+
+body {
+    background-color: #0b113e;
+    color: #efefef;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    text-align: center;
+    width: 20%;
+    margin-left: 36%;
+    margin-right: auto;
+    line-height: 1.2;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.menu button {
+    background-color: #0051f4;
+    border: none;
+    color: #efefef;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background-color: #93cafe;
+    color: black;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 1px; /* Diminua o espaço entre as divs */
+    flex: 1;
+}
+
+.section {
+    margin-top: 40px;
+}
+
+.modelos-container {
+    flex: 0.5; /* Aumentando a largura da div dos modelos */
+    overflow-y: scroll;
+    height: 600px;
+    border: 2px solid #93cafe;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 68, 204, 0.5);
+}
+
+.modelos-container .modelo {
+    background-color: #efefef;
+    color: #000000;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.input-row {
+    display: flex;
+    margin: 10px;
+    gap: 30px; /* Aumenta o espaço entre os campos */
+}
+
+.form-container {
+    flex: 0.6;
+}
+
+input[type="text"],
+input[type="tel"],
+select {
+    padding: 8px;
+    border: 1px solid #efefef;
+    background-color: #0b113e;
+    color: #efefef;
+    border-radius: 15px; 
+}
+
+input[type="email"] {
+    width: 40%; /* Ajustando a largura do input de e-mail */
+    padding: 8px;
+    border: 1px solid #efefef;
+    background-color: #0b113e;
+    color: #efefef;
+    border-radius: 15px;
+}
+
+input[type="file"] {
+    background-color: #0b113e;
+    color: #efefef;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 15px;
+    display: inline-block;
+    border: 1px solid #efefef;
+    width: 650px;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #0051f4;
+    color: #efefef;
+    border: none;
+    padding: 8px 15px;
+    margin-right: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #003399;
+}
+
+input[type="file"]::after {
+    content: '';
+}
+
+hr {
+    border: 1px solid #efefef;
+    margin-top: auto;
+}
+
+footer {
+    background-color: #0b113e;
+    text-align: center;
+    padding: 20px 0;
+    color: #efefef;
+    width: 100%;
+}
+
+.modelos-container::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+}
+
+.modelos-container::-webkit-scrollbar-track {
+    background: #0b113e;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.modelos-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom,#0044cc, #93cafe, #0044cc);
+    border-radius: 10px;
+}
+
+label {
+    color: #76a3d6;
+}
+
+.styled-hr {
+    width: 50%;
+    margin: 0px auto; /* Centraliza a linha horizontal */
+    border: 0;
+    height: 3px; /* Ajuste a altura da linha */
+    border-radius: 100%;
+    background: linear-gradient(to right, #0044cc, #93cafe, #0044cc);
+}
+
+.styled-hr2 {
+    width: 80%;
+    margin: 10px auto;
+    border: 0;
+    height: 4px; /* Ajuste a altura da linha */
+    border-radius: 100%;
+    background: linear-gradient(to right, #0044cc, #93cafe, #0044cc);
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Adiciona espaço entre a imagem e o título */
+}
+
+.logo {
+    max-width: 200px; /* Garante que a logo não fique muito grande */
+}
+
+.titulo-container {
+    flex: 1; /* Faz com que o contêiner do título ocupe o espaço restante */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}

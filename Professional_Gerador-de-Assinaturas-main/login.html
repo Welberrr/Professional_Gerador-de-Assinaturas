@@ -1,0 +1,153 @@
+body {
+    background-color: #1e254c;
+    color: #efefef;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 350px;
+    width: 100%; /* Adiciona largura completa ao contêiner */
+    background: #1e254c;
+    border-radius: 40px;
+    padding: 25px 35px;
+    border: 5px solid #efefef;
+    margin: 20px;
+    text-align: center;
+}
+
+.heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    color: #efefef;
+}
+
+.form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Garante que o formulário ocupe toda a largura do contêiner */
+}
+
+.form .input {
+    width: calc(100% - 40px); /* Garante que os inputs mantenham a largura total menos o padding */
+    max-width: 100%;
+    background: #efefef;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    border-inline: 2px solid transparent;
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+.form .input::-moz-placeholder {
+    color: rgb(170, 170, 170);
+}
+
+.form .input::placeholder {
+    color: rgb(170, 170, 170);
+}
+
+.form .input:focus {
+    outline: none;
+    border-inline: 2px solid #0790b8;
+}
+
+.form .forgot-password {
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.form .forgot-password a {
+    font-size: 11px;
+    color: #0051f4;
+    text-decoration: none;
+}
+
+.form .login-button {
+    display: block;
+    width: calc(100% - 40px); /* Garante que o botão mantenha a largura total menos o padding */
+    max-width: 100%;
+    font-weight: bold;
+    background: linear-gradient(45deg, #0790b8 0%, #0051f4 100%);
+    color: #efefef;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+.form .login-button:hover {
+    transform: scale(1.03);
+}
+
+.form .login-button:active {
+    transform: scale(0.95);
+}
+
+.social-account-container {
+    margin-top: 25px;
+}
+
+.social-account-container .title {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    color: rgb(170, 170, 170);
+}
+
+.social-account-container .social-accounts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.social-account-container .social-accounts .social-button {
+    background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(112, 112, 112) 100%);
+    border: 5px solid #efefef;
+    padding: 5px;
+    border-radius: 50%;
+    width: 40px;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.social-account-container .social-accounts .social-button .svg {
+    fill: #efefef;
+    margin: auto;
+}
+
+.social-account-container .social-accounts .social-button:hover {
+    transform: scale(1.2);
+}
+
+.social-account-container .social-accounts .social-button:active {
+    transform: scale(0.9);
+}
+
+.agreement {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.agreement a {
+    text-decoration: none;
+    color: #0790b8;
+    font-size: 9px;
+}
