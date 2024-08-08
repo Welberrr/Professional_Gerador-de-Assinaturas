@@ -2,12 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+    
 }
 
 body {
     background-color: #0b113e;
-    color: #ffffff;
+    color: #efefef;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -38,9 +40,9 @@ h1 {
 }
 
 .menu button {
-    background-color: #003399;
+    background-color: #0051f4;
     border: none;
-    color: white;
+    color: #efefef;
     padding: 10px 20px;
     margin: 0 10px;
     border-radius: 5px;
@@ -74,7 +76,7 @@ h1 {
 }
 
 .modelos-container .modelo {
-    background-color: #ffffff;
+    background-color: #efefef;
     color: #000000;
     margin-bottom: 10px;
     padding: 20px;
@@ -84,6 +86,7 @@ h1 {
 .input-row {
     display: flex;
     margin: 10px;
+    gap: 30px; /* Aumenta o espaço entre os campos */
 }
 
 .form-container {
@@ -94,37 +97,37 @@ input[type="text"],
 input[type="tel"],
 select {
     padding: 8px;
-    border: 1px solid #ffffff;
+    border: 1px solid #efefef;
     background-color: #0b113e;
-    color: #ffffff;
-    border-radius: 15px;
+    color: #efefef;
+    border-radius: 15px; 
 }
 
 input[type="email"] {
     width: 40%; /* Ajustando a largura do input de e-mail */
     padding: 8px;
-    border: 1px solid #ffffff;
+    border: 1px solid #efefef;
     background-color: #0b113e;
-    color: #ffffff;
+    color: #efefef;
     border-radius: 15px;
 }
 
 input[type="file"] {
     background-color: #0b113e;
-    color: white;
+    color: #efefef;
     cursor: pointer;
     padding: 8px;
     border-radius: 15px;
     display: inline-block;
-    border: 1px solid #ffffff;
-    width: auto;
+    border: 1px solid #efefef;
+    width: 650px;
 }
 
 input[type="file"]::file-selector-button {
-    background-color: #0044cc;
-    color: white;
+    background-color: #0051f4;
+    color: #efefef;
     border: none;
-    padding: 8px 16px;
+    padding: 8px 15px;
     margin-right: 10px;
     border-radius: 15px;
     cursor: pointer;
@@ -139,7 +142,7 @@ input[type="file"]::after {
 }
 
 hr {
-    border: 1px solid #ffffff;
+    border: 1px solid #efefef;
     margin-top: auto;
 }
 
@@ -147,12 +150,12 @@ footer {
     background-color: #0b113e;
     text-align: center;
     padding: 20px 0;
-    color: #ffffff;
+    color: #efefef;
     width: 100%;
 }
 
 .modelos-container::-webkit-scrollbar {
-    width: 6px;
+    width: 10px;
     border-radius: 10px;
 }
 
@@ -175,7 +178,7 @@ label {
     width: 50%;
     margin: 0px auto; /* Centraliza a linha horizontal */
     border: 0;
-    height: 4px; /* Ajuste a altura da linha */
+    height: 3px; /* Ajuste a altura da linha */
     border-radius: 100%;
     background: linear-gradient(to right, #0044cc, #93cafe, #0044cc);
 }
@@ -197,7 +200,7 @@ label {
 }
 
 .logo {
-    max-width: 130px; /* Garante que a logo não fique muito grande */
+    max-width: 200px; /* Garante que a logo não fique muito grande */
 }
 
 .titulo-container {

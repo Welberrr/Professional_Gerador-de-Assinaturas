@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Assinaturas</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script>
         function showSection(sectionId) {
             document.getElementById('insercao-dados').style.display = 'none';
@@ -16,6 +19,23 @@
         window.onload = function() {
             showSection('insercao-dados');
         };
+
+        $(document).ready(function() {
+            $('#telefone').mask('(00) 000000000');
+            
+            function updateEmail() {
+                var nome = $('#nome').val();
+                var sobrenome = $('#sobrenome').val();
+                if (nome && sobrenome) {
+                    var email = nome.toLowerCase() + '.' + sobrenome.toLowerCase() + '@referenciaseguros.com.br';
+                    $('#email').val(email);
+                }
+            }
+
+            $('#nome, #sobrenome').on('input', function() {
+                updateEmail();
+            });
+        });
     </script>
 </head>
 <body>
@@ -59,11 +79,22 @@
                             <div class="input-group">
                                 <label for="cargo">Cargo/Função</label>
                                 <select id="cargo" name="cargo" style="width: 100%;">
+                                    <option value="SDR">SDR</option>
+                                    <option value="CS">CS</option>
+                                    <option value="Closer">Closer</option>
+                                    <option value="Estagiario">Estagiário</option>
+                                    <option value="Assessoria ADM">Assessoria ADM</option>
+                                    <option value="RH">RH</option>
+                                    <option value="Serviços Gerais">Serviços Gerais</option>
+                                    <option value="T.I">T.I</option>
+                                    <option value="Financeiro">Financeiro</option>
+                                    <option value="Marketing">Marketing</option>
+                                    <option value="Supervisor T.I">Supervisor T.I</option>
+                                    <option value="Gestor Comercial">Gestor Comercial</option>
+                                    <option value="Gestor Marketing">Gestor Marketing</option>
+                                    <option value="Gestor de Processos">Gestor de Processos</option>
+                                    <option value="Gestor de Projetos">Gestor de Projetos</option>
                                     <option value="Gerente">Gerente</option>
-                                    <option value="Analista">Analista</option>
-                                    <option value="Desenvolvedor">Desenvolvedor</option>
-                                    <option value="Designer">Designer</option>
-                                    <option value="Consultor">Consultor</option>
                                 </select>
                             </div>
                             <div class="input-group">
@@ -126,7 +157,7 @@
     </div>
     <hr class="styled-hr2">
     <footer>
-        <p>&copy; 2024 - Referência Internacional Corretora de Seguros</p>
+        <p>Copyright &copy; 2024 - Referência Internacional Corretora de Seguros</p>
     </footer>
 </body>
 </html>
