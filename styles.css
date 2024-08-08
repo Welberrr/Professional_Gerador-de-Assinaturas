@@ -28,7 +28,7 @@ h1 {
     line-height: 1.2;
     text-align: center;
     width: 20%;
-    margin-left: 36%;
+    margin-left: 32.5%;
     margin-right: auto;
     line-height: 1.2;
 }
@@ -104,7 +104,7 @@ select {
 }
 
 input[type="email"] {
-    width: 40%; /* Ajustando a largura do input de e-mail */
+    width: 404px; /* Ajustando a largura do input de e-mail */
     padding: 8px;
     border: 1px solid #efefef;
     background-color: #0b113e;
@@ -120,7 +120,7 @@ input[type="file"] {
     border-radius: 15px;
     display: inline-block;
     border: 1px solid #efefef;
-    width: 650px;
+    width: 411px;
 }
 
 input[type="file"]::file-selector-button {
