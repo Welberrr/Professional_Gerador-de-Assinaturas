@@ -1,85 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gerador de assinaturas</title>
+
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="modelos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="index.js"></script>
+
 </head>
 
 <body>
     <div class="parent">
         <div class="setor1">
             <div class="cabecalho">
-                <img src="Logo_ReferenciaSeguros.png" class="logo">
                 <div class="titulo-container">
-                    <h1>Gerador de Assinaturas</h1>
-                </div>
-                <div class="menu">
-                    <button onclick="showSection('insercao-dados')">Inserção de Dados</button>
-                    <button onclick="showSection('personalizacao-imagens')">Personalização de Imagens</button>
-                    <button onclick="showSection('personalizacao-fontes')">Personalização de Fontes</button>
+                    <img src="imagens/ReferenciaSeguros_Logos_Vetor_Illustrator_referencia-seguros-simbolo-cores.png" class="logo">
+                    <h1>GERADOR DE ASSINATURAS</h1>
                 </div>
             </div>
-            <div id="insercao-dados" class="section">
-                <div class="form-container">
-                    <div class="titulo-form">
-                        <h3>Insira seus dados e escolha entre as cinco opções disponíveis</h3>
-                    </div>
-                    <form>
-                        <div class="input-row">
-                            <div class="input-group">
-                                <label for="nome">Nome</label>
-                                <input type="text" id="nome" name="nome">
-                            </div>
-                            <div class="input-group">
-                                <label for="sobrenome">Sobrenome</label>
-                                <input type="text" id="sobrenome" name="sobrenome">
-                            </div>
-                        </div>
-                        <div class="input-row">
-                            <div class="input-group">
-                                <label for="email">E-mail Corporativo</label>
-                                <input type="email" id="email" name="email">
-                            </div>
-                        </div>
-                        <div class="input-row">
-                            <div class="input-group">
-                                <label for="cargo">Cargo/Função</label>
-                                <select id="cargo" name="cargo">
-                                    <option value="SDR">SDR</option>
-                                    <option value="CS">CS</option>
-                                    <option value="Closer">Closer</option>
-                                    <option value="Estagiario">Estagiário</option>
-                                    <option value="Assessoria ADM">Assessoria ADM</option>
-                                    <option value="RH">RH</option>
-                                    <option value="Serviços Gerais">Serviços Gerais</option>
-                                    <option value="T.I">T.I</option>
-                                    <option value="Financeiro">Financeiro</option>
-                                    <option value="Marketing">Marketing</option>
-                                    <option value="Supervisor T.I">Supervisor T.I</option>
-                                    <option value="Gestor Comercial">Gestor Comercial</option>
-                                    <option value="Gestor Marketing">Gestor Marketing</option>
-                                    <option value="Gestor de Processos">Gestor de Processos</option>
-                                    <option value="Gestor de Projetos">Gestor de Projetos</option>
-                                    <option value="Gerente">Gerente</option>
-                                </select>
-                            </div>
-                            <div class="input-group">
-                                <label for="telefone">Telefone</label>
-                                <input type="tel" id="telefone" name="telefone">
-                            </div>
+
+            <!-- Seção de Inserção de Dados (única restante) -->
+            <div class="form-container">
+                <div class="titulo-form">
+                    <h2>Insira seus dados e escolha entre as cinco opções disponíveis</h2>
+                </div>
+                <form>
+                    <div class="input-row" style="gap: 45px;">
+                        <div class="input-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome">
                         </div>
                         <div class="input-group">
-                            <label for="foto">Foto</label>
-                            <input type="file" id="foto" name="foto">
+                            <label for="sobrenome">Sobrenome</label>
+                            <input type="text" id="sobrenome" name="sobrenome">
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="email">E-mail Corporativo</label>
+                            <input type="email" id="email" name="email" style="width: 152%;">
+                        </div>
+                    </div>
+                    <div class="input-row2">
+                        <div class="input-group" style="width: 285px;">
+                            <label for="cargo">Cargo/Função</label>
+                            <select id="cargo" name="cargo">
+                                <option value="SDR">SDR</option>
+                                <option value="CS">CS</option>
+                                <option value="Closer">Closer</option>
+                                <option value="Estagiario">Estagiário</option>
+                                <option value="Assessoria ADM">Assessoria ADM</option>
+                                <option value="RH">RH</option>
+                                <option value="Serviços Gerais">Serviços Gerais</option>
+                                <option value="T.I">T.I</option>
+                                <option value="Financeiro">Financeiro</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Supervisor T.I">Supervisor T.I</option>
+                                <option value="Gestor Comercial">Gestor Comercial</option>
+                                <option value="Gestor Marketing">Gestor Marketing</option>
+                                <option value="Gestor de Processos">Gestor de Processos</option>
+                                <option value="Gestor de Projetos">Gestor de Projetos</option>
+                                <option value="Gerente">Gerente</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" style="width: 345px;">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="foto" style="margin-left: 13px;">Foto</label>
+                        <input type="file" id="foto" name="foto">
+                    </div>
+                </form>
             </div>
         </div>
-
 
         <div class="setor2">
             <div class="modelos-container">
@@ -87,31 +96,49 @@
                     <p>Nome Sobrenome</p>
                     <p>Cargo</p>
                     <p>(00) 9 9999-9999</p>
+                    <a class="whatsapp-link" href="#" target="_blank">
+                        <img src="whatsapp-logo.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+                    </a>
                 </div>
                 <div class="modelo">
                     <p>Nome Sobrenome</p>
                     <p>Cargo</p>
                     <p>(00) 9 9999-9999</p>
+                    <a class="whatsapp-link" href="#" target="_blank">
+                        <img src="whatsapp-logo.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+                    </a>
                 </div>
                 <div class="modelo">
                     <p>Nome Sobrenome</p>
                     <p>Cargo</p>
                     <p>(00) 9 9999-9999</p>
+                    <a class="whatsapp-link" href="#" target="_blank">
+                        <img src="whatsapp-logo.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+                    </a>
                 </div>
                 <div class="modelo">
                     <p>Nome Sobrenome</p>
                     <p>Cargo</p>
                     <p>(00) 9 9999-9999</p>
+                    <a class="whatsapp-link" href="#" target="_blank">
+                        <img src="whatsapp-logo.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+                    </a>
                 </div>
                 <div class="modelo">
                     <p>Nome Sobrenome</p>
                     <p>Cargo</p>
                     <p>(00) 9 9999-9999</p>
+                    <a class="whatsapp-link" href="#" target="_blank">
+                        <img src="whatsapp-logo.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+                    </a>
                 </div>
                 <div class="modelo">
                     <p>Nome Sobrenome</p>
                     <p>Cargo</p>
                     <p>(00) 9 9999-9999</p>
+                    <a class="whatsapp-link" href="#" target="_blank">
+                        <img src="whatsapp-logo.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+                    </a>
                 </div>
             </div>
         </div>
@@ -120,7 +147,7 @@
     <hr class="styled-hr2">
 
     <footer>
-        <p>Copyright &copy; 2024 - Referência Internacional Corretora de Seguros</p>
+        <p style="font-family: montserrat">Copyright &copy; 2024 - Referência Internacional Corretora de Seguros</p>
     </footer>
 </body>
 
