@@ -69,4 +69,46 @@ $(document).ready(function() {
             $('.whatsapp-link').attr('href', whatsappLink);
         }
     });
+
+    // Função para copiar o conteúdo visual do modelo ao clicar
+    $('.modelo').on('click', async function() {
+        try {
+            const tempElement = $(this).clone();
+            const htmlContent = tempElement.prop('outerHTML');
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const data = [new ClipboardItem({ [blob.type]: blob })];
+
+            await navigator.clipboard.write(data);
+        } catch (err) {
+            console.error('Falha ao copiar:', err);
+            alert('Erro ao copiar, tente novamente.');
+        }
+    });
+});
+
+$(document).ready(function() {
+    // ... (restante do seu código)
+
+    // Função para copiar o conteúdo visual do modelo ao clicar
+    $('.modelo').on('click', async function() {
+        try {
+            const tempElement = $(this).clone();
+            const htmlContent = tempElement.prop('outerHTML');
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const data = [new ClipboardItem({ [blob.type]: blob })];
+
+            await navigator.clipboard.write(data);
+
+            // Mostrar o popup estilizado
+            const popup = $('#popup');
+            popup.addClass('show');
+            setTimeout(function() {
+                popup.removeClass('show');
+            }, 2000); // O popup ficará visível por 2 segundos
+
+        } catch (err) {
+            console.error('Falha ao copiar:', err);
+            alert('Erro ao copiar, tente novamente.');
+        }
+    });
 });

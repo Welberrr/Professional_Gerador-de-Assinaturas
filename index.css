@@ -228,3 +228,26 @@ footer {
   color: #fff;
   transform: translateY(-7px);
 }
+
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif;
+}
+
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
