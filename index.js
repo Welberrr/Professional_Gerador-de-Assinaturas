@@ -27,77 +27,46 @@ $(document).ready(function() {
         }
     }
 
-    $('#nome, #sobrenome').on('input', function() {
-        formatNameAndSurname();
-        updateEmail();
-    });
-
-    // Função para mostrar a seção correspondente
-    function showSection(sectionId) {
-        // Esconde todas as seções
-        $('.section').hide();
-
-        // Mostra apenas a seção clicada
-        $('#' + sectionId).show();
-    }
-
-    // Evento para os botões do menu
-    $('.menu button').click(function() {
-        var sectionId = $(this).attr('data-section');
-        showSection(sectionId);
-    });
-
-    // Mostra a primeira seção ao carregar a página
-    showSection('insercao-dados');
-
-    // Função para atualizar os modelos com os dados inseridos
-    $('#nome, #sobrenome, #cargo, #telefone').on('input', function() {
+    function updateModel() {
         var nome = $('#nome').val();
         var sobrenome = $('#sobrenome').val();
         var cargo = $('#cargo').val();
         var telefone = $('#telefone').val();
+        var email = $('#email').val();
 
-        // Atualiza os modelos
-        $('.modelo p:nth-child(1)').text(nome + ' ' + sobrenome);
-        $('.modelo p:nth-child(2)').text(cargo);
-        $('.modelo p:nth-child(3)').text(telefone);
+        // Atualiza os valores nos modelos
+        $('#modelo-nome').text(nome ? capitalizeFirstLetter(nome) : 'NOME');
+        $('#modelo-sobrenome').text(sobrenome ? capitalizeFirstLetter(sobrenome) : 'SOBRENOME');
+        $('#modelo-cargo').text(cargo ? capitalizeFirstLetter(cargo) : 'CARGO');
+        $('#modelo-telefone').text(telefone ? telefone : '(00) 9 9999-9999');
+        $('#modelo-email').text(email ? email : 'email.email@referenciaseguros.com.br');
 
-        // Atualiza o link do WhatsApp para abrir no WhatsApp Web
+        // Atualiza o link do WhatsApp
         if (telefone) {
-            var formattedPhone = telefone.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
-            var whatsappLink = "https://web.whatsapp.com/send?phone=55" + formattedPhone;
-            $('.whatsapp-link').attr('href', whatsappLink);
+            var whatsappLink = "https://web.whatsapp.com/send?phone=55" + telefone.replace(/\D/g, '');
+            $('#modelo-whatsapp-link').attr('href', whatsappLink);
+        } else {
+            $('#modelo-whatsapp-link').attr('href', '#');
         }
+    }
+
+    $('#nome, #sobrenome, #cargo, #telefone, #email').on('input', function() {
+        formatNameAndSurname();
+        updateEmail();
+        updateModel();
     });
 
-    // Função para copiar o conteúdo visual do modelo ao clicar
-    $('.modelo').on('click', async function() {
+    // Função para copiar o conteúdo visual da tabela ao clicar
+    $('table').on('click', async function() {
         try {
-            const tempElement = $(this).clone();
-            const htmlContent = tempElement.prop('outerHTML');
-            const blob = new Blob([htmlContent], { type: 'text/html' });
-            const data = [new ClipboardItem({ [blob.type]: blob })];
+            const htmlContent = $(this).prop('outerHTML'); // Pega o HTML da tabela
 
-            await navigator.clipboard.write(data);
-        } catch (err) {
-            console.error('Falha ao copiar:', err);
-            alert('Erro ao copiar, tente novamente.');
-        }
-    });
-});
-
-$(document).ready(function() {
-    // ... (restante do seu código)
-
-    // Função para copiar o conteúdo visual do modelo ao clicar
-    $('.modelo').on('click', async function() {
-        try {
-            const tempElement = $(this).clone();
-            const htmlContent = tempElement.prop('outerHTML');
-            const blob = new Blob([htmlContent], { type: 'text/html' });
-            const data = [new ClipboardItem({ [blob.type]: blob })];
-
-            await navigator.clipboard.write(data);
+            // Usando a API de Clipboard para copiar o conteúdo como texto HTML
+            await navigator.clipboard.write([
+                new ClipboardItem({
+                    'text/html': new Blob([htmlContent], { type: 'text/html' })
+                })
+            ]);
 
             // Mostrar o popup estilizado
             const popup = $('#popup');

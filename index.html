@@ -11,16 +11,16 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="index.js"></script>
 
+    <style>
+        /* Coloque todo o estilo inline aqui */
+    </style>
 </head>
 
 <body>
@@ -91,54 +91,72 @@
 
         <div class="setor2">
             <div class="modelos-container">
-                <div class="modelo">
-                    <p>Nome Sobrenome</p>
-                    <p>Cargo</p>
-                    <p>(00) 9 9999-9999</p>
-                    <a class="whatsapp-link" href="#" target="_blank">
-                        <img src="whatsapp-logo.png" alt="WhatsApp" style="width: 24px; height: 24px;">
-                    </a>
-                </div>
-                <div class="modelo">
-                    <p>Nome Sobrenome</p>
-                    <p>Cargo</p>
-                    <p>(00) 9 9999-9999</p>
-                    <a class="whatsapp-link" href="#" target="_blank">
-                        <img src="whatsapp-logo.png" alt="WhatsApp" style="width: 24px; height: 24px;">
-                    </a>
-                </div>
-                <div class="modelo">
-                    <p>Nome Sobrenome</p>
-                    <p>Cargo</p>
-                    <p>(00) 9 9999-9999</p>
-                    <a class="whatsapp-link" href="#" target="_blank">
-                        <img src="whatsapp-logo.png" alt="WhatsApp" style="width: 24px; height: 24px;">
-                    </a>
-                </div>
-                <div class="modelo">
-                    <p>Nome Sobrenome</p>
-                    <p>Cargo</p>
-                    <p>(00) 9 9999-9999</p>
-                    <a class="whatsapp-link" href="#" target="_blank">
-                        <img src="whatsapp-logo.png" alt="WhatsApp" style="width: 24px; height: 24px;">
-                    </a>
-                </div>
-                <div class="modelo">
-                    <p>Nome Sobrenome</p>
-                    <p>Cargo</p>
-                    <p>(00) 9 9999-9999</p>
-                    <a class="whatsapp-link" href="#" target="_blank">
-                        <img src="whatsapp-logo.png" alt="WhatsApp" style="width: 24px; height: 24px;">
-                    </a>
-                </div>
-                <div class="modelo">
-                    <p>Nome Sobrenome</p>
-                    <p>Cargo</p>
-                    <p>(00) 9 9999-9999</p>
-                    <a class="whatsapp-link" href="#" target="_blank">
-                        <img src="whatsapp-logo.png" alt="WhatsApp" style="width: 24px; height: 24px;">
-                    </a>
-                </div>
+                <table class="modelo" style="width: 100%; max-width: 745px; background-color: #00134A; border-radius: 15px; color: #B0C4DE; padding: 20px; box-sizing: border-box; font-family: 'Montserrat', sans-serif;">
+                    <tr>
+                        <td style="padding-bottom: 15px;">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="vertical-align: top;">
+                                        <table>
+                                            <tr>
+                                                <td id="modelo-nome" style="font-weight: bold; font-size: 28px;">NOME</td>
+                                            </tr>
+                                            <tr>
+                                                <td id="modelo-sobrenome" style="font-weight: bold; font-size: 28px;">SOBRENOME</td>
+                                            </tr>
+                                            <tr>
+                                                <td id="modelo-cargo" style="font-size: 18px; color: #B0C4DE;">CARGO</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td style="vertical-align: top; text-align: right;">
+                                        <table style="text-align: right;">
+                                            <tr>
+                                                <td>
+                                                    <a href="https://www.referenciaseguros.com.br" target="_blank">
+                                                        <img src="imagens/icones/iconeSite.png" alt="Website" style="width: 24px; height: 24px; margin-left: 10px;">
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="https://www.linkedin.com/company/referenciasseguros/mycompany/verification/" target="_blank">
+                                                        <img src="imagens/icones/iconeLinkedin.png" alt="LinkedIn" style="width: 24px; height: 24px; margin-left: 10px;">
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="https://www.instagram.com/referenciaseguros/" target="_blank">
+                                                        <img src="imagens/icones/IconeInstagram.png" alt="Instagram" style="width: 24px; height: 24px; margin-left: 10px;">
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a id="modelo-whatsapp-link" href="#" target="_blank">
+                                                        <img src="imagens/icones/iconeWhatsapp.png" alt="WhatsApp" style="width: 24px; height: 24px; margin-left: 10px;">
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom: 2px solid #93CAFE;"></td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top: 10px;">
+                            <table style="width: 100%; display: flex; align-items: center; gap: 20px;">
+                                <tr>
+                                    <td style="width: 39px;">
+                                        <img src="imagens/icones/logoModelos.png" alt="Logo" style="width: 39px; height: 39px;">
+                                    </td>
+                                    <td id="modelo-telefone" style="font-size: 20px; line-height: 19.8px; font-weight: 600;">(00) 9 9999-9999</td>
+                                    <td id="modelo-email" style="font-size: 20px; line-height: 19.8px; font-weight: 600;">email.email@referenciaseguros.com.br</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!-- Repita o bloco acima para outros modelos, se necessário -->
             </div>
         </div>
     </div>
@@ -150,6 +168,7 @@
     <footer>
         <p style="font-family: montserrat">Copyright &copy; 2024 - Referência Internacional Corretora de Seguros</p>
     </footer>
+
 </body>
 
 </html>

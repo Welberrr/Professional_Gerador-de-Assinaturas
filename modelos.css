@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/static/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/static/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/static/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/static/Montserrat-Black.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.modelos-container .modelo {
+    background-color: #00134A;
+    color: #ffff;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    width: 745px;  /* Define a largura */
+    height: 243px; /* Define a altura */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
+    position: relative; /* Necessário para posicionar a imagem */
+    box-sizing: border-box;
+    padding-left: 30px; /* Ajuste conforme necessário */
+    padding-top: 20px; /* Ajuste conforme necessário */
+}
+
+.nome-black {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 36px; /* Tamanho maior para destaque */
+    margin-bottom: 5px; /* Ajuste do espaço entre o nome e o cargo */
+}
+
+.sobrenome-black {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 36px; /* Tamanho maior para destaque */
+    margin-bottom: 5px; /* Ajuste do espaço entre o nome e o cargo */
+}
+
+.cargo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 20px; /* Ajuste conforme necessário */
+    margin-bottom: 10px;
+}
+
+.telefone-email {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 10px; /* Espaço entre telefone/email e a imagem */
+}
+
+.modelos-container .modelo .imagem-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0; /* Remove qualquer margem */
+    padding: 0; /* Remove qualquer padding */
+}
+
+.modelos-container .modelo .imagem-container img {
+    width: 300px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    display: block; /* Garante que a imagem não tenha espaço ao redor */
+    margin: 0; /* Remove qualquer margem */
+    padding: 0; /* Remove qualquer padding */
+}
+
+.modelos-container .modelo {
+    background-color: #00134A;
+    color: #B0C4DE;
+    padding: 20px;
+    border-radius: 15px;
+    width: 745px;
+    height: 200px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.informacoes-principais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nome-cargo {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome, .sobrenome {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    margin: 0;
+}
+
+.cargo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin-top: 5px;
+    color: #B0C4DE;
+}
+
+.icones-sociais {
+    display: flex;
+    gap: 10px;
+    align-items: center; /* Alinha os ícones verticalmente no centro */
+}
+
+.icone-social {
+    width: 24px;
+    height: 24px;
+    object-fit: contain; /* Garante que o conteúdo da imagem se ajuste sem distorção */
+}
+
+.linha-separadora {
+    height: 2px;
+    background-color: #93CAFE;
+    margin: 10px 0;
+}
+
+.informacoes-contato {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.telefone, .email {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 19.8px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.logo-contato {
+    width: 39px;
+    height: 39px;
+}
