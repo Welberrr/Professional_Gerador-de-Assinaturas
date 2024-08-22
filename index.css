@@ -220,23 +220,25 @@ footer {
 
 .popup {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #4CAF50;
-    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0044cc; 
+    color: #efefef; 
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
     transition: all 0.3s ease;
     z-index: 1000;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 700;
+    text-align: center;
+    width: 300px; 
 }
 
 .popup.show {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
 }
