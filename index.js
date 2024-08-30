@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // Máscara de telefone para o formato (xx) x xxxx-xxxx
     $('#telefone').mask('(00) 0 0000-0000');
 
@@ -9,7 +9,7 @@ $(document).ready(function() {
     function formatNameAndSurname() {
         var nome = $('#nome').val();
         var sobrenome = $('#sobrenome').val();
-        
+
         if (nome) {
             $('#nome').val(capitalizeFirstLetter(nome));
         }
@@ -34,30 +34,36 @@ $(document).ready(function() {
         var telefone = $('#telefone').val();
         var email = $('#email').val();
 
-        // Atualiza os valores nos modelos
-        $('#modelo-nome').text(nome ? capitalizeFirstLetter(nome) : 'NOME');
-        $('#modelo-sobrenome').text(sobrenome ? capitalizeFirstLetter(sobrenome) : 'SOBRENOME');
-        $('#modelo-cargo').text(cargo ? capitalizeFirstLetter(cargo) : 'CARGO');
-        $('#modelo-telefone').text(telefone ? telefone : '(00) 9 9999-9999');
-        $('#modelo-email').text(email ? email : 'email.email@referenciaseguros.com.br');
+        // Atualiza os valores em todos os modelos
+        $('.modelo-nome').text(nome ? capitalizeFirstLetter(nome) : 'NOME');
+        $('.modelo-sobrenome').text(sobrenome ? capitalizeFirstLetter(sobrenome) : 'SOBRENOME');
+        $('.modelo-cargo').text(cargo ? capitalizeFirstLetter(cargo) : 'CARGO');
+        $('.modelo-telefone').text(telefone ? telefone : '(00) 9 9999-9999');
+        $('.modelo-email').text(email ? email : 'email.email@referenciaseguros.com.br');
 
         // Atualiza o link do WhatsApp
         if (telefone) {
             var whatsappLink = "https://web.whatsapp.com/send?phone=55" + telefone.replace(/\D/g, '');
-            $('#modelo-whatsapp-link').attr('href', whatsappLink);
+            $('.modelo-whatsapp-link').attr('href', whatsappLink);
         } else {
-            $('#modelo-whatsapp-link').attr('href', '#');
+            $('.modelo-whatsapp-link').attr('href', '#');
         }
     }
 
-    $('#nome, #sobrenome, #cargo, #telefone, #email').on('input', function() {
+    $('#nome, #sobrenome, #cargo, #telefone, #email').on('input', function () {
+        formatNameAndSurname();
+        updateEmail();
+        updateModel();
+    });
+
+    $('#nome, #sobrenome, #cargo, #telefone, #email').on('input', function () {
         formatNameAndSurname();
         updateEmail();
         updateModel();
     });
 
     // Função para copiar o conteúdo visual da tabela ao clicar
-    $('table').on('click', async function() {
+    $('table').on('click', async function () {
         try {
             const htmlContent = $(this).prop('outerHTML'); // Pega o HTML da tabela
 
@@ -71,7 +77,7 @@ $(document).ready(function() {
             // Mostrar o popup estilizado
             const popup = $('#popup');
             popup.addClass('show');
-            setTimeout(function() {
+            setTimeout(function () {
                 popup.removeClass('show');
             }, 2000); // O popup ficará visível por 2 segundos
 
@@ -82,7 +88,7 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     // Máscara de telefone para o formato (xx) x xxxx-xxxx
     $('#telefone').mask('(00) 0 0000-0000');
 
@@ -135,14 +141,14 @@ $(document).ready(function() {
         }
     }
 
-    $('#nome, #sobrenome, #cargo, #telefone, #email').on('input', function() {
+    $('#nome, #sobrenome, #cargo, #telefone, #email').on('input', function () {
         formatNameAndSurname();
         updateEmail();
         updateModel();
     });
 
     // Função para copiar o conteúdo visual da tabela ao clicar
-    $('table').on('click', async function() {
+    $('table').on('click', async function () {
         try {
             const htmlContent = $(this).prop('outerHTML'); // Pega o HTML da tabela
 
@@ -156,7 +162,7 @@ $(document).ready(function() {
             // Mostrar o popup estilizado
             const popup = $('#popup');
             popup.addClass('show');
-            setTimeout(function() {
+            setTimeout(function () {
                 popup.removeClass('show');
             }, 2000); // O popup ficará visível por 2 segundos
 
