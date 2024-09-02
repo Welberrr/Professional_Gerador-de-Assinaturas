@@ -102,35 +102,38 @@
 
         <div class="setor2">
             <div class="modelos-container">
+
                 <!-- Primeiro modelo-->
                 <table class="modelo"
-                    style="width: 100%; max-width: 745px; background-color: #00248B; border-radius: 15px; color: #B0C4DE; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; border: 2px solid #93CAFE;">
+                    style="width: 100%; max-width: 745px; background-color: #00248B; border-radius: 15px; color: #B0C4DE; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; border: 2px solid #93CAFE; border-collapse: collapse;">
                     <tr style="height: 150px;"> <!-- Defina uma altura fixa para a linha -->
-                        <td style="vertical-align: top; padding-right: 150px;">
-                            <table>
+                        <td style="vertical-align: top; padding-right: 0; padding-left: 20px; width: 70%;">
+                            <table style="width: 100%; border-spacing: 0;">
                                 <tr>
                                     <td class="modelo-nome"
-                                        style="font-weight: bold; font-size: 28px; padding-left: 20px;">NOME</td>
+                                        style="font-weight: bold; font-size: 28px; color: #B0C4DE; font-family: 'Montserrat', sans-serif; padding-top: 20px;">
+                                        NOME</td>
                                 </tr>
                                 <tr>
                                     <td class="modelo-sobrenome"
-                                        style="font-weight: bold; font-size: 28px; padding-left: 20px;">SOBRENOME</td>
+                                        style="font-weight: bold; font-size: 28px; color: #B0C4DE; font-family: 'Montserrat', sans-serif; padding-top: 5px;">
+                                        SOBRENOME</td>
                                 </tr>
                                 <tr>
                                     <td class="modelo-cargo"
-                                        style="font-size: 18px; color: #B0C4DE; padding-left: 20px;">
-                                        <div>CARGO</div>
-                                        <div style="margin-bottom: 20px;"></div>
+                                        style="font-size: 18px; color: #B0C4DE; font-family: 'Montserrat', sans-serif; padding-top: 5px;">
+                                        CARGO
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="modelo-telefone"
-                                        style="font-size: 18px; color: #B0C4DE; padding-left: 20px;">(00) 9 9999-9999
+                                    <td class="modelo-telefone" style="padding-top: 10px;" font-size: 18px; color:
+                                        #B0C4DE; font-family: 'Montserrat' , sans-serif; padding-top: 10px;">
+                                        (00) 9 9999-9999
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="modelo-email"
-                                        style="font-size: 10px; font-weight: 600; color: #B0C4DE; padding-right: 22px; padding-left: 20px;">
+                                        style="font-size: 10px; font-weight: 600; color: #B0C4DE; font-family: 'Montserrat', sans-serif; padding-top: 5px;">
                                         email.email@referenciaseguros.com.br
                                     </td>
                                 </tr>
@@ -138,34 +141,40 @@
                         </td>
 
                         <!-- Imagem e ícones -->
-                        <td style="padding: 0; width: 200px; vertical-align: top; position: relative;">
-                            <!-- Ícones sociais sobrepostos à imagem -->
-                            <div style="position: absolute; right: 20px; display: flex; gap: 10px;">
-                                <a href="https://www.referenciaseguros.com.br" target="_blank">
-                                    <img src="imagens/icones/iconeSite.png" alt="Website"
-                                        style="width: 24px; height: 24px;">
-                                </a>
-                                <a href="https://www.linkedin.com/company/referenciasseguros/mycompany/verification/"
-                                    target="_blank">
-                                    <img src="imagens/icones/iconeLinkedin.png" alt="LinkedIn"
-                                        style="width: 24px; height: 24px;">
-                                </a>
-                                <a href="https://www.instagram.com/referenciaseguros/" target="_blank">
-                                    <img src="imagens/icones/IconeInstagram.png" alt="Instagram"
-                                        style="width: 24px; height: 24px;">
-                                </a>
-                                <a id="modelo-whatsapp-link" href="#" target="_blank">
-                                    <img src="imagens/icones/iconeWhatsapp.png" alt="WhatsApp"
-                                        style="width: 24px; height: 24px;">
-                                </a>
-                            </div>
-                            <!-- Imagem no fundo -->
-                            <img src="imagens/image-modelo-1.png" alt="Foto"
-                                style="position: absolute; bottom: 0; right: 0; width: 100%; height: auto; object-fit: cover; border-radius: 0 15px 15px 0;">
+                        <td style="width: 30%; vertical-align: top;">
+                            <table style="width: 100%; border-spacing: 0;">
+                                <tr>
+                                    <td
+                                        style="text-align: right; padding-top: 10px; padding-right: 20px; white-space: nowrap;">
+                                        <a href="https://www.referenciaseguros.com.br" target="_blank">
+                                            <img src="imagens/icones/iconeSite.png" alt="Website"
+                                                style="width: 24px; height: 24px;">
+                                        </a>
+                                        <a href="https://www.linkedin.com/company/referenciasseguros/mycompany/verification/"
+                                            target="_blank">
+                                            <img src="imagens/icones/iconeLinkedin.png" alt="LinkedIn"
+                                                style="width: 24px; height: 24px; margin-left: 10px;">
+                                        </a>
+                                        <a href="https://www.instagram.com/referenciaseguros/" target="_blank">
+                                            <img src="imagens/icones/IconeInstagram.png" alt="Instagram"
+                                                style="width: 24px; height: 24px; margin-left: 10px;">
+                                        </a>
+                                        <a id="modelo-whatsapp-link" href="#" target="_blank">
+                                            <img src="imagens/icones/iconeWhatsapp.png" alt="WhatsApp"
+                                                style="width: 24px; height: 24px; margin-left: 10px;">
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-top: 60px;">
+                                        <img src="imagens/image-modelo-1.png" alt="Foto"
+                                            style="width: 100%; height: auto; object-fit: cover; border-radius: 0 15px 15px 0;">
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                 </table>
-
 
 
 
@@ -268,12 +277,11 @@
                 <table class="modelo"
                     style="width: 100%; max-width: 745px; background-color: #00134A; border-radius: 15px; color: #B0C4DE; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; border: 2px solid #93CAFE;">
                     <tr style="height: 150px;"> <!-- Defina uma altura fixa para a linha -->
-                        <td style="vertical-align: top; padding: 0; width: 150px; height: 150px;">
-                            <!-- Ajuste a altura aqui -->
-                            <!-- Terceiro modelo -->
+                        <td style="vertical-align: top; padding: 0; width: 150px; height: 150px; overflow: hidden;">
                             <img id="modelo-foto3" src="imagens/mulher2.png" alt="Foto"
-                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px 0 0 15px;">
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 150px 150px 150px 150px; display: block;">
                         </td>
+
 
                         <!-- Ícones de redes sociais alinhados à direita -->
                         <td style="vertical-align: top;">
@@ -488,7 +496,7 @@
                         <td style="padding: 0; width: 150px; height: 150px; vertical-align: top;">
                             <!-- Quinto modelo -->
                             <img id="modelo-foto4" src="imagens/imagem-mulher3.png" alt="Foto"
-                                style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0 15px 15px 0;">
+                                style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 150px 150px 150px 150px;">
                         </td>
                     </tr>
                 </table>
