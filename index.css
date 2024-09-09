@@ -1,13 +1,13 @@
 body {
-    background-color: #0b113e;
+    background-color: #0b113e !important;
 }
 
 .parent {
-    display: grid;
+    display: grid !important;
 }
 
 .setor1 {
-    grid-area: 1/2;
+    grid-area: 1/2 !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,7 +37,7 @@ body {
 }
 
 h1 {
-    color: #FFF;
+    color: #FFF !important;
     font-family: montserrat;
     font-size: 64px;
     font-style: normal;
@@ -50,7 +50,7 @@ h1 {
 }
 
 h2 {
-    color: white;
+    color: white !important;
     font-family: poppins;
     margin-left: 10px;
     width: 500px;
@@ -107,17 +107,17 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="text"],
+input[type="text"] ,
 input[type="tel"],
 input[type="email"],
 select {
-    padding: 10px;
-    border: 1px solid #efefef;
-    background-color: #0b113e;
-    color: #efefef;
-    border-radius: 15px;
-    width: 100%;
-    margin-top: 10px;
+    padding: 10px ;
+    border: 1px solid #efefef ;
+    background-color: #0b113e ;
+    color: #efefef ;
+    border-radius: 15px ;
+    width: 100% ;
+    margin-top: 10px ;
 }
 
 .cargo {
@@ -148,6 +148,9 @@ input[type="file"]::file-selector-button {
 input[type="file"]::file-selector-button:hover {
     background-color: #003399;
 }
+.modelo-nome, .modelo-sobrenome, .modelo-cargo, .modelo-telefone, .modelo-email {
+    text-transform: uppercase;
+}
 
 .modelos-container::-webkit-scrollbar {
     width: 10px;
@@ -171,7 +174,7 @@ input[type="file"]::file-selector-button:hover {
     flex: 0.5;
     overflow-y: scroll;
     height: 750px;
-    width: 850px;
+    width: 700px;
     border: 2px solid #93cafe;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 68, 204, 0.5);
