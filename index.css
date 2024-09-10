@@ -1,13 +1,13 @@
 body {
-    background-color: #0b113e !important;
+    background-color: #0b113e;
 }
 
 .parent {
-    display: grid !important;
+    display: grid;
 }
 
 .setor1 {
-    grid-area: 1/2 !important;
+    grid-area: 1/2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +21,9 @@ body {
     position: fixed;
     top: 0;
     width: 683px;
+    margin-left: 20px; /* Ajustar o alinhamento do título */
 }
+
 
 .titulo-container {
     display: flex;
@@ -36,32 +38,29 @@ body {
     margin-left: 10px;
 }
 
+
 h1 {
-    color: #FFF !important;
-    font-family: montserrat;
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
     font-size: 64px;
-    font-style: normal;
     font-weight: 900;
-    line-height: 99%;
     letter-spacing: 1.5px;
     margin-bottom: 50px;
     margin-top: 0px;
-    margin-left: 33px;
+    margin-left: 40px; /* Diminuir a margem para alinhar com os inputs */
 }
-
-h2 {
-    color: white !important;
-    font-family: poppins;
-    margin-left: 10px;
-    width: 500px;
+ 
+h3 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 10px; /* Ajuste o alinhamento do subtítulo */
+    width: 650px;
 }
 
 label {
     color: #76a3d6;
-    font-family: "DM Serif Display", serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 25px;
-    letter-spacing: -.5px;
-    font-family: "Poppins", sans-serif;
     font-weight: 600;
 }
 
@@ -84,6 +83,7 @@ label {
     margin: 0 auto;
     padding: 20px;
     margin-top: 250px;
+    margin-left: 33px; /* Alinhar os inputs com o título */
 }
 
 .input-row {
@@ -98,31 +98,35 @@ label {
     flex: 1;
 }
 
-label {
-    color: #76a3d6;
-    font-family: "Poppins", sans-serif;
-    font-size: 25px;
-    letter-spacing: -0.5px;
-    font-weight: 600;
-    margin-bottom: 5px;
+
+
+/* Ajuste a largura e a altura para todos os campos */
+.form-container input[type="text"],
+.form-container input[type="tel"],
+.form-container input[type="email"],
+.form-container select {
+    padding: 10px;
+    border: 1px solid #efefef;
+    background-color: #0b113e;
+    color: #efefef;
+    border-radius: 15px;
+    width: 100%; /* Todos os campos terão a mesma largura */
+    margin-top: 10px;
+    height: 44px; /* Altura padronizada para todos os campos */
 }
 
-input[type="text"] ,
-input[type="tel"],
-input[type="email"],
-select {
-    padding: 10px ;
-    border: 1px solid #efefef ;
-    background-color: #0b113e ;
-    color: #efefef ;
-    border-radius: 15px ;
-    width: 100% ;
-    margin-top: 10px ;
+/* Ajustar a altura e largura dos campos na linha */
+.input-row {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os campos */
+    margin-bottom: 20px;
 }
 
-.cargo {
-    width: 300px;
+.input-group {
+    flex: 1; /* Garantir que os campos se ajustem dentro da linha */
 }
+
+
 
 input[type="file"] {
     background-color: #0b113e;
@@ -148,6 +152,7 @@ input[type="file"]::file-selector-button {
 input[type="file"]::file-selector-button:hover {
     background-color: #003399;
 }
+
 .modelo-nome, .modelo-sobrenome, .modelo-cargo, .modelo-telefone, .modelo-email {
     text-transform: uppercase;
 }

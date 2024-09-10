@@ -30,17 +30,17 @@ $(document).ready(function () {
 
 
 
-    $('#cropModal').on('shown.bs.modal', function() {
+    $('#cropModal').on('shown.bs.modal', function () {
         cropper = new Cropper(image, {
             aspectRatio: 1,
             viewMode: 3
         });
-    }).on('hidden.bs.modal', function() {
+    }).on('hidden.bs.modal', function () {
         cropper.destroy();
         cropper = null;
     });
 
-    $('#crop').click(function() {
+    $('#crop').click(function () {
         var canvas;
         $('#cropModal').modal('hide');
 
@@ -49,11 +49,11 @@ $(document).ready(function () {
                 width: 100,
                 height: 100,
             });
-            canvas.toBlob(function(blob) {
+            canvas.toBlob(function (blob) {
                 var url = URL.createObjectURL(blob);
                 var reader = new FileReader();
                 reader.readAsDataURL(blob);
-                reader.onloadend = function() {
+                reader.onloadend = function () {
                     var base64data = reader.result;
                     $('#modelo-foto3').attr('src', base64data).addClass('img-preview');
                     $('#modelo-foto4').attr('src', base64data).addClass('img-preview');
@@ -62,7 +62,7 @@ $(document).ready(function () {
         }
     });
 
- 
+
     function updateModel() {
         var nome = $('#nome').val();
         var sobrenome = $('#sobrenome').val();
@@ -77,12 +77,11 @@ $(document).ready(function () {
         $('.modelo-telefone').text(telefone ? telefone : '(00) 9 9999-9999');
         $('.modelo-email').text(email ? email : 'email.email@referenciaseguros.com.br');
 
-        // Atualiza o link do WhatsApp
+        // Atualiza o link do WhatsApp para abrir no WhatsApp Web
         if (telefone) {
-            var whatsappLink = "https://web.whatsapp.com/send?phone=55" + telefone.replace(/\D/g, '');
-            $('.modelo-whatsapp-link').attr('href', whatsappLink);
-        } else {
-            $('.modelo-whatsapp-link').attr('href', '#');
+            var formattedPhone = telefone.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+            var whatsappLink = "https://web.whatsapp.com/send?phone=55" + formattedPhone;
+            $('.whatsapp-link').attr('href', whatsappLink);
         }
     }
 
@@ -128,14 +127,14 @@ $(document).ready(function () {
 
 
 
-    
+
     var cropper;
     var image = document.getElementById('image');
     var input = document.getElementById('foto');  // Corrigi aqui para refletir o ID correto
 
-    $('#foto').on('change', function(event) {
+    $('#foto').on('change', function (event) {
         var files = event.target.files;
-        var done = function(url) {
+        var done = function (url) {
             input.value = '';
             image.src = url;
             $('#cropModal').modal('show');
@@ -151,12 +150,14 @@ $(document).ready(function () {
                 done(URL.createObjectURL(file));
             } else if (FileReader) {
                 reader = new FileReader();
-                reader.onload = function(event) {
+                reader.onload = function (event) {
                     done(reader.result);
                 };
                 reader.readAsDataURL(file);
             }
         }
     });
+
+
 
 });

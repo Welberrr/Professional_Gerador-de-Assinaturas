@@ -33,14 +33,21 @@
     color: #B0C4DE;
     padding: 20px;
     border-radius: 15px;
-    margin: 0 auto 20px auto;  /* Centraliza o modelo e adiciona espaçamento abaixo */
+    margin: 0 auto 20px auto;
     height: auto;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Permite que o modelo cresça horizontalmente */
     justify-content: space-between;
     position: relative;
+    width: auto; /* Permite crescimento automático */
+    min-width: 600px; /* Define uma largura mínima */
 }
+
+
+
+
+
 
 /* Informações principais: Nome, Sobrenome e Cargo */
 .informacoes-principais {
