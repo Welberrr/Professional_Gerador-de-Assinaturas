@@ -4,13 +4,21 @@ body {
 
 .parent {
     display: grid;
+    grid-template-columns: 1fr 1fr; /* Para dois setores lado a lado */
+    grid-gap: 20px; /* Espaçamento entre setores */
+    max-width: 100%; /* Para garantir que a grid seja responsiva */
 }
 
 .setor1 {
-    grid-area: 1/2;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.setor1, .setor2 {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
 }
 
 .setor2 {
@@ -23,7 +31,6 @@ body {
     width: 683px;
     margin-left: 20px; /* Ajustar o alinhamento do título */
 }
-
 
 .titulo-container {
     display: flex;
@@ -38,7 +45,6 @@ body {
     margin-left: 10px;
 }
 
-
 h1 {
     color: #FFF;
     font-family: 'Montserrat', sans-serif;
@@ -49,7 +55,7 @@ h1 {
     margin-top: 0px;
     margin-left: 40px; /* Diminuir a margem para alinhar com os inputs */
 }
- 
+
 h3 {
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -98,8 +104,6 @@ label {
     flex: 1;
 }
 
-
-
 /* Ajuste a largura e a altura para todos os campos */
 .form-container input[type="text"],
 .form-container input[type="tel"],
@@ -126,8 +130,6 @@ label {
     flex: 1; /* Garantir que os campos se ajustem dentro da linha */
 }
 
-
-
 input[type="file"] {
     background-color: #0b113e;
     color: #efefef;
@@ -151,6 +153,27 @@ input[type="file"]::file-selector-button {
 
 input[type="file"]::file-selector-button:hover {
     background-color: #003399;
+}
+
+.modelo {
+    width: 100%; /* Garantir que o modelo ocupe o espaço disponível */
+    flex-wrap: wrap; /* Permitir que os elementos fiquem um abaixo do outro em telas menores */
+    min-width: 300px; /* Evitar que os elementos fiquem pequenos demais */
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .parent {
+        grid-template-columns: 1fr; /* Tornar os setores uma coluna em telas pequenas */
+    }
+    
+    .modelo {
+        min-width: 100%; /* Para que a tabela ocupe todo o espaço da tela menor */
+    }
+    
+    h1 {
+        font-size: 48px; /* Reduzir o tamanho da fonte do título em telas menores */
+    }
 }
 
 .modelo-nome, .modelo-sobrenome, .modelo-cargo, .modelo-telefone, .modelo-email {

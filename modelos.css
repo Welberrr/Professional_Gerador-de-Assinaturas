@@ -40,14 +40,18 @@
     flex-direction: row; /* Permite que o modelo cresça horizontalmente */
     justify-content: space-between;
     position: relative;
-    width: auto; /* Permite crescimento automático */
-    min-width: 600px; /* Define uma largura mínima */
 }
 
+.modelos-container {
+    width: 100%; /* Responsivo */
+    max-width: 100%; /* Para garantir que a div cresça */
+    overflow-x: auto; /* Adicionar scroll horizontal para tabelas maiores */
+}
 
-
-
-
+.modelo {
+    flex-wrap: wrap; /* Permitir que os elementos fiquem um abaixo do outro em telas menores */
+    box-sizing: border-box;
+}
 
 /* Informações principais: Nome, Sobrenome e Cargo */
 .informacoes-principais {
