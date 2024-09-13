@@ -1,0 +1,88 @@
+/* Ajuste o contêiner principal do slider */
+.slider-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 1400px; /* Aumenta a caixa de imagem */
+    margin-top: 120px; /* Adiciona uma margem entre o título e os slides */
+}
+
+/* Ajuste as imagens do slider */
+.image-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px; /* Aumenta o espaçamento entre a imagem e o texto */
+    width: 100%;
+}
+
+.image-slider img {
+    width: 900px; /* Aumenta o tamanho da imagem */
+    height: 550px; /* Ajusta a altura */
+    object-fit: cover; /* Garante que a imagem preencha sem perder qualidade */
+    border-radius: 10px;
+}
+
+/* Estilo do texto */
+.text {
+    color: white;
+    font-size: 30px; /* Aumenta o tamanho do texto */
+    font-weight: bold; /* Deixa o texto mais grosso */
+    padding: 12px 16px;
+    border-radius: 5px;
+    width: 450px; /* Define a largura do texto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 850;
+    letter-spacing: 2px;
+    line-height: 35px;
+}
+
+/* Dots - pontos de navegação */
+.dots-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.dot {
+    height: 20px; /* Aumenta o tamanho das bolinhas */
+    width: 20px;
+    margin: 0 10px; /* Aumenta o espaçamento entre as bolinhas */
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Ocultar slides */
+.image-slider .slide {
+    display: none;
+}
+
+.image-slider .active-slide {
+    display: flex;
+    justify-content: center;
+}
+
+/* Fade-in */
+@keyframes fade {
+    from { opacity: 0.4; } 
+    to { opacity: 1; }
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}

@@ -40,17 +40,8 @@
     flex-direction: row; /* Permite que o modelo cresça horizontalmente */
     justify-content: space-between;
     position: relative;
-}
-
-.modelos-container {
-    width: 100%; /* Responsivo */
-    max-width: 100%; /* Para garantir que a div cresça */
-    overflow-x: auto; /* Adicionar scroll horizontal para tabelas maiores */
-}
-
-.modelo {
-    flex-wrap: wrap; /* Permitir que os elementos fiquem um abaixo do outro em telas menores */
-    box-sizing: border-box;
+    width: auto; /* Permite crescimento automático */
+    min-width: 600px; /* Define uma largura mínima */
 }
 
 /* Informações principais: Nome, Sobrenome e Cargo */
@@ -70,6 +61,13 @@
     font-weight: bold;
     font-size: 28px;
     margin: 0;
+    padding: 0;
+    line-height: 1; /* Certifica que o espaçamento entre as linhas é mínimo */
+    display: block; /* Garante que ambas as divs se comportem como blocos */
+}
+
+.sobrenome {
+    margin-top: -5px; /* Ajusta o valor para trazer o texto mais próximo */
 }
 
 .cargo {

@@ -63,9 +63,15 @@
             </div>
 
             <div class="form-container">
-                <div class="titulo-form">
+                <div class="titulo-form" style="display: flex; align-items: center;">
                     <h3>Insira seus dados e escolha entre as cinco opções disponíveis</h3>
+                    <a href="ajuda.html" class="tooltip-container" style="margin-left: 10px;">
+                        <img src="https://cdn-icons-png.flaticon.com/128/3840/3840674.png" 
+                             style="height: 25px; width: 25px;">
+                        <span class="tooltip-text">Ajuda</span>
+                    </a>
                 </div>
+                
                 <form>
                     <div class="input-row" style="gap: 45px;">
                         <div class="input-group">
@@ -127,7 +133,7 @@
                 <!-- Primeiro modelo-->
 
                 <table class="modelo"
-                    style="max-width: 650px; width: 82.5%; margin-top: 20px ; max-width: 600px; background-color: #00248B; border-radius: 15px; color: #B0C4DE; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; border: 2px solid #93CAFE; border-collapse: collapse;">
+                    style="width: 100%;margin-top: 20px ; max-width: 600px; background-color: #00248B; border-radius: 15px; color: #B0C4DE; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; border: 2px solid #93CAFE; border-collapse: collapse;">
                     <tr style="height: 150px;"> <!-- Defina uma altura fixa para a linha -->
                         <td style="vertical-align: top; padding-right: 0; padding-left: 20px; width: 70%;">
                             <table style="width: 100%; border-spacing: 0;">
@@ -206,7 +212,7 @@
 
                 <!-- Segundo modelo ajustado -->
                 <table class="modelo"
-                    style="max-width: 650px; width: 82.5%; background-color: #00134A; border-radius: 15px; color: #B0C4DE; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; border: 2px solid #93CAFE;">
+                    style="width: 100%; max-width: 600px; background-color: #00134A; border-radius: 15px; color: #B0C4DE; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; border: 2px solid #93CAFE;">
                     <tr style="height: 100px;"> <!-- Defina uma altura fixa para a linha -->
                         <td>
                             <table style="width: 100%;">
@@ -300,7 +306,7 @@
 
                 <!-- Terceiro modelo ajustado -->
                 <table class="modelo"
-                    style="max-width: 650px; width: 82.5%; background-color: #00134A; border-radius: 15px; color: #B0C4DE; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; border: 2px solid #93CAFE;">
+                    style="width: 100%; max-width: 600px; background-color: #00134A; border-radius: 15px; color: #B0C4DE; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; border: 2px solid #93CAFE;">
                     <tr style="height: 180px;"> <!-- Defina uma altura fixa para a linha -->
                         <td style="vertical-align: top; width: 150px; height: 180px; overflow: hidden;">
                             <div style="border-radius: 20px 0 0 20px; overflow: hidden; width: 150px; height: 180px;">
@@ -379,7 +385,7 @@
 
                 <!-- Quarto modelo ajustado -->
                 <table class="modelo"
-                    style="max-width: 650px; width: 82.5%; background-color: #00134A; border-radius: 15px; color: #B0C4DE; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; border: 2px solid #93CAFE;">
+                    style="width: 100%; max-width: 600px; background-color: #00134A; border-radius: 15px; color: #B0C4DE; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; border: 2px solid #93CAFE;">
                     <tr>
                         <td style="vertical-align: top; padding: 0; width: 150px; height: 180px; overflow: hidden;">
                             <img src="https://odin.referenciaseguros.com.br/ftpadmin/gerador%20imagens/logo-ref-recortada.png"
@@ -455,7 +461,7 @@
 
                 <!-- Quinto modelo ajustado -->
                 <table class="modelo"
-                    style="max-width: 650px; width: 82.5%; background-color: #00248B; border-radius: 15px; color: #B0C4DE; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; border: 2px solid #93CAFE;">
+                    style="width: 100%; max-width: 600px; background-color: #00248B; border-radius: 15px; color: #B0C4DE; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; border: 2px solid #93CAFE;">
                     <tr style="height: 20px;"> <!-- Defina uma altura fixa para a linha -->
                         <!-- Ícones de redes sociais alinhados à direita -->
                         <td style="vertical-align: top;">
@@ -484,7 +490,7 @@
                                 </tr>
                                 <tr>
                                     <td class="modelo-email"
-                                        style="font-size: 10px; font-weight: 600; color: #B0C4DE;padding-right: 22px; padding-left: 20px; text-decoration: none;">
+                                        style="font-size: 10px; font-weight: 600; color: #B0C4DE;padding-right: 22px; padding-left: 20px;">
                                         email.email@referenciaseguros.com.br
                                     </td>
                                 </tr>
@@ -537,27 +543,6 @@
         </div>
     </div>
 
-    <!-- Modal de recorte de imagem -->
-    <div class="modal fade" id="cropModal" tabindex="-1" role="dialog" aria-labelledby="cropModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="cropModalLabel">Recortar Imagem</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img id="image" src="" alt="Imagem para recorte" style="max-width: 100%;">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" id="crop" class="btn btn-primary">Recortar</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div id="popup" class="popup">Copiado com sucesso!!</div>
 
